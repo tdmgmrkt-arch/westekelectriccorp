@@ -1,0 +1,8 @@
+export { HeroSection } from './hero'
+export { CoreServicesSection } from './core-services'
+export { TrustAboutSection } from './trust-about'
+export { EVChargersSection } from './ev-chargers'
+export { TestimonialsSection } from './testimonials'
+export { ServiceCategoriesSection } from './service-categories'
+export { ContactSection } from './contact-section'
+export { BlogPreviewSection } from './blog-preview'
