@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import { ShieldCheck, Award, Users, Clock, CheckCircle2, ArrowRight } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
@@ -63,11 +64,14 @@ export default function AboutPage() {
                 in Lake Elsinore, Temecula, Murrieta, and throughout Southern California. As a family-owned business,
                 we take pride in delivering honest, quality work to our community.
               </p>
-              <div className="flex items-center gap-4 mb-8">
-                <div className="bg-navy-900 text-white px-4 py-2 rounded-lg">
-                  <p className="font-semibold">{BUSINESS_INFO.license}</p>
+              <div className="inline-flex items-center gap-3 bg-gradient-to-r from-navy-900 to-navy-800 text-white px-5 py-3 rounded-xl shadow-medium mb-8">
+                <div className="w-10 h-10 bg-electric-500 rounded-lg flex items-center justify-center shrink-0">
+                  <ShieldCheck className="w-5 h-5" />
                 </div>
-                <p className="text-charcoal-600">Licensed & Insured</p>
+                <div>
+                  <p className="text-sm text-navy-200">Licensed & Insured</p>
+                  <p className="font-semibold text-white">{BUSINESS_INFO.license}</p>
+                </div>
               </div>
               <Button asChild size="lg">
                 <Link href="/contact">
@@ -77,13 +81,16 @@ export default function AboutPage() {
               </Button>
             </div>
 
-            {/* Image Placeholder */}
-            <div className="aspect-[4/3] rounded-3xl overflow-hidden shadow-strong bg-gradient-to-br from-navy-800 to-navy-900 flex items-center justify-center">
-              <div className="text-center text-white/60 p-8">
-                <Users className="w-20 h-20 mx-auto mb-4" />
-                <p className="text-sm">Team Photo Placeholder</p>
-                <p className="text-xs mt-1 text-white/40">Professional team photo</p>
-              </div>
+            {/* Hero Image */}
+            <div className="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-strong">
+              <Image
+                src="/images/westek.trusted.service.webp"
+                alt="Westek Electric Corp. - Your Trusted Local Electricians"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                priority
+              />
             </div>
           </div>
         </div>
@@ -108,22 +115,43 @@ export default function AboutPage() {
       {/* Our Story */}
       <section className="section-padding bg-white">
         <div className="container-wide">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-heading font-bold text-navy-900 mb-6 text-center">
+          <div className="text-center mb-8">
+            <span className="text-electric-500 font-semibold text-sm uppercase tracking-wider mb-3 block">
+              Our Journey
+            </span>
+            <h2 className="text-3xl md:text-4xl font-heading font-bold text-navy-900">
               Our Story
             </h2>
-            <div className="prose prose-lg max-w-none text-charcoal-600">
+          </div>
+          <div className="grid md:grid-cols-3 gap-8 text-charcoal-600">
+            <div className="bg-accent-50 rounded-2xl p-6">
+              <div className="w-12 h-12 bg-electric-500 rounded-xl flex items-center justify-center text-white font-bold text-xl mb-4">
+                1
+              </div>
+              <h3 className="font-heading font-semibold text-navy-900 mb-3">The Beginning</h3>
               <p>
                 Westek Electric Corp. was founded in 2010 with a simple mission: provide honest,
                 high-quality electrical services to homeowners and businesses in the Lake Elsinore and Temecula Valley areas.
                 What started as a one-man operation has grown into a team of skilled, licensed
                 electricians serving all of Southern California.
               </p>
+            </div>
+            <div className="bg-accent-50 rounded-2xl p-6">
+              <div className="w-12 h-12 bg-electric-500 rounded-xl flex items-center justify-center text-white font-bold text-xl mb-4">
+                2
+              </div>
+              <h3 className="font-heading font-semibold text-navy-900 mb-3">Our Values</h3>
               <p>
                 As a family-owned business, we understand the importance of trust when inviting
                 someone into your home or business. That&apos;s why we focus on clear communication,
                 transparent pricing, and treating every property as if it were our own.
               </p>
+            </div>
+            <div className="bg-accent-50 rounded-2xl p-6">
+              <div className="w-12 h-12 bg-electric-500 rounded-xl flex items-center justify-center text-white font-bold text-xl mb-4">
+                3
+              </div>
+              <h3 className="font-heading font-semibold text-navy-900 mb-3">Today</h3>
               <p>
                 Today, we&apos;re proud to have completed over 5,000 projects and earned the trust of
                 thousands of families and businesses throughout Riverside and San Diego counties.
@@ -133,6 +161,67 @@ export default function AboutPage() {
             </div>
           </div>
         </div>
+      </section>
+
+      {/* Meet the Owner */}
+      <section className="section-padding bg-gradient-to-br from-white via-accent-50 to-white">
+        <div className="container-wide">
+          <span className="text-electric-500 font-semibold text-sm uppercase tracking-wider mb-3 block">
+            Meet the Owner
+          </span>
+          <h2 className="text-3xl md:text-4xl font-heading font-bold text-navy-900 mb-6">
+            Westek Owner - Ryan Reese
+          </h2>
+
+          <div className="text-charcoal-600 leading-relaxed">
+              {/* Floating Image */}
+              <div className="float-right ml-6 mb-4 md:ml-8 md:mb-6">
+                <div className="relative">
+                  <div className="absolute -top-2 -right-2 w-48 h-56 md:w-64 md:h-72 bg-electric-500/10 hexagon" />
+                  <div className="relative w-48 h-56 md:w-64 md:h-72 hexagon overflow-hidden shadow-strong">
+                    <Image
+                      src="/images/Ryan-Reese.webp"
+                      alt="Ryan Reese - Owner of Westek Electric Corp."
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 192px, 256px"
+                    />
+                  </div>
+                  <div className="absolute -bottom-3 -left-3 bg-navy-900 text-white px-4 py-2 rounded-lg shadow-medium">
+                    <p className="text-xl font-bold text-electric-400">18+</p>
+                    <p className="text-xs text-navy-200">Years Experience</p>
+                  </div>
+                </div>
+              </div>
+
+              <p className="text-lg mb-4">
+                Ryan Reese is an accomplished electrician with over 18 years of experience in
+                the field of electrical work. Since he began his career in 2003, Ryan has honed
+                his skills and expertise in all aspects of electrical systems, including
+                installation, maintenance, and repair.
+              </p>
+              <p className="mb-4">
+                In 2016, Ryan founded Westek Electric Corp, a reputable electrical contracting
+                company that has since served countless residential and commercial clients.
+                Under Ryan&apos;s leadership, Westek Electric Corp has earned a reputation for
+                delivering top-quality electrical services, employing the latest industry
+                techniques and tools to ensure that all work is completed efficiently and
+                effectively.
+              </p>
+              <p className="mb-4">
+                Ryan is known for his exceptional attention to detail and commitment to
+                customer satisfaction. His dedication to his craft and passion for delivering
+                top-notch electrical services have made him a sought-after electrician in the
+                industry. Whether it&apos;s troubleshooting electrical issues, installing new
+                electrical systems, or performing routine maintenance, Ryan&apos;s knowledge and
+                experience make him a valuable asset to any project.
+              </p>
+              <p className="text-charcoal-500 italic">
+                When Ryan is not on the job, he enjoys spending time with his family, racing
+                RC cars, and engaging in outdoor activities.
+              </p>
+            </div>
+          </div>
       </section>
 
       {/* Our Values */}

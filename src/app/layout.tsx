@@ -1,10 +1,13 @@
 import type { Metadata } from 'next'
+import Script from 'next/script'
 import { Inter, Poppins } from 'next/font/google'
 import { Header } from '@/components/layout/header'
 import { Footer } from '@/components/layout/footer'
 import { QuoteModalProvider } from '@/components/forms/quote-modal'
 import { generateLocalBusinessSchema } from '@/lib/seo'
 import '@/styles/globals.css'
+
+const RECAPTCHA_SITE_KEY = '6LfdVUIsAAAAAEkutqurevpauvNgCikqQwCQchET'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -112,6 +115,10 @@ export default function RootLayout({
         />
       </head>
       <body className="font-sans antialiased">
+        <Script
+          src={`https://www.google.com/recaptcha/enterprise.js?render=${RECAPTCHA_SITE_KEY}`}
+          strategy="lazyOnload"
+        />
         <QuoteModalProvider>
           <Header />
           <main>{children}</main>

@@ -26,7 +26,9 @@ interface ServiceCardProps {
 function ServiceCard({ service, serviceType }: ServiceCardProps) {
   const { openQuoteModal } = useQuoteModal()
 
-  const handleClick = () => {
+  const handleQuoteClick = (e: React.MouseEvent) => {
+    e.preventDefault()
+    e.stopPropagation()
     openQuoteModal({
       projectScope: serviceType,
       services: [service.id],
@@ -35,9 +37,9 @@ function ServiceCard({ service, serviceType }: ServiceCardProps) {
   }
 
   return (
-    <button
-      onClick={handleClick}
-      className="group block h-full w-full text-left"
+    <Link
+      href={service.href as never}
+      className="group block h-full"
     >
       <Card className="h-full overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1 border-accent-200 hover:border-electric-300">
         <div className="relative aspect-[4/3] overflow-hidden bg-accent-100">
@@ -60,13 +62,21 @@ function ServiceCard({ service, serviceType }: ServiceCardProps) {
           <p className="text-sm text-charcoal-600 mb-4 line-clamp-2">
             {service.description}
           </p>
-          <span className="inline-flex items-center text-sm font-semibold text-electric-500 group-hover:text-electric-600 transition-colors">
-            Request A Quote
-            <ArrowRight className="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" />
-          </span>
+          <div className="flex items-center justify-between">
+            <span className="inline-flex items-center text-sm font-semibold text-navy-600 group-hover:text-navy-800 transition-colors">
+              Learn More
+              <ArrowRight className="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" />
+            </span>
+            <button
+              onClick={handleQuoteClick}
+              className="text-sm font-semibold text-electric-500 hover:text-electric-600 transition-colors"
+            >
+              Get Quote
+            </button>
+          </div>
         </CardContent>
       </Card>
-    </button>
+    </Link>
   )
 }
 
@@ -76,27 +86,41 @@ export function ServicesContent() {
       {/* Hero */}
       <section className="pt-32 pb-16 bg-gradient-to-br from-accent-100 via-white to-accent-50">
         <div className="container-wide">
-          <div className="max-w-3xl">
-            <span className="text-electric-500 font-semibold text-sm uppercase tracking-wider mb-3 block">
-              Our Services
-            </span>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-navy-900 mb-6">
-              What does Westek Electric Corp. offer?
-            </h1>
-            <p className="text-lg text-charcoal-600 leading-relaxed mb-8">
-              From residential repairs to commercial installations, our licensed electricians
-              deliver quality workmanship for every project. Serving Temecula, Murrieta, and
-              all of Southern California.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button asChild size="lg">
-                <a href={`tel:${BUSINESS_INFO.phoneRaw}`}>
-                  Call {BUSINESS_INFO.phone}
-                </a>
-              </Button>
-              <Button asChild variant="outline" size="lg">
-                <Link href="/contact">Request Free Estimate</Link>
-              </Button>
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <span className="text-electric-500 font-semibold text-sm uppercase tracking-wider mb-3 block">
+                Our Services
+              </span>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-navy-900 mb-6">
+                What does Westek Electric Corp. offer?
+              </h1>
+              <p className="text-lg text-charcoal-600 leading-relaxed mb-8">
+                From residential repairs to commercial installations, our licensed electricians
+                deliver quality workmanship for every project. Serving Temecula, Murrieta, and
+                all of Southern California.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button asChild size="lg">
+                  <a href={`tel:${BUSINESS_INFO.phoneRaw}`}>
+                    Call {BUSINESS_INFO.phone}
+                  </a>
+                </Button>
+                <Button asChild variant="outline" size="lg">
+                  <Link href="/contact">Request Free Estimate</Link>
+                </Button>
+              </div>
+            </div>
+
+            {/* Hero Image */}
+            <div className="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-strong">
+              <Image
+                src="/images/Westek-Truck.webp"
+                alt="Westek Electric Corp. Service Vehicle"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                priority
+              />
             </div>
           </div>
         </div>

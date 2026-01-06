@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import Image from 'next/image'
 import { Home, Building2, Factory, PenTool, ArrowRight, CheckCircle2 } from 'lucide-react'
 import { Card, CardContent } from '@/components/ui/card'
 import { SERVICE_CATEGORIES } from '@/lib/constants'
@@ -11,6 +12,13 @@ const iconMap = {
   Building2,
   Factory,
   PenTool,
+}
+
+const categoryImages: Record<string, string> = {
+  residential: '/images/residential.webp',
+  commercial: '/images/Commercial.webp',
+  industrial: '/images/industrial.webp',
+  design: '/images/Electrical-Design.webp',
 }
 
 const containerVariants = {
@@ -77,9 +85,21 @@ export function ServiceCategoriesSection() {
                     <CardContent className="p-0">
                       <div className="flex flex-col lg:flex-row">
                         {/* Icon/Visual Side */}
-                        <div className="lg:w-1/3 bg-gradient-to-br from-navy-900 to-navy-800 p-6 lg:p-8 flex items-center justify-center group-hover:from-electric-500 group-hover:to-electric-600 transition-all duration-300">
-                          <div className="w-20 h-20 hexagon bg-white/10 flex items-center justify-center">
-                            <IconComponent className="w-10 h-10 text-white" />
+                        <div className="lg:w-1/3 relative overflow-hidden">
+                          {categoryImages[category.id] && (
+                            <Image
+                              src={categoryImages[category.id]}
+                              alt={category.title}
+                              fill
+                              className="object-cover"
+                              sizes="(max-width: 1024px) 100vw, 33vw"
+                            />
+                          )}
+                          <div className="absolute inset-0 bg-gradient-to-br from-navy-900/80 to-navy-800/80 group-hover:from-electric-500/80 group-hover:to-electric-600/80 transition-all duration-300" />
+                          <div className="relative p-6 lg:p-8 flex items-center justify-center min-h-[120px] lg:min-h-full">
+                            <div className="w-20 h-20 hexagon bg-white/20 flex items-center justify-center backdrop-blur-sm">
+                              <IconComponent className="w-10 h-10 text-white" />
+                            </div>
                           </div>
                         </div>
 

@@ -33,7 +33,7 @@ const homepageFAQs = [
   {
     question: 'Are your electricians licensed and insured?',
     answer:
-      'Yes, all our electricians are fully licensed by the State of California (Westek Electric Corp. - Lic# C10-1100272) and carry comprehensive liability insurance for your protection.',
+      'Yes, all our electricians are fully licensed by the State of California (Westek Electric Corp. | License #C10-1100272) and carry comprehensive liability insurance for your protection.',
   },
   {
     question: 'How much does EV charger installation cost?',

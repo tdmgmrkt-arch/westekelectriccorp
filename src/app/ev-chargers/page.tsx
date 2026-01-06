@@ -1,10 +1,19 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import { BatteryCharging, Zap, CheckCircle2, ArrowRight } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import { EV_CHARGER_BRANDS, BUSINESS_INFO } from '@/lib/constants'
 import { generateServiceSchema, generateFAQSchema } from '@/lib/seo'
+
+// Map brand IDs to image filenames
+const brandImages: Record<string, string> = {
+  tesla: '/images/Tesla-Charger.webp',
+  ford: '/images/Ford-EV-Charger.webp',
+  chevrolet: '/images/Chevy-Volt-Charger.webp',
+  rivian: '/images/rivian.charger.webp',
+}
 
 export const metadata: Metadata = {
   title: 'EV Charger Installation',
@@ -114,12 +123,16 @@ export default function EVChargersPage() {
               </div>
             </div>
 
-            {/* Image Placeholder */}
-            <div className="aspect-[4/3] rounded-3xl overflow-hidden shadow-strong bg-gradient-to-br from-navy-800 to-navy-900 flex items-center justify-center">
-              <div className="text-center text-white/60 p-8">
-                <BatteryCharging className="w-20 h-20 mx-auto mb-4" />
-                <p className="text-sm">EV Charger Installation Image</p>
-              </div>
+            {/* Hero Image */}
+            <div className="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-strong">
+              <Image
+                src="/images/EV-Chargers.webp"
+                alt="Professional EV Charger Installation"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                priority
+              />
             </div>
           </div>
         </div>
@@ -142,8 +155,20 @@ export default function EVChargersPage() {
             {EV_CHARGER_BRANDS.map((brand) => (
               <Card key={brand.id} className="text-center hover:shadow-medium transition-shadow">
                 <CardContent className="p-6">
-                  <div className="w-16 h-16 mx-auto mb-4 bg-accent-100 rounded-xl flex items-center justify-center">
-                    <BatteryCharging className="w-8 h-8 text-navy-900" />
+                  <div className="relative w-24 h-24 mx-auto mb-4 rounded-xl overflow-hidden">
+                    {brandImages[brand.id] ? (
+                      <Image
+                        src={brandImages[brand.id]}
+                        alt={`${brand.brand} EV Charger`}
+                        fill
+                        className="object-contain"
+                        sizes="96px"
+                      />
+                    ) : (
+                      <div className="w-full h-full bg-accent-100 flex items-center justify-center">
+                        <BatteryCharging className="w-8 h-8 text-navy-900" />
+                      </div>
+                    )}
                   </div>
                   <h3 className="text-xl font-heading font-semibold text-navy-900 mb-2">
                     {brand.brand}

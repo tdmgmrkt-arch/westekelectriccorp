@@ -26,8 +26,8 @@ export function Header() {
       className={cn(
         'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
         isScrolled
-          ? 'bg-white/95 backdrop-blur-md shadow-soft'
-          : 'bg-transparent'
+          ? 'bg-white shadow-soft'
+          : 'bg-white/95 backdrop-blur-md'
       )}
     >
       <div className="container-wide">
@@ -61,20 +61,11 @@ export function Header() {
           </div>
 
           {/* Desktop CTA */}
-          <div className="hidden lg:flex items-center gap-4">
-            <a
-              href={`tel:${BUSINESS_INFO.phoneRaw}`}
-              className={cn(
-                'flex items-center gap-2 font-semibold transition-colors',
-                isScrolled ? 'text-navy-900' : 'text-navy-900'
-              )}
-            >
-              <Phone className="w-5 h-5" />
-              {BUSINESS_INFO.phone}
-            </a>
-            <Button asChild>
+          <div className="hidden lg:flex items-center">
+            <Button asChild size="lg">
               <a href={`tel:${BUSINESS_INFO.phoneRaw}`}>
-                Call Now
+                <Phone className="w-5 h-5" />
+                {BUSINESS_INFO.phone}
               </a>
             </Button>
           </div>

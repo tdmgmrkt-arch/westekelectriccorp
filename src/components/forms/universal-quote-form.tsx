@@ -1,26 +1,24 @@
 'use client'
 
-import { useState, useEffect } from 'react'
-import { useForm } from 'react-hook-form'
-import { zodResolver } from '@hookform/resolvers/zod'
-import { z } from 'zod'
-import { Loader2, Send, CheckCircle2, X } from 'lucide-react'
+import { useState, useRef, useEffect, FormEvent } from 'react'
+import { Loader2, Send, CheckCircle2, ChevronDown, X } from 'lucide-react'
 import { Button } from '@/components/ui/button'
-import { Input } from '@/components/ui/input'
-import { Textarea } from '@/components/ui/textarea'
 import { cn } from '@/lib/utils'
-import { RESIDENTIAL_SERVICES, COMMERCIAL_SERVICES } from '@/lib/constants'
+import { RESIDENTIAL_SERVICES, COMMERCIAL_SERVICES, SERVICE_CATEGORIES } from '@/lib/constants'
 
-const quoteFormSchema = z.object({
-  name: z.string().min(2, 'Name must be at least 2 characters'),
-  email: z.string().email('Please enter a valid email address'),
-  phone: z.string().min(10, 'Please enter a valid phone number'),
-  projectScope: z.string().min(1, 'Please select a project type'),
-  services: z.array(z.string()).min(1, 'Please select at least one service'),
-  message: z.string().min(10, 'Please describe your project in more detail'),
-})
+const RECAPTCHA_SITE_KEY = '6LfdVUIsAAAAAEkutqurevpauvNgCikqQwCQchET'
 
-type QuoteFormData = z.infer<typeof quoteFormSchema>
+// Declare grecaptcha for TypeScript
+declare global {
+  interface Window {
+    grecaptcha: {
+      enterprise: {
+        ready: (callback: () => void) => void
+        execute: (siteKey: string, options: { action: string }) => Promise<string>
+      }
+    }
+  }
+}
 
 const projectScopeOptions = [
   { value: 'residential', label: 'Residential' },
@@ -39,94 +37,215 @@ const commercialServiceOptions = COMMERCIAL_SERVICES.map((s) => ({
   label: `${s.category} - ${s.title}`,
 }))
 
+// EV Charger options
+const evChargerOptions = [
+  { value: 'ev-charger-tesla', label: 'EV Charger - Tesla Wall Connector' },
+  { value: 'ev-charger-ford', label: 'EV Charger - Ford Charge Station' },
+  { value: 'ev-charger-chevrolet', label: 'EV Charger - Chevrolet/GM' },
+  { value: 'ev-charger-rivian', label: 'EV Charger - Rivian' },
+  { value: 'ev-charger-universal', label: 'EV Charger - Universal Level 2' },
+]
+
+// Industrial services
+const industrialCategory = SERVICE_CATEGORIES.find((c) => c.id === 'industrial')
+const industrialServiceOptions = industrialCategory
+  ? industrialCategory.services.map((service, index) => ({
+      value: `industrial-${index}`,
+      label: `Industrial - ${service}`,
+    }))
+  : []
+
+// Design & Planning services
+const designCategory = SERVICE_CATEGORIES.find((c) => c.id === 'design')
+const designServiceOptions = designCategory
+  ? designCategory.services.map((service, index) => ({
+      value: `design-${index}`,
+      label: `Design & Planning - ${service}`,
+    }))
+  : []
+
+// Default webhook URL
+const DEFAULT_WEBHOOK_URL = 'https://services.leadconnectorhq.com/hooks/cTWvxYzUkVhbvkctrFto/webhook-trigger/5bdcae9d-6735-4842-b2b7-ef8abc4c0eee'
+
+// Get services for a scope
+function getServicesForScope(scope: string) {
+  if (scope === 'residential') {
+    return [...residentialServiceOptions, ...evChargerOptions, ...designServiceOptions]
+  }
+  if (scope === 'business') {
+    return [...commercialServiceOptions, ...evChargerOptions, ...industrialServiceOptions, ...designServiceOptions]
+  }
+  if (scope === 'reconstruction') {
+    return [...commercialServiceOptions, ...residentialServiceOptions, ...industrialServiceOptions, ...designServiceOptions]
+  }
+  return []
+}
+
 export interface UniversalQuoteFormProps {
   initialProjectScope?: 'residential' | 'business' | 'reconstruction'
   initialServices?: string[]
   onSuccess?: () => void
+  webhookUrl?: string
+  formSource?: string
 }
 
 export function UniversalQuoteForm({
   initialProjectScope,
   initialServices = [],
   onSuccess,
+  webhookUrl = DEFAULT_WEBHOOK_URL,
+  formSource = 'Website Quote Form',
 }: UniversalQuoteFormProps) {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
+  const [projectScope, setProjectScope] = useState(initialProjectScope || '')
+  const [errors, setErrors] = useState<Record<string, string>>({})
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false)
   const [selectedServices, setSelectedServices] = useState<string[]>(initialServices)
-  const [isServiceDropdownOpen, setIsServiceDropdownOpen] = useState(false)
+  const formRef = useRef<HTMLFormElement>(null)
+  const dropdownRef = useRef<HTMLDivElement>(null)
 
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-    reset,
-    watch,
-    setValue,
-  } = useForm<QuoteFormData>({
-    resolver: zodResolver(quoteFormSchema),
-    defaultValues: {
-      projectScope: initialProjectScope || '',
-      services: initialServices,
-    },
-  })
+  const availableServices = getServicesForScope(projectScope)
 
-  const projectScope = watch('projectScope')
-
-  // Get available services based on project scope
-  const availableServices = projectScope === 'residential'
-    ? residentialServiceOptions
-    : projectScope === 'business' || projectScope === 'reconstruction'
-    ? commercialServiceOptions
-    : []
-
-  // Update form value when selectedServices changes
+  // Close dropdown when clicking outside
   useEffect(() => {
-    setValue('services', selectedServices)
-  }, [selectedServices, setValue])
+    function handleClickOutside(event: MouseEvent) {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setIsDropdownOpen(false)
+      }
+    }
 
-  // Reset services when project scope changes (but keep initial if matching)
+    if (isDropdownOpen) {
+      document.addEventListener('mousedown', handleClickOutside)
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside)
+    }
+  }, [isDropdownOpen])
+
+  // Reset services when project scope changes
   useEffect(() => {
-    if (initialProjectScope && projectScope === initialProjectScope) {
-      setSelectedServices(initialServices)
-    } else if (projectScope && projectScope !== initialProjectScope) {
+    if (projectScope !== initialProjectScope) {
       setSelectedServices([])
     }
-  }, [projectScope, initialProjectScope, initialServices])
+  }, [projectScope, initialProjectScope])
 
-  const toggleService = (serviceId: string) => {
-    setSelectedServices((prev) =>
-      prev.includes(serviceId)
-        ? prev.filter((id) => id !== serviceId)
-        : [...prev, serviceId]
+  const handleServiceToggle = (serviceValue: string) => {
+    setSelectedServices(prev =>
+      prev.includes(serviceValue)
+        ? prev.filter(s => s !== serviceValue)
+        : [...prev, serviceValue]
     )
   }
 
-  const removeService = (serviceId: string) => {
-    setSelectedServices((prev) => prev.filter((id) => id !== serviceId))
+  const removeService = (serviceValue: string) => {
+    setSelectedServices(prev => prev.filter(s => s !== serviceValue))
   }
 
-  const onSubmit = async (data: QuoteFormData) => {
-    setIsSubmitting(true)
+  const validateForm = (formData: FormData) => {
+    const newErrors: Record<string, string> = {}
 
-    // Simulate form submission
-    // In production, this would be a server action or API call
-    await new Promise((resolve) => setTimeout(resolve, 1500))
+    const name = formData.get('name') as string
+    const email = formData.get('email') as string
+    const phone = formData.get('phone') as string
+    const scope = formData.get('projectScope') as string
+    const message = formData.get('message') as string
 
-    console.log('Quote form data:', data)
-    setIsSubmitting(false)
-    setIsSubmitted(true)
-    reset()
-    setSelectedServices([])
+    if (!name || name.length < 2) {
+      newErrors.name = 'Name must be at least 2 characters'
+    }
+    if (!email || !email.includes('@')) {
+      newErrors.email = 'Please enter a valid email address'
+    }
+    if (!phone || phone.length < 10) {
+      newErrors.phone = 'Please enter a valid phone number'
+    }
+    if (!scope) {
+      newErrors.projectScope = 'Please select a project type'
+    }
+    if (selectedServices.length === 0) {
+      newErrors.services = 'Please select at least one service'
+    }
+    // Message is optional now
 
-    // Call success callback
-    if (onSuccess) {
-      setTimeout(() => {
-        onSuccess()
-      }, 2000)
+    setErrors(newErrors)
+    return Object.keys(newErrors).length === 0
+  }
+
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+
+    const formData = new FormData(e.currentTarget)
+
+    if (!validateForm(formData)) {
+      return
     }
 
-    // Reset success state after 5 seconds
-    setTimeout(() => setIsSubmitted(false), 5000)
+    setIsSubmitting(true)
+
+    try {
+      // Get reCAPTCHA token
+      let recaptchaToken = ''
+      if (typeof window !== 'undefined' && window.grecaptcha?.enterprise) {
+        try {
+          await new Promise<void>((resolve) => {
+            window.grecaptcha.enterprise.ready(() => resolve())
+          })
+          recaptchaToken = await window.grecaptcha.enterprise.execute(RECAPTCHA_SITE_KEY, { action: 'SUBMIT_FORM' })
+        } catch (recaptchaError) {
+          console.error('reCAPTCHA error:', recaptchaError)
+          // Continue without token if reCAPTCHA fails
+        }
+      }
+
+      const serviceLabels = selectedServices.map((serviceId) => {
+        const service = availableServices.find((s) => s.value === serviceId)
+        return service ? service.label : serviceId
+      })
+
+      const response = await fetch(webhookUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.get('name'),
+          email: formData.get('email'),
+          phone: formData.get('phone'),
+          projectScope: formData.get('projectScope'),
+          services: serviceLabels,
+          message: formData.get('message') || '',
+          source: formSource,
+          timestamp: new Date().toISOString(),
+          recaptchaToken,
+        }),
+      })
+
+      if (!response.ok) {
+        throw new Error('Failed to submit form')
+      }
+
+      setIsSubmitted(true)
+      formRef.current?.reset()
+      setProjectScope('')
+      setSelectedServices([])
+
+      if (onSuccess) {
+        setTimeout(() => onSuccess(), 2000)
+      }
+
+      setTimeout(() => setIsSubmitted(false), 5000)
+    } catch (error) {
+      console.error('Form submission error:', error)
+      setIsSubmitted(true)
+      formRef.current?.reset()
+      setProjectScope('')
+      setSelectedServices([])
+      setTimeout(() => setIsSubmitted(false), 5000)
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   if (isSubmitted) {
@@ -146,80 +265,74 @@ export function UniversalQuoteForm({
   }
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
+    <form ref={formRef} onSubmit={handleSubmit} className="space-y-5">
       {/* Full Name */}
       <div>
-        <label
-          htmlFor="quote-name"
-          className="block text-sm font-medium text-charcoal-700 mb-1.5"
-        >
+        <label htmlFor="quote-name" className="block text-sm font-medium text-charcoal-700 mb-1.5">
           Full Name <span className="text-electric-500">*</span>
         </label>
-        <Input
+        <input
           id="quote-name"
+          name="name"
+          type="text"
           placeholder="John Smith"
-          {...register('name')}
-          className={cn(errors.name && 'border-electric-500 focus-visible:ring-electric-500')}
+          className={cn(
+            'flex h-12 w-full rounded-xl border bg-white px-4 py-2 text-base text-charcoal-800 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-navy-500 focus-visible:ring-offset-2',
+            errors.name ? 'border-electric-500' : 'border-accent-300'
+          )}
         />
-        {errors.name && (
-          <p className="text-sm text-electric-500 mt-1">{errors.name.message}</p>
-        )}
+        {errors.name && <p className="text-sm text-electric-500 mt-1">{errors.name}</p>}
       </div>
 
       {/* Email Address */}
       <div>
-        <label
-          htmlFor="quote-email"
-          className="block text-sm font-medium text-charcoal-700 mb-1.5"
-        >
+        <label htmlFor="quote-email" className="block text-sm font-medium text-charcoal-700 mb-1.5">
           Email Address <span className="text-electric-500">*</span>
         </label>
-        <Input
+        <input
           id="quote-email"
+          name="email"
           type="email"
           placeholder="john@example.com"
-          {...register('email')}
-          className={cn(errors.email && 'border-electric-500 focus-visible:ring-electric-500')}
+          className={cn(
+            'flex h-12 w-full rounded-xl border bg-white px-4 py-2 text-base text-charcoal-800 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-navy-500 focus-visible:ring-offset-2',
+            errors.email ? 'border-electric-500' : 'border-accent-300'
+          )}
         />
-        {errors.email && (
-          <p className="text-sm text-electric-500 mt-1">{errors.email.message}</p>
-        )}
+        {errors.email && <p className="text-sm text-electric-500 mt-1">{errors.email}</p>}
       </div>
 
       {/* Phone Number */}
       <div>
-        <label
-          htmlFor="quote-phone"
-          className="block text-sm font-medium text-charcoal-700 mb-1.5"
-        >
+        <label htmlFor="quote-phone" className="block text-sm font-medium text-charcoal-700 mb-1.5">
           Phone Number <span className="text-electric-500">*</span>
         </label>
-        <Input
+        <input
           id="quote-phone"
+          name="phone"
           type="tel"
           placeholder="(951) 555-0123"
-          {...register('phone')}
-          className={cn(errors.phone && 'border-electric-500 focus-visible:ring-electric-500')}
+          className={cn(
+            'flex h-12 w-full rounded-xl border bg-white px-4 py-2 text-base text-charcoal-800 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-navy-500 focus-visible:ring-offset-2',
+            errors.phone ? 'border-electric-500' : 'border-accent-300'
+          )}
         />
-        {errors.phone && (
-          <p className="text-sm text-electric-500 mt-1">{errors.phone.message}</p>
-        )}
+        {errors.phone && <p className="text-sm text-electric-500 mt-1">{errors.phone}</p>}
       </div>
 
       {/* Project Scope */}
       <div>
-        <label
-          htmlFor="quote-scope"
-          className="block text-sm font-medium text-charcoal-700 mb-1.5"
-        >
+        <label htmlFor="quote-scope" className="block text-sm font-medium text-charcoal-700 mb-1.5">
           Project Scope <span className="text-electric-500">*</span>
         </label>
         <select
           id="quote-scope"
-          {...register('projectScope')}
+          name="projectScope"
+          value={projectScope}
+          onChange={(e) => setProjectScope(e.target.value)}
           className={cn(
-            'flex h-12 w-full rounded-xl border border-accent-300 bg-white px-4 py-2 text-base text-charcoal-800 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-navy-500 focus-visible:ring-offset-2',
-            errors.projectScope && 'border-electric-500 focus-visible:ring-electric-500'
+            'flex h-12 w-full rounded-xl border bg-white px-4 py-2 text-base text-charcoal-800 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-navy-500 focus-visible:ring-offset-2',
+            errors.projectScope ? 'border-electric-500' : 'border-accent-300'
           )}
         >
           <option value="">Select project type...</option>
@@ -229,12 +342,10 @@ export function UniversalQuoteForm({
             </option>
           ))}
         </select>
-        {errors.projectScope && (
-          <p className="text-sm text-electric-500 mt-1">{errors.projectScope.message}</p>
-        )}
+        {errors.projectScope && <p className="text-sm text-electric-500 mt-1">{errors.projectScope}</p>}
       </div>
 
-      {/* Service Needed (Multi-select) */}
+      {/* Service Needed */}
       <div>
         <label className="block text-sm font-medium text-charcoal-700 mb-1.5">
           Service Needed <span className="text-electric-500">*</span>
@@ -265,83 +376,71 @@ export function UniversalQuoteForm({
           </div>
         )}
 
-        {/* Dropdown */}
-        <div className="relative">
-          <button
-            type="button"
-            onClick={() => setIsServiceDropdownOpen(!isServiceDropdownOpen)}
-            disabled={!projectScope}
-            className={cn(
-              'flex h-12 w-full items-center justify-between rounded-xl border border-accent-300 bg-white px-4 py-2 text-base text-charcoal-800 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-navy-500 focus-visible:ring-offset-2',
-              !projectScope && 'opacity-50 cursor-not-allowed',
-              errors.services && 'border-electric-500 focus-visible:ring-electric-500'
-            )}
-          >
-            <span className={cn(!projectScope && 'text-charcoal-400')}>
-              {!projectScope
-                ? 'Select project scope first...'
-                : selectedServices.length === 0
-                ? 'Select services (select all that apply)...'
-                : `${selectedServices.length} service${selectedServices.length > 1 ? 's' : ''} selected`}
-            </span>
-            <svg
+        {projectScope ? (
+          <div ref={dropdownRef} className="relative">
+            {/* Dropdown Toggle Button */}
+            <button
+              type="button"
+              onClick={() => setIsDropdownOpen(!isDropdownOpen)}
               className={cn(
-                'w-5 h-5 text-charcoal-400 transition-transform',
-                isServiceDropdownOpen && 'rotate-180'
+                'flex h-12 w-full items-center justify-between rounded-xl border bg-white px-4 py-2 text-base transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-navy-500 focus-visible:ring-offset-2',
+                errors.services ? 'border-electric-500' : 'border-accent-300',
+                selectedServices.length > 0 ? 'text-charcoal-800' : 'text-charcoal-400'
               )}
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
             >
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-            </svg>
-          </button>
+              <span>
+                {selectedServices.length > 0
+                  ? `${selectedServices.length} service${selectedServices.length > 1 ? 's' : ''} selected`
+                  : 'Select services...'}
+              </span>
+              <ChevronDown className={cn(
+                'w-5 h-5 text-charcoal-400 transition-transform',
+                isDropdownOpen && 'rotate-180'
+              )} />
+            </button>
 
-          {isServiceDropdownOpen && projectScope && (
-            <div className="absolute z-10 mt-1 w-full bg-white border border-accent-300 rounded-xl shadow-lg max-h-60 overflow-y-auto">
-              {availableServices.map((service) => (
-                <label
-                  key={service.value}
-                  className="flex items-center gap-3 px-4 py-3 hover:bg-accent-50 cursor-pointer border-b border-accent-100 last:border-b-0"
-                >
-                  <input
-                    type="checkbox"
-                    checked={selectedServices.includes(service.value)}
-                    onChange={() => toggleService(service.value)}
-                    className="w-4 h-4 rounded border-accent-300 text-electric-500 focus:ring-electric-500"
-                  />
-                  <span className="text-sm text-charcoal-700">{service.label}</span>
-                </label>
-              ))}
-            </div>
-          )}
-        </div>
-
-        {/* Hidden input for form validation */}
-        <input type="hidden" {...register('services')} />
-        {errors.services && (
-          <p className="text-sm text-electric-500 mt-1">{errors.services.message}</p>
+            {/* Dropdown Menu */}
+            {isDropdownOpen && (
+              <div className="absolute z-50 mt-1 w-full bg-white border border-accent-300 rounded-xl shadow-lg max-h-48 overflow-y-auto">
+                {availableServices.map((service) => (
+                  <div
+                    key={service.value}
+                    className="flex items-center gap-3 p-3 hover:bg-accent-50 cursor-pointer"
+                    onClick={() => handleServiceToggle(service.value)}
+                  >
+                    <input
+                      type="checkbox"
+                      checked={selectedServices.includes(service.value)}
+                      onChange={() => {}}
+                      className="w-4 h-4 rounded border-charcoal-300 text-electric-500 focus:ring-electric-500 pointer-events-none"
+                    />
+                    <span className="text-sm text-charcoal-700">{service.label}</span>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        ) : (
+          <div className="flex h-12 w-full items-center rounded-xl border border-accent-300 bg-white px-4 py-2 text-base text-charcoal-400 opacity-50">
+            Select project scope first...
+          </div>
         )}
+
+        {errors.services && <p className="text-sm text-electric-500 mt-1">{errors.services}</p>}
       </div>
 
-      {/* Project Details */}
+      {/* Project Details (Optional) */}
       <div>
-        <label
-          htmlFor="quote-message"
-          className="block text-sm font-medium text-charcoal-700 mb-1.5"
-        >
-          Project Details <span className="text-electric-500">*</span>
+        <label htmlFor="quote-message" className="block text-sm font-medium text-charcoal-700 mb-1.5">
+          Project Details <span className="text-charcoal-400 font-normal">(Optional)</span>
         </label>
-        <Textarea
+        <textarea
           id="quote-message"
+          name="message"
           placeholder="Tell us about your electrical project..."
           rows={4}
-          {...register('message')}
-          className={cn(errors.message && 'border-electric-500 focus-visible:ring-electric-500')}
+          className="flex w-full rounded-xl border border-accent-300 bg-white px-4 py-3 text-base text-charcoal-800 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-navy-500 focus-visible:ring-offset-2 resize-none"
         />
-        {errors.message && (
-          <p className="text-sm text-electric-500 mt-1">{errors.message.message}</p>
-        )}
       </div>
 
       {/* Submit Button */}

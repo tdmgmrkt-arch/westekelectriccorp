@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import Image from 'next/image'
 import { ShieldCheck, ThumbsUp, Clock, Award, CheckCircle2, ArrowRight } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { BUSINESS_INFO } from '@/lib/constants'
@@ -53,18 +54,13 @@ export function TrustAboutSection() {
           >
             {/* Main Image */}
             <div className="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-strong">
-              {/* Placeholder for About Image */}
-              <div className="absolute inset-0 bg-gradient-to-br from-navy-700 to-navy-900 flex items-center justify-center">
-                <div className="text-center text-white/60 p-8">
-                  <div className="w-24 h-24 mx-auto mb-4 border-2 border-white/30 rounded-2xl flex items-center justify-center">
-                    <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                    </svg>
-                  </div>
-                  <p className="text-sm">About Section Image</p>
-                  <p className="text-xs mt-1 text-white/40">Professional team / Quality electrical work</p>
-                </div>
-              </div>
+              <Image
+                src="/images/whychooseus.webp"
+                alt="Westek Electric Corp. - Reliable & Honest Electricians"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
             </div>
 
             {/* License Badge */}
