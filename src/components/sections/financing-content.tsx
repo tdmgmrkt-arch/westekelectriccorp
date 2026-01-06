@@ -82,7 +82,7 @@ export function FinancingContent() {
   return (
     <>
       {/* Hero Section */}
-      <section className="pt-32 pb-16 bg-gradient-to-br from-accent-100 via-white to-accent-50 overflow-hidden">
+      <section className="pt-40 pb-16 bg-gradient-to-br from-accent-100 via-white to-accent-50 overflow-hidden">
         <div className="container-wide">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div

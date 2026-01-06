@@ -14,12 +14,12 @@ import {
 import { BUSINESS_INFO, SERVICE_AREAS, NAV_LINKS } from '@/lib/constants'
 
 const footerServices = [
-  { label: 'Residential Electrical', href: '/services/residential' },
-  { label: 'Commercial Electrical', href: '/services/commercial' },
+  { label: 'Residential Electrical', href: '/services#residential' },
+  { label: 'Commercial Electrical', href: '/services#commercial' },
   { label: 'EV Charger Installation', href: '/ev-chargers' },
-  { label: 'Panel Upgrades', href: '/services/panel-upgrades' },
-  { label: 'LED Lighting', href: '/services/led-lighting' },
-  { label: 'Emergency Service', href: '/services/emergency' },
+  { label: 'Panel Upgrades', href: '/services/residential/breaker-replacement' },
+  { label: 'Outdoor Lighting', href: '/services/residential/outdoor-lighting' },
+  { label: 'New Construction', href: '/services/residential/new-construction' },
 ]
 
 export function Footer() {
@@ -146,18 +146,15 @@ export function Footer() {
               Service Areas
             </h3>
             <ul className="grid grid-cols-2 gap-x-4 gap-y-2">
-              {SERVICE_AREAS.slice(0, 8).map((area) => (
+              {SERVICE_AREAS.slice(0, 10).map((area) => (
                 <li key={area}>
                   <span className="text-navy-200 text-sm">{area}</span>
                 </li>
               ))}
             </ul>
-            <Link
-              href={"/service-areas" as never}
-              className="inline-block mt-4 text-electric-400 hover:text-electric-300 text-sm font-medium"
-            >
-              View All Areas →
-            </Link>
+            <p className="mt-4 text-electric-400 text-sm font-medium">
+              & Surrounding Areas
+            </p>
           </div>
 
           {/* Contact Info */}
@@ -222,23 +219,23 @@ export function Footer() {
             </p>
             <div className="flex items-center gap-6 text-sm">
               <Link
-                href={"/privacy" as never}
+                href="/privacy"
                 className="text-navy-300 hover:text-white transition-colors"
               >
                 Privacy Policy
               </Link>
               <Link
-                href={"/terms" as never}
+                href="/terms"
                 className="text-navy-300 hover:text-white transition-colors"
               >
                 Terms of Service
               </Link>
-              <Link
-                href={"/sitemap" as never}
+              <a
+                href="/sitemap.xml"
                 className="text-navy-300 hover:text-white transition-colors"
               >
                 Sitemap
-              </Link>
+              </a>
             </div>
           </div>
         </div>

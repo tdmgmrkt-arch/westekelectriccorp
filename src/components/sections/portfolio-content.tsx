@@ -151,7 +151,7 @@ export function PortfolioContent() {
   return (
     <>
       {/* Hero */}
-      <section className="pt-32 pb-16 bg-gradient-to-br from-accent-100 via-white to-accent-50">
+      <section className="pt-40 pb-16 bg-gradient-to-br from-accent-100 via-white to-accent-50">
         <div className="container-wide">
           <div className="text-center max-w-3xl mx-auto">
             <span className="text-electric-500 font-semibold text-sm uppercase tracking-wider mb-3 block">

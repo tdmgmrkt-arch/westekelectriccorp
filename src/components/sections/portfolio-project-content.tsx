@@ -56,7 +56,7 @@ export function PortfolioProjectContent({
   return (
     <>
       {/* Hero Section */}
-      <section className="pt-32 pb-12 bg-gradient-to-br from-navy-900 via-navy-800 to-navy-900 relative overflow-hidden">
+      <section className="pt-40 pb-12 bg-gradient-to-br from-navy-900 via-navy-800 to-navy-900 relative overflow-hidden">
         {/* Circuit Pattern Background */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0 bg-[url('/images/circuit-pattern.svg')] bg-repeat" />

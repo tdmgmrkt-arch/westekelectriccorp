@@ -83,7 +83,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
 
   if (!post) {
     return (
-      <div className="pt-32 pb-16 text-center">
+      <div className="pt-40 pb-16 text-center">
         <h1 className="text-2xl font-bold text-navy-900 mb-4">Post Not Found</h1>
         <Link href="/blog" className="text-electric-500 hover:underline">
           Return to Blog
@@ -118,7 +118,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
       />
 
       {/* Hero */}
-      <section className="pt-32 pb-8 bg-gradient-to-br from-accent-100 via-white to-accent-50">
+      <section className="pt-40 pb-8 bg-gradient-to-br from-accent-100 via-white to-accent-50">
         <div className="container-narrow">
           <Link
             href="/blog"
