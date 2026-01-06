@@ -10,15 +10,8 @@ import { BUSINESS_INFO } from '@/lib/constants'
 
 export function HeroSection() {
   return (
-    <section className="relative min-h-[90vh] flex items-center bg-gradient-to-br from-accent-100 via-white to-accent-50 overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 bg-pattern opacity-50" />
-
-      {/* Decorative Elements */}
-      <div className="absolute top-20 right-0 w-96 h-96 bg-navy-900/5 rounded-full blur-3xl" />
-      <div className="absolute bottom-0 left-0 w-80 h-80 bg-electric-500/5 rounded-full blur-3xl" />
-
-      <div className="container-wide relative z-10 py-24 lg:py-32">
+    <section className="pt-32 pb-16 bg-gradient-to-br from-accent-100 via-white to-accent-50 overflow-hidden">
+      <div className="container-wide">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left Column - Content */}
           <motion.div
@@ -147,18 +140,6 @@ export function HeroSection() {
             </motion.div>
           </motion.div>
         </div>
-      </div>
-
-      {/* Bottom Wave Separator */}
-      <div className="absolute bottom-0 left-0 right-0">
-        <svg
-          className="w-full h-16 text-white"
-          preserveAspectRatio="none"
-          viewBox="0 0 1440 54"
-          fill="currentColor"
-        >
-          <path d="M0 22L60 16.7C120 11 240 1.00001 360 0.700012C480 1.00001 600 11 720 16.7C840 22 960 22 1080 19.8C1200 17 1320 11 1380 8.50001L1440 5.70001V54H1380C1320 54 1200 54 1080 54C960 54 840 54 720 54C600 54 480 54 360 54C240 54 120 54 60 54H0V22Z" />
-        </svg>
       </div>
     </section>
   )
