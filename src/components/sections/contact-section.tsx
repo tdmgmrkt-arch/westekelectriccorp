@@ -28,11 +28,6 @@ const contactBenefits = [
 export function ContactSection() {
   return (
     <section className="section-padding bg-navy-900 relative overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0 bg-[url('/images/pattern-grid.svg')]" />
-      </div>
-
       <div className="container-wide relative z-10">
         <div className="grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
           {/* Left Column - Content & Image */}
