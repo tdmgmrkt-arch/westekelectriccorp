@@ -21,9 +21,9 @@ export const BUSINESS_INFO = {
   license: 'Westek Electric Corp. | License #C10-1100272',
   founded: 2010,
   social: {
-    facebook: 'https://facebook.com/socalelectricpros',
-    instagram: 'https://instagram.com/socalelectricpros',
-    yelp: 'https://yelp.com/biz/socal-electric-pros',
+    facebook: 'https://www.facebook.com/1westekelectric',
+    instagram: 'https://www.instagram.com/westekelectricco',
+    yelp: 'https://www.yelp.com/biz/westek-electric-lake-elsinore-9',
     google: 'https://g.page/socalelectricpros',
   },
 } as const
