@@ -29,42 +29,42 @@ export function Footer() {
     <footer className="bg-navy-900 text-white">
       {/* Trust Bar */}
       <div className="border-b border-navy-800">
-        <div className="container-wide py-6">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-full bg-navy-800 flex items-center justify-center">
-                <ShieldCheck className="w-5 h-5 text-electric-500" />
+        <div className="container-wide py-4 md:py-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+            <div className="flex items-center gap-2 md:gap-3">
+              <div className="w-9 h-9 md:w-10 md:h-10 rounded-full bg-navy-800 flex items-center justify-center shrink-0">
+                <ShieldCheck className="w-4 h-4 md:w-5 md:h-5 text-electric-500" />
               </div>
-              <div>
-                <p className="font-semibold text-sm">Licensed & Insured</p>
-                <p className="text-xs text-navy-300">{BUSINESS_INFO.license}</p>
-              </div>
-            </div>
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-full bg-navy-800 flex items-center justify-center">
-                <Clock className="w-5 h-5 text-electric-500" />
-              </div>
-              <div>
-                <p className="font-semibold text-sm">24/7 Emergency</p>
-                <p className="text-xs text-navy-300">Always Available</p>
+              <div className="min-w-0">
+                <p className="font-semibold text-xs md:text-sm truncate">Licensed & Insured</p>
+                <p className="text-[10px] md:text-xs text-navy-300 truncate">{BUSINESS_INFO.license}</p>
               </div>
             </div>
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-full bg-navy-800 flex items-center justify-center">
-                <Award className="w-5 h-5 text-electric-500" />
+            <div className="flex items-center gap-2 md:gap-3">
+              <div className="w-9 h-9 md:w-10 md:h-10 rounded-full bg-navy-800 flex items-center justify-center shrink-0">
+                <Clock className="w-4 h-4 md:w-5 md:h-5 text-electric-500" />
               </div>
-              <div>
-                <p className="font-semibold text-sm">15+ Years</p>
-                <p className="text-xs text-navy-300">Experience</p>
+              <div className="min-w-0">
+                <p className="font-semibold text-xs md:text-sm">24/7 Emergency</p>
+                <p className="text-[10px] md:text-xs text-navy-300">Always Available</p>
               </div>
             </div>
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-full bg-navy-800 flex items-center justify-center">
-                <Star className="w-5 h-5 text-electric-500" />
+            <div className="flex items-center gap-2 md:gap-3">
+              <div className="w-9 h-9 md:w-10 md:h-10 rounded-full bg-navy-800 flex items-center justify-center shrink-0">
+                <Award className="w-4 h-4 md:w-5 md:h-5 text-electric-500" />
               </div>
-              <div>
-                <p className="font-semibold text-sm">4.9 Star Rating</p>
-                <p className="text-xs text-navy-300">127+ Reviews</p>
+              <div className="min-w-0">
+                <p className="font-semibold text-xs md:text-sm">15+ Years</p>
+                <p className="text-[10px] md:text-xs text-navy-300">Experience</p>
+              </div>
+            </div>
+            <div className="flex items-center gap-2 md:gap-3">
+              <div className="w-9 h-9 md:w-10 md:h-10 rounded-full bg-navy-800 flex items-center justify-center shrink-0">
+                <Star className="w-4 h-4 md:w-5 md:h-5 text-electric-500" />
+              </div>
+              <div className="min-w-0">
+                <p className="font-semibold text-xs md:text-sm">4.9 Star Rating</p>
+                <p className="text-[10px] md:text-xs text-navy-300">127+ Reviews</p>
               </div>
             </div>
           </div>
@@ -90,12 +90,12 @@ export function Footer() {
               and all of Southern California. Quality work, honest pricing,
               guaranteed satisfaction.
             </p>
-            <div className="flex gap-3">
+            <div className="flex gap-2 md:gap-3">
               <a
                 href={BUSINESS_INFO.social.facebook}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-navy-800 flex items-center justify-center hover:bg-electric-500 transition-colors"
+                className="w-11 h-11 md:w-10 md:h-10 min-h-[44px] min-w-[44px] rounded-full bg-navy-800 flex items-center justify-center hover:bg-electric-500 active:bg-electric-600 transition-colors"
                 aria-label="Facebook"
               >
                 <Facebook className="w-5 h-5" />
@@ -104,7 +104,7 @@ export function Footer() {
                 href={BUSINESS_INFO.social.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-navy-800 flex items-center justify-center hover:bg-electric-500 transition-colors"
+                className="w-11 h-11 md:w-10 md:h-10 min-h-[44px] min-w-[44px] rounded-full bg-navy-800 flex items-center justify-center hover:bg-electric-500 active:bg-electric-600 transition-colors"
                 aria-label="Instagram"
               >
                 <Instagram className="w-5 h-5" />
@@ -113,7 +113,7 @@ export function Footer() {
                 href={BUSINESS_INFO.social.yelp}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-navy-800 flex items-center justify-center hover:bg-electric-500 transition-colors"
+                className="w-11 h-11 md:w-10 md:h-10 min-h-[44px] min-w-[44px] rounded-full bg-navy-800 flex items-center justify-center hover:bg-electric-500 active:bg-electric-600 transition-colors"
                 aria-label="Yelp"
               >
                 <Star className="w-5 h-5" />
@@ -123,15 +123,15 @@ export function Footer() {
 
           {/* Services */}
           <div>
-            <h3 className="font-heading font-semibold text-lg mb-4">
+            <h3 className="font-heading font-semibold text-lg mb-3 md:mb-4">
               Our Services
             </h3>
-            <ul className="space-y-3">
+            <ul className="space-y-1 md:space-y-2">
               {footerServices.map((service) => (
                 <li key={service.href}>
                   <Link
                     href={service.href as never}
-                    className="text-navy-200 hover:text-electric-400 transition-colors text-sm"
+                    className="text-navy-200 hover:text-electric-400 active:text-electric-300 transition-colors text-sm py-2 -my-1 min-h-[44px] flex items-center"
                   >
                     {service.label}
                   </Link>
@@ -142,31 +142,31 @@ export function Footer() {
 
           {/* Service Areas */}
           <div>
-            <h3 className="font-heading font-semibold text-lg mb-4">
+            <h3 className="font-heading font-semibold text-lg mb-3 md:mb-4">
               Service Areas
             </h3>
-            <ul className="grid grid-cols-2 gap-x-4 gap-y-2">
+            <ul className="grid grid-cols-2 gap-x-3 md:gap-x-4 gap-y-1.5 md:gap-y-2">
               {SERVICE_AREAS.slice(0, 10).map((area) => (
                 <li key={area}>
                   <span className="text-navy-200 text-sm">{area}</span>
                 </li>
               ))}
             </ul>
-            <p className="mt-4 text-electric-400 text-sm font-medium">
+            <p className="mt-3 md:mt-4 text-electric-400 text-sm font-medium">
               & Surrounding Areas
             </p>
           </div>
 
           {/* Contact Info */}
           <div>
-            <h3 className="font-heading font-semibold text-lg mb-4">
+            <h3 className="font-heading font-semibold text-lg mb-3 md:mb-4">
               Contact Us
             </h3>
-            <ul className="space-y-4">
+            <ul className="space-y-3 md:space-y-4">
               <li>
                 <a
                   href={`tel:${BUSINESS_INFO.phoneRaw}`}
-                  className="flex items-start gap-3 text-navy-200 hover:text-electric-400 transition-colors"
+                  className="flex items-start gap-3 text-navy-200 hover:text-electric-400 active:text-electric-300 transition-colors py-1 -my-1 min-h-[44px]"
                 >
                   <Phone className="w-5 h-5 mt-0.5 shrink-0" />
                   <div>
@@ -178,14 +178,14 @@ export function Footer() {
               <li>
                 <a
                   href={`mailto:${BUSINESS_INFO.email}`}
-                  className="flex items-center gap-3 text-navy-200 hover:text-electric-400 transition-colors"
+                  className="flex items-center gap-3 text-navy-200 hover:text-electric-400 active:text-electric-300 transition-colors py-2 -my-1 min-h-[44px]"
                 >
                   <Mail className="w-5 h-5 shrink-0" />
-                  <span className="text-sm">{BUSINESS_INFO.email}</span>
+                  <span className="text-sm break-all">{BUSINESS_INFO.email}</span>
                 </a>
               </li>
               <li>
-                <div className="flex items-start gap-3 text-navy-200">
+                <div className="flex items-start gap-3 text-navy-200 py-1">
                   <MapPin className="w-5 h-5 mt-0.5 shrink-0" />
                   <address className="not-italic text-sm">
                     {BUSINESS_INFO.address.street}
@@ -196,7 +196,7 @@ export function Footer() {
                 </div>
               </li>
               <li>
-                <div className="flex items-start gap-3 text-navy-200">
+                <div className="flex items-start gap-3 text-navy-200 py-1">
                   <Clock className="w-5 h-5 mt-0.5 shrink-0" />
                   <div className="text-sm">
                     <p>Mon-Fri: {BUSINESS_INFO.hours.weekdays}</p>
@@ -212,27 +212,27 @@ export function Footer() {
 
       {/* Bottom Bar */}
       <div className="border-t border-navy-800">
-        <div className="container-wide py-6">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-navy-300 text-sm text-center md:text-left">
+        <div className="container-wide py-4 md:py-6">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-3 md:gap-4">
+            <p className="text-navy-300 text-xs md:text-sm text-center md:text-left">
               © {currentYear} {BUSINESS_INFO.name}. All rights reserved.
             </p>
-            <div className="flex items-center gap-6 text-sm">
+            <div className="flex items-center gap-1 md:gap-6 text-sm">
               <Link
                 href="/privacy"
-                className="text-navy-300 hover:text-white transition-colors"
+                className="text-navy-300 hover:text-white active:text-electric-400 transition-colors px-2 py-2 min-h-[44px] flex items-center"
               >
                 Privacy Policy
               </Link>
               <Link
                 href="/terms"
-                className="text-navy-300 hover:text-white transition-colors"
+                className="text-navy-300 hover:text-white active:text-electric-400 transition-colors px-2 py-2 min-h-[44px] flex items-center"
               >
                 Terms of Service
               </Link>
               <a
                 href="/sitemap.xml"
-                className="text-navy-300 hover:text-white transition-colors"
+                className="text-navy-300 hover:text-white active:text-electric-400 transition-colors px-2 py-2 min-h-[44px] flex items-center"
               >
                 Sitemap
               </a>

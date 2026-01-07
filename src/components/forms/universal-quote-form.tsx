@@ -250,14 +250,14 @@ export function UniversalQuoteForm({
 
   if (isSubmitted) {
     return (
-      <div className="bg-green-50 rounded-2xl p-8 text-center">
-        <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-          <CheckCircle2 className="w-8 h-8 text-green-600" />
+      <div className="bg-green-50 rounded-2xl p-6 md:p-8 text-center">
+        <div className="w-14 h-14 md:w-16 md:h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-3 md:mb-4">
+          <CheckCircle2 className="w-7 h-7 md:w-8 md:h-8 text-green-600" />
         </div>
-        <h3 className="text-xl font-heading font-semibold text-green-800 mb-2">
+        <h3 className="text-lg md:text-xl font-heading font-semibold text-green-800 mb-2">
           Thank You!
         </h3>
-        <p className="text-green-700">
+        <p className="text-green-700 text-sm md:text-base">
           We&apos;ve received your quote request and will contact you within 24 hours.
         </p>
       </div>
@@ -360,15 +360,15 @@ export function UniversalQuoteForm({
               return (
                 <span
                   key={serviceId}
-                  className="inline-flex items-center gap-1 bg-electric-100 text-electric-700 px-3 py-1 rounded-full text-sm"
+                  className="inline-flex items-center gap-1 bg-electric-100 text-electric-700 pl-3 pr-1 py-1 rounded-full text-sm"
                 >
                   {service.label}
                   <button
                     type="button"
                     onClick={() => removeService(serviceId)}
-                    className="hover:text-electric-900 transition-colors"
+                    className="hover:text-electric-900 active:text-electric-900 transition-colors p-1.5 min-h-[44px] min-w-[44px] flex items-center justify-center -mr-1"
                   >
-                    <X className="w-3.5 h-3.5" />
+                    <X className="w-4 h-4" />
                   </button>
                 </span>
               )
@@ -401,18 +401,18 @@ export function UniversalQuoteForm({
 
             {/* Dropdown Menu */}
             {isDropdownOpen && (
-              <div className="absolute z-50 mt-1 w-full bg-white border border-accent-300 rounded-xl shadow-lg max-h-48 overflow-y-auto">
+              <div className="absolute z-50 mt-1 w-full bg-white border border-accent-300 rounded-xl shadow-lg max-h-60 md:max-h-48 overflow-y-auto">
                 {availableServices.map((service) => (
                   <div
                     key={service.value}
-                    className="flex items-center gap-3 p-3 hover:bg-accent-50 cursor-pointer"
+                    className="flex items-center gap-3 px-3 py-3.5 md:py-3 hover:bg-accent-50 active:bg-accent-100 cursor-pointer min-h-[48px]"
                     onClick={() => handleServiceToggle(service.value)}
                   >
                     <input
                       type="checkbox"
                       checked={selectedServices.includes(service.value)}
                       onChange={() => {}}
-                      className="w-4 h-4 rounded border-charcoal-300 text-electric-500 focus:ring-electric-500 pointer-events-none"
+                      className="w-5 h-5 md:w-4 md:h-4 rounded border-charcoal-300 text-electric-500 focus:ring-electric-500 pointer-events-none shrink-0"
                     />
                     <span className="text-sm text-charcoal-700">{service.label}</span>
                   </div>
@@ -458,9 +458,9 @@ export function UniversalQuoteForm({
         )}
       </Button>
 
-      <p className="text-xs text-charcoal-500 text-center">
+      <p className="text-xs text-charcoal-500 text-center leading-relaxed">
         By submitting this form, you agree to our{' '}
-        <a href="/privacy" className="text-navy-700 hover:underline">
+        <a href="/privacy" className="text-navy-700 hover:underline active:text-electric-500 py-1">
           Privacy Policy
         </a>
         . We&apos;ll never share your information.

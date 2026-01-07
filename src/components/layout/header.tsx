@@ -31,15 +31,15 @@ export function Header() {
       )}
     >
       <div className="container-wide">
-        <nav className="flex items-center justify-between h-20">
+        <nav className="flex items-center justify-between h-16 md:h-18 lg:h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center group">
+          <Link href="/" className="flex items-center group min-h-[44px]">
             <Image
               src="/images/westek.logo.webp"
               alt="Westek Electric Corp."
               width={180}
               height={60}
-              className="h-20 w-auto object-contain"
+              className="h-12 md:h-16 lg:h-20 w-auto object-contain"
               priority
             />
           </Link>
@@ -71,20 +71,20 @@ export function Header() {
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="flex lg:hidden items-center gap-3">
-            <Button size="sm" asChild className="hidden sm:inline-flex">
+          <div className="flex lg:hidden items-center gap-2">
+            <Button size="sm" asChild className="min-h-[44px] min-w-[44px] px-3">
               <a href={`tel:${BUSINESS_INFO.phoneRaw}`}>
-                <Phone className="w-4 h-4" />
-                Call
+                <Phone className="w-5 h-5" />
+                <span className="hidden sm:inline ml-1">Call</span>
               </a>
             </Button>
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className={cn(
-                'p-2 rounded-lg transition-colors',
+                'p-3 rounded-lg transition-colors min-h-[44px] min-w-[44px] flex items-center justify-center',
                 isScrolled
-                  ? 'text-navy-900 hover:bg-navy-100'
-                  : 'text-navy-900 hover:bg-navy-100'
+                  ? 'text-navy-900 hover:bg-navy-100 active:bg-navy-200'
+                  : 'text-navy-900 hover:bg-navy-100 active:bg-navy-200'
               )}
               aria-label="Toggle menu"
             >
@@ -107,27 +107,27 @@ export function Header() {
             exit={{ opacity: 0, height: 0 }}
             className="lg:hidden bg-white border-t border-accent-100 shadow-medium"
           >
-            <div className="container-wide py-6">
-              <div className="flex flex-col gap-4">
+            <div className="container-wide py-4">
+              <div className="flex flex-col gap-1">
                 {NAV_LINKS.map((link) => (
                   <Link
                     key={link.href}
                     href={link.href}
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className="text-lg font-medium text-charcoal-800 hover:text-electric-500 transition-colors py-2"
+                    className="text-base font-medium text-charcoal-800 hover:text-electric-500 active:bg-accent-100 transition-colors py-3 px-2 -mx-2 rounded-lg min-h-[44px] flex items-center"
                   >
                     {link.label}
                   </Link>
                 ))}
-                <hr className="border-accent-200 my-2" />
+                <hr className="border-accent-200 my-3" />
                 <a
                   href={`tel:${BUSINESS_INFO.phoneRaw}`}
-                  className="flex items-center gap-3 text-lg font-semibold text-navy-900"
+                  className="flex items-center gap-3 text-base font-semibold text-navy-900 py-3 px-2 -mx-2 rounded-lg min-h-[44px] active:bg-accent-100"
                 >
                   <Phone className="w-5 h-5" />
                   {BUSINESS_INFO.phone}
                 </a>
-                <Button asChild size="lg" className="w-full mt-2">
+                <Button asChild size="lg" className="w-full mt-3 min-h-[48px]">
                   <a href={`tel:${BUSINESS_INFO.phoneRaw}`}>
                     Call Now for Free Estimate
                   </a>
