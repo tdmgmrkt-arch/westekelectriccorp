@@ -136,17 +136,6 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
-
-      {/* Map Placeholder */}
-      <section className="h-64 md:h-80 lg:h-96 bg-accent-200">
-        <div className="w-full h-full flex items-center justify-center">
-          <div className="text-center text-charcoal-500 px-4">
-            <MapPin className="w-10 h-10 md:w-12 md:h-12 mx-auto mb-3 md:mb-4" />
-            <p className="font-medium text-sm md:text-base">Google Maps Embed</p>
-            <p className="text-xs md:text-sm">Replace with actual map integration</p>
-          </div>
-        </div>
-      </section>
     </>
   )
 }
