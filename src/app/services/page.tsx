@@ -1,17 +1,27 @@
 import { Metadata } from 'next'
-import { generateServiceSchema } from '@/lib/seo'
+import { generateServiceSchema, generateBreadcrumbSchema } from '@/lib/seo'
 import { ServicesContent } from '@/components/sections/services-content'
 
 export const metadata: Metadata = {
   title: 'Electrical Services | Residential & Commercial',
   description:
-    'Comprehensive electrical services in Southern California. Residential & commercial wiring, breakers, lighting, code corrections, new construction. Licensed & insured.',
+    'Comprehensive electrical services in Southern California. Residential & commercial wiring, breakers, lighting, code corrections. Licensed & insured.',
   alternates: {
     canonical: '/services',
+  },
+  openGraph: {
+    title: 'Electrical Services | Westek Electric Corp.',
+    description:
+      'Full-service residential and commercial electrical contractor in Southern California. Wiring, lighting, breakers, code corrections, and new construction.',
   },
 }
 
 export default function ServicesPage() {
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: 'Home', url: '/' },
+    { name: 'Services', url: '/services' },
+  ])
+
   const serviceSchemas = [
     generateServiceSchema({
       name: 'Residential Electrical Services',
@@ -31,6 +41,12 @@ export default function ServicesPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(serviceSchemas),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbSchema),
         }}
       />
       <ServicesContent />

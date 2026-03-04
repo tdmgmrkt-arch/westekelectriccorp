@@ -4,7 +4,11 @@ import { Calendar, Clock, ArrowLeft, ArrowRight, User } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 import { BLOG_POSTS_PREVIEW, BUSINESS_INFO } from '@/lib/constants'
-import { generateArticleSchema } from '@/lib/seo'
+import { generateArticleSchema, generateBreadcrumbSchema } from '@/lib/seo'
+
+export async function generateStaticParams() {
+  return BLOG_POSTS_PREVIEW.map((post) => ({ slug: post.slug }))
+}
 
 // This would normally come from a CMS or MDX files
 const blogPostContent = {
@@ -74,6 +78,11 @@ export async function generateMetadata({
     alternates: {
       canonical: `/news/${params.slug}`,
     },
+    openGraph: {
+      title: `${post.title} | Westek Electric Corp. Blog`,
+      description: post.excerpt,
+      type: 'article',
+    },
   }
 }
 
@@ -99,6 +108,12 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
     datePublished: post.date,
   })
 
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: 'Home', url: '/' },
+    { name: 'Blog', url: '/news' },
+    { name: post.title, url: `/news/${params.slug}` },
+  ])
+
   const formatDate = (dateString: string) => {
     const date = new Date(dateString)
     return date.toLocaleDateString('en-US', {
@@ -114,6 +129,12 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(articleSchema),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbSchema),
         }}
       />
 

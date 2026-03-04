@@ -4,13 +4,19 @@ import { Calendar, Clock, ArrowRight } from 'lucide-react'
 import { Card, CardContent } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { BLOG_POSTS_PREVIEW } from '@/lib/constants'
+import { generateBreadcrumbSchema } from '@/lib/seo'
 
 export const metadata: Metadata = {
-  title: 'Blog | Electrical Tips & News',
+  title: 'Electrical Tips & News',
   description:
     'Expert electrical tips, guides, and industry news from Westek Electric Corp. Learn about EV chargers, panel upgrades, LED lighting, and electrical safety.',
   alternates: {
     canonical: '/news',
+  },
+  openGraph: {
+    title: 'Electrical Tips & News | Westek Electric Corp. Blog',
+    description:
+      'Expert electrical tips and guides. Learn about EV chargers, panel upgrades, LED lighting, and home electrical safety.',
   },
 }
 
@@ -53,8 +59,19 @@ function formatDate(dateString: string): string {
 }
 
 export default function BlogPage() {
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: 'Home', url: '/' },
+    { name: 'Blog', url: '/news' },
+  ])
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbSchema),
+        }}
+      />
       {/* Hero */}
       <section className="pt-40 pb-16 bg-gradient-to-br from-accent-100 via-white to-accent-50">
         <div className="container-wide">
@@ -144,13 +161,17 @@ export default function BlogPage() {
               Get the latest electrical tips and industry news delivered to your inbox.
             </p>
             <form className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+              <label htmlFor="newsletter-email" className="sr-only">Email address</label>
               <input
+                id="newsletter-email"
                 type="email"
                 placeholder="Enter your email"
+                aria-label="Email address for newsletter"
                 className="flex-1 h-12 px-4 rounded-xl border border-accent-300 focus:outline-none focus:ring-2 focus:ring-navy-500"
               />
               <button
                 type="submit"
+                aria-label="Subscribe to newsletter"
                 className="h-12 px-6 bg-electric-500 text-white font-semibold rounded-xl hover:bg-electric-600 transition-colors"
               >
                 Subscribe

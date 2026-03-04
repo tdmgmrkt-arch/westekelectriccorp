@@ -10,11 +10,16 @@ import { BlogPreviewSection } from '@/components/sections/blog-preview'
 import { generateFAQSchema } from '@/lib/seo'
 
 export const metadata: Metadata = {
-  title: 'Home',
+  title: 'Electrician in Lake Elsinore & Temecula | 24/7 Service',
   description:
-    'Westek Electric Corp. - Your trusted electricians in Lake Elsinore, Temecula, Murrieta, and Southern California. Licensed residential and commercial electrical services, EV charger installation, panel upgrades. 24/7 emergency service available. Free estimates.',
+    'Top-rated electricians in Lake Elsinore, Temecula & Murrieta. Residential, commercial, EV chargers, panel upgrades. Licensed C10 contractor. Free estimates.',
   alternates: {
     canonical: '/',
+  },
+  openGraph: {
+    title: 'Westek Electric Corp. | Licensed Electricians in Southern California',
+    description:
+      'Top-rated electricians in Lake Elsinore, Temecula & Murrieta. Residential, commercial, EV charger installation, panel upgrades. Free estimates.',
   },
 }
 

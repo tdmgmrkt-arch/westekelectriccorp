@@ -3,19 +3,36 @@ import { Phone, Mail, MapPin, Clock } from 'lucide-react'
 import { Card, CardContent } from '@/components/ui/card'
 import { UniversalQuoteForm } from '@/components/forms/universal-quote-form'
 import { BUSINESS_INFO, SERVICE_AREAS } from '@/lib/constants'
+import { generateBreadcrumbSchema } from '@/lib/seo'
 
 export const metadata: Metadata = {
-  title: 'Contact Us',
+  title: 'Contact Us - Free Electrical Estimates',
   description:
-    'Contact Westek Electric Corp. for electrical services in Lake Elsinore, Temecula & Murrieta. Call (909) 996-6678 for free estimates. 24/7 emergency service available.',
+    'Get a free electrical estimate today. Call (909) 996-6678 or fill out our online form. Serving Lake Elsinore, Temecula, Murrieta & all of Southern California.',
   alternates: {
     canonical: '/contact',
+  },
+  openGraph: {
+    title: 'Contact Westek Electric Corp. | Free Estimates',
+    description:
+      'Get a free electrical estimate today. Call (909) 996-6678 or fill out our online form. 24/7 emergency service available.',
   },
 }
 
 export default function ContactPage() {
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: 'Home', url: '/' },
+    { name: 'Contact Us', url: '/contact' },
+  ])
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbSchema),
+        }}
+      />
       {/* Hero */}
       <section className="pt-24 pb-10 md:pt-32 md:pb-14 lg:pt-40 lg:pb-16 bg-gradient-to-br from-accent-100 via-white to-accent-50">
         <div className="container-wide">

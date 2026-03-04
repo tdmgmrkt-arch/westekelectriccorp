@@ -22,15 +22,22 @@ export function Header() {
   }, [])
 
   return (
-    <header
-      className={cn(
-        'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
-        isScrolled
-          ? 'bg-white shadow-soft'
-          : 'bg-white/95 backdrop-blur-md'
-      )}
-    >
-      <div className="container-wide">
+    <>
+      <a
+        href="#main"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[60] focus:bg-electric-500 focus:text-white focus:px-4 focus:py-2 focus:rounded-lg focus:text-sm focus:font-semibold"
+      >
+        Skip to main content
+      </a>
+      <header
+        className={cn(
+          'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
+          isScrolled
+            ? 'bg-white shadow-soft'
+            : 'bg-white/95 backdrop-blur-md'
+        )}
+      >
+        <div className="container-wide">
         <nav className="flex items-center justify-between h-16 md:h-18 lg:h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center group min-h-[44px]">
@@ -138,5 +145,6 @@ export function Header() {
         )}
       </AnimatePresence>
     </header>
+    </>
   )
 }

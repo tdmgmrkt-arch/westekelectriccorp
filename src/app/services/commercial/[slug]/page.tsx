@@ -7,7 +7,7 @@ import {
   COMMERCIAL_SERVICE_DETAILS,
 } from '@/lib/service-details'
 import { COMMERCIAL_SERVICES } from '@/lib/constants'
-import { generateServiceSchema } from '@/lib/seo'
+import { generateServiceSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/seo'
 
 interface PageProps {
   params: { slug: string }
@@ -68,6 +68,15 @@ export default function CommercialServicePage({ params }: PageProps) {
     url: `/services/commercial/${params.slug}`,
   })
 
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: 'Home', url: '/' },
+    { name: 'Services', url: '/services' },
+    { name: 'Commercial', url: '/services' },
+    { name: service.title, url: `/services/commercial/${params.slug}` },
+  ])
+
+  const faqSchema = service.faqs?.length ? generateFAQSchema(service.faqs) : null
+
   return (
     <>
       <script
@@ -76,6 +85,20 @@ export default function CommercialServicePage({ params }: PageProps) {
           __html: JSON.stringify(serviceSchema),
         }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbSchema),
+        }}
+      />
+      {faqSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(faqSchema),
+          }}
+        />
+      )}
       <ServicePageContent
         service={service}
         serviceType="business"

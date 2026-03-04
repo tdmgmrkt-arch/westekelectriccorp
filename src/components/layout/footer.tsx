@@ -12,6 +12,8 @@ import {
   Award,
 } from 'lucide-react'
 import { BUSINESS_INFO, SERVICE_AREAS } from '@/lib/constants'
+import { cityToSlug } from '@/lib/service-areas'
+import { FaYelp } from 'react-icons/fa'
 
 const footerServices = [
   { label: 'Residential Electrical', href: '/services#residential' },
@@ -76,7 +78,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 md:gap-10 lg:gap-8">
 
           {/* Column 1: Brand */}
-          <div className="lg:col-span-4">
+          <div className="lg:col-span-3">
             <Link href="/" className="inline-block mb-5">
               <Image
                 src="/images/westek.logo.webp"
@@ -86,10 +88,9 @@ export function Footer() {
                 className="h-16 w-auto object-contain"
               />
             </Link>
-            <p className="text-navy-200 text-sm leading-relaxed mb-6 max-w-xs">
+            <p className="text-navy-200 text-sm leading-relaxed mb-6">
               Your trusted electrical contractors serving Lake Elsinore, Temecula, Murrieta,
-              and all of Southern California. Quality work, honest pricing,
-              guaranteed satisfaction.
+              and all of Southern California.
             </p>
             {/* Social Icons */}
             <div className="flex items-center gap-3">
@@ -118,7 +119,7 @@ export function Footer() {
                 className="w-10 h-10 min-h-[44px] min-w-[44px] rounded-lg bg-navy-800 flex items-center justify-center hover:bg-electric-500 active:bg-electric-600 transition-colors"
                 aria-label="Yelp"
               >
-                <Star className="w-5 h-5" />
+                <FaYelp className="w-5 h-5" />
               </a>
             </div>
           </div>
@@ -143,20 +144,28 @@ export function Footer() {
           </div>
 
           {/* Column 3: Service Areas */}
-          <div className="lg:col-span-3">
+          <div className="lg:col-span-4">
             <h3 className="text-white font-bold text-base uppercase tracking-wide mb-4 pb-2 border-b border-navy-700">
               Service Areas
             </h3>
             <ul className="grid grid-cols-2 gap-x-4 gap-y-2">
-              {SERVICE_AREAS.slice(0, 10).map((area) => (
+              {SERVICE_AREAS.map((area) => (
                 <li key={area}>
-                  <span className="text-navy-200 text-sm">{area}</span>
+                  <Link
+                    href={`/service-areas/${cityToSlug(area)}`}
+                    className="text-navy-200 hover:text-electric-400 transition-colors text-sm"
+                  >
+                    {area}
+                  </Link>
                 </li>
               ))}
             </ul>
-            <p className="mt-4 text-electric-400 text-sm font-semibold">
-              & Surrounding Areas
-            </p>
+            <Link
+              href="/service-areas"
+              className="mt-4 text-electric-400 text-sm font-semibold block hover:text-electric-300 transition-colors"
+            >
+              View All Service Areas &rarr;
+            </Link>
           </div>
 
           {/* Column 4: Contact Info */}
@@ -170,7 +179,7 @@ export function Footer() {
                   href={`tel:${BUSINESS_INFO.phoneRaw}`}
                   className="flex items-start gap-3 text-navy-200 hover:text-electric-400 active:text-electric-300 transition-colors group"
                 >
-                  <div className="w-9 h-9 rounded-lg bg-navy-800 flex items-center justify-center shrink-0 group-hover:bg-electric-500 transition-colors">
+                  <div className="w-9 h-9 rounded-lg bg-navy-800 flex items-center justify-center shrink-0 group-hover:bg-navy-700 transition-colors">
                     <Phone className="w-4 h-4" />
                   </div>
                   <div>
@@ -184,7 +193,7 @@ export function Footer() {
                   href={`mailto:${BUSINESS_INFO.email}`}
                   className="flex items-start gap-3 text-navy-200 hover:text-electric-400 active:text-electric-300 transition-colors group"
                 >
-                  <div className="w-9 h-9 rounded-lg bg-navy-800 flex items-center justify-center shrink-0 group-hover:bg-electric-500 transition-colors">
+                  <div className="w-9 h-9 rounded-lg bg-navy-800 flex items-center justify-center shrink-0 group-hover:bg-navy-700 transition-colors">
                     <Mail className="w-4 h-4" />
                   </div>
                   <div>
@@ -193,26 +202,32 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <div className="flex items-start gap-3 text-navy-200">
-                  <div className="w-9 h-9 rounded-lg bg-navy-800 flex items-center justify-center shrink-0">
+                <Link
+                  href="/contact"
+                  className="flex items-start gap-3 text-navy-200 hover:text-electric-400 active:text-electric-300 transition-colors group"
+                >
+                  <div className="w-9 h-9 rounded-lg bg-navy-800 flex items-center justify-center shrink-0 group-hover:bg-navy-700 transition-colors">
                     <MapPin className="w-4 h-4" />
                   </div>
                   <address className="not-italic text-sm">
                     {BUSINESS_INFO.address.street}<br />
                     {BUSINESS_INFO.address.city}, {BUSINESS_INFO.address.state} {BUSINESS_INFO.address.zip}
                   </address>
-                </div>
+                </Link>
               </li>
               <li>
-                <div className="flex items-start gap-3 text-navy-200">
-                  <div className="w-9 h-9 rounded-lg bg-navy-800 flex items-center justify-center shrink-0">
+                <Link
+                  href="/contact"
+                  className="flex items-start gap-3 text-navy-200 hover:text-electric-400 active:text-electric-300 transition-colors group"
+                >
+                  <div className="w-9 h-9 rounded-lg bg-navy-800 flex items-center justify-center shrink-0 group-hover:bg-navy-700 transition-colors">
                     <Clock className="w-4 h-4" />
                   </div>
                   <div className="text-sm">
                     <p>Mon-Fri: {BUSINESS_INFO.hours.weekdays}</p>
                     <p>Sat-Sun: Closed</p>
                   </div>
-                </div>
+                </Link>
               </li>
             </ul>
           </div>

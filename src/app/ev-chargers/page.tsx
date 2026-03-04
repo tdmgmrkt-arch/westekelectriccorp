@@ -5,7 +5,7 @@ import { BatteryCharging, Zap, CheckCircle2, ArrowRight } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import { EV_CHARGER_BRANDS, BUSINESS_INFO } from '@/lib/constants'
-import { generateServiceSchema, generateFAQSchema } from '@/lib/seo'
+import { generateServiceSchema, generateFAQSchema, generateBreadcrumbSchema } from '@/lib/seo'
 
 // Map brand IDs to image filenames
 const brandImages: Record<string, string> = {
@@ -16,11 +16,17 @@ const brandImages: Record<string, string> = {
 }
 
 export const metadata: Metadata = {
-  title: 'EV Charger Installation',
+  title: 'Home EV Charger Installation - Level 2',
   description:
     'Professional EV charger installation in Temecula & Murrieta. Tesla, Ford, Chevy, Rivian certified. Level 2 home charging. Permits included. Free estimates.',
   alternates: {
     canonical: '/ev-chargers',
+  },
+  openGraph: {
+    title: 'EV Charger Installation | Westek Electric Corp.',
+    description:
+      'Professional Level 2 EV charger installation for all makes. Tesla, Ford, Chevy, Rivian certified. Permits included. Free estimates.',
+    images: ['/images/Tesla-Charger.webp'],
   },
 }
 
@@ -79,12 +85,23 @@ export default function EVChargersPage() {
 
   const faqSchema = generateFAQSchema(evFAQs)
 
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: 'Home', url: '/' },
+    { name: 'EV Charger Installation', url: '/ev-chargers' },
+  ])
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify([serviceSchema, faqSchema]),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbSchema),
         }}
       />
 

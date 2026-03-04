@@ -13,12 +13,31 @@ module.exports = {
       'smart-home-electrical-requirements',
       'outdoor-lighting-installation-tips',
     ]
-    return blogSlugs.map((slug) => ({
+    const serviceAreaSlugs = [
+      'temecula', 'murrieta', 'menifee', 'lake-elsinore',
+      'wildomar', 'winchester', 'french-valley', 'fallbrook',
+      'hemet', 'san-jacinto', 'corona', 'riverside',
+    ]
+
+    const blogPaths = blogSlugs.map((slug) => ({
       loc: `/news/${slug}`,
       lastmod: new Date().toISOString(),
       changefreq: 'monthly',
       priority: 0.7,
     }))
+
+    const serviceAreaPaths = serviceAreaSlugs.map((slug) => ({
+      loc: `/service-areas/${slug}`,
+      lastmod: new Date().toISOString(),
+      changefreq: 'monthly',
+      priority: 0.8,
+    }))
+
+    return [
+      ...blogPaths,
+      { loc: '/service-areas', lastmod: new Date().toISOString(), changefreq: 'monthly', priority: 0.9 },
+      ...serviceAreaPaths,
+    ]
   },
   robotsTxtOptions: {
     policies: [

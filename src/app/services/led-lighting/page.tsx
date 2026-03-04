@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 import { ServicePageContent } from '@/components/sections/service-page-content'
 import { RESIDENTIAL_SERVICES, COMMERCIAL_SERVICES } from '@/lib/constants'
-import { generateServiceSchema } from '@/lib/seo'
+import { generateServiceSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/seo'
 import type { ServiceDetail } from '@/lib/service-details'
 
 const service: ServiceDetail = {
@@ -94,7 +94,8 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: `${service.fullTitle} | Westek Electric Corp.`,
-    description: service.description,
+    description:
+      'Energy-efficient LED upgrades, recessed lighting, and custom lighting designs for homes and businesses. Save up to 75% on energy costs.',
     images: [service.image],
   },
 }
@@ -123,12 +124,32 @@ export default function LEDLightingPage() {
     url: '/services/led-lighting',
   })
 
+  const faqSchema = generateFAQSchema(service.faqs)
+
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: 'Home', url: '/' },
+    { name: 'Services', url: '/services' },
+    { name: 'LED Lighting', url: '/services/led-lighting' },
+  ])
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(serviceSchema),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbSchema),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(faqSchema),
         }}
       />
       <ServicePageContent

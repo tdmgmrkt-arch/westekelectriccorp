@@ -5,13 +5,20 @@ import { ShieldCheck, Award, Users, Clock, CheckCircle2, ArrowRight } from 'luci
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import { BUSINESS_INFO, SERVICE_AREAS } from '@/lib/constants'
+import { generateBreadcrumbSchema } from '@/lib/seo'
 
 export const metadata: Metadata = {
-  title: 'About Us',
+  title: 'About Us - Trusted Electricians Since 2010',
   description:
-    'Westek Electric Corp. - Licensed electricians serving Lake Elsinore, Temecula & Murrieta since 2010. Family-owned, 15+ years experience, 24/7 emergency service. Learn about our team.',
+    'Family-owned since 2010 with 15+ years experience and 5,000+ projects completed. Meet owner Ryan Reese and the Westek Electric team serving Southern California.',
   alternates: {
     canonical: '/about',
+  },
+  openGraph: {
+    title: 'About Westek Electric Corp. | Family-Owned Since 2010',
+    description:
+      'Family-owned since 2010 with 15+ years experience and 5,000+ projects completed. Meet the Westek Electric team serving Southern California.',
+    images: ['/images/westek.trusted.service.webp'],
   },
 }
 
@@ -46,8 +53,19 @@ const values = [
 ]
 
 export default function AboutPage() {
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: 'Home', url: '/' },
+    { name: 'About Us', url: '/about' },
+  ])
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbSchema),
+        }}
+      />
       {/* Hero */}
       <section className="pt-40 pb-16 bg-gradient-to-br from-accent-100 via-white to-accent-50">
         <div className="container-wide">

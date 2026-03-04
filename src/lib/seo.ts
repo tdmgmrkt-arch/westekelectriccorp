@@ -123,6 +123,20 @@ export function generateLocalBusinessSchema() {
   }
 }
 
+export function generateWebSiteSchema() {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: BUSINESS_INFO.name,
+    url: siteUrl,
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: `${siteUrl}/services?q={search_term_string}`,
+      'query-input': 'required name=search_term_string',
+    },
+  }
+}
+
 export function generateServiceSchema(service: {
   name: string
   description: string
@@ -171,6 +185,74 @@ export function generateBreadcrumbSchema(items: { name: string; url: string }[])
       name: item.name,
       item: `${siteUrl}${item.url}`,
     })),
+  }
+}
+
+export function generateServiceAreaSchema(area: {
+  cityName: string
+  state: string
+  county: string
+  coordinates: { lat: number; lng: number }
+  url: string
+}) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Electrician',
+    '@id': `${siteUrl}/#organization`,
+    name: BUSINESS_INFO.name,
+    image: `${siteUrl}/images/westek.logo.webp`,
+    logo: `${siteUrl}/images/westek.logo.webp`,
+    url: siteUrl,
+    telephone: BUSINESS_INFO.phone,
+    email: BUSINESS_INFO.email,
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: BUSINESS_INFO.address.street,
+      addressLocality: BUSINESS_INFO.address.city,
+      addressRegion: BUSINESS_INFO.address.state,
+      postalCode: BUSINESS_INFO.address.zip,
+      addressCountry: 'US',
+    },
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: area.coordinates.lat,
+      longitude: area.coordinates.lng,
+    },
+    areaServed: {
+      '@type': 'City',
+      name: `${area.cityName}, ${area.state}`,
+      containedInPlace: {
+        '@type': 'AdministrativeArea',
+        name: area.county,
+      },
+    },
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '4.9',
+      reviewCount: '127',
+      bestRating: '5',
+      worstRating: '1',
+    },
+    priceRange: '$$',
+    openingHoursSpecification: [
+      {
+        '@type': 'OpeningHoursSpecification',
+        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+        opens: '07:00',
+        closes: '18:00',
+      },
+      {
+        '@type': 'OpeningHoursSpecification',
+        dayOfWeek: 'Saturday',
+        opens: '08:00',
+        closes: '16:00',
+      },
+    ],
+    sameAs: [
+      BUSINESS_INFO.social.facebook,
+      BUSINESS_INFO.social.instagram,
+      BUSINESS_INFO.social.yelp,
+    ],
   }
 }
 

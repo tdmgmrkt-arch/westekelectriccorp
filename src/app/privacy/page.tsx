@@ -1,19 +1,36 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 import { BUSINESS_INFO } from '@/lib/constants'
+import { generateBreadcrumbSchema } from '@/lib/seo'
 
 export const metadata: Metadata = {
   title: 'Privacy Policy',
   description:
-    'Privacy Policy for Westek Electric Corp. Learn how we collect, use, and protect your personal information.',
+    'Privacy Policy for Westek Electric Corp. Learn how we collect, use, and protect your personal information when you use our website and electrical services.',
   alternates: {
     canonical: '/privacy',
+  },
+  openGraph: {
+    title: 'Privacy Policy | Westek Electric Corp.',
+    description:
+      'Learn how Westek Electric Corp. collects, uses, and protects your personal information when you use our website and services.',
   },
 }
 
 export default function PrivacyPage() {
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: 'Home', url: '/' },
+    { name: 'Privacy Policy', url: '/privacy' },
+  ])
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbSchema),
+        }}
+      />
       {/* Hero */}
       <section className="pt-40 pb-16 bg-gradient-to-br from-accent-100 via-white to-accent-50">
         <div className="container-wide">

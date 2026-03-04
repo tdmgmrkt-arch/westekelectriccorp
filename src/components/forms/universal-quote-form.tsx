@@ -347,7 +347,7 @@ export function UniversalQuoteForm({
 
       {/* Service Needed */}
       <div>
-        <label className="block text-sm font-medium text-charcoal-700 mb-1.5">
+        <label id="service-needed-label" className="block text-sm font-medium text-charcoal-700 mb-1.5">
           Service Needed <span className="text-electric-500">*</span>
         </label>
 
@@ -381,6 +381,8 @@ export function UniversalQuoteForm({
             {/* Dropdown Toggle Button */}
             <button
               type="button"
+              aria-labelledby="service-needed-label"
+              aria-expanded={isDropdownOpen}
               onClick={() => setIsDropdownOpen(!isDropdownOpen)}
               className={cn(
                 'flex h-12 w-full items-center justify-between rounded-xl border bg-white px-4 py-2 text-base transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-navy-500 focus-visible:ring-offset-2',

@@ -4,8 +4,9 @@ import { Inter, Poppins } from 'next/font/google'
 import { Header } from '@/components/layout/header'
 import { Footer } from '@/components/layout/footer'
 import { QuoteModalProvider } from '@/components/forms/quote-modal'
-import { generateLocalBusinessSchema } from '@/lib/seo'
+import { generateLocalBusinessSchema, generateWebSiteSchema } from '@/lib/seo'
 import { AccessibilityWidget } from '@/components/accessibility-widget'
+import { CookieConsent } from '@/components/cookie-consent'
 import '@/styles/globals.css'
 
 const RECAPTCHA_SITE_KEY = '6LfdVUIsAAAAAEkutqurevpauvNgCikqQwCQchET'
@@ -29,7 +30,7 @@ export const metadata: Metadata = {
     template: '%s | Westek Electric Corp.',
   },
   description:
-    'Licensed electricians serving Lake Elsinore, Temecula, Murrieta & Southern California. Residential, commercial, EV charger installation, panel upgrades. 24/7 emergency service. Free estimates.',
+    'Licensed electricians serving Lake Elsinore, Temecula, Murrieta & Southern California. Residential & commercial electrical, EV chargers, panel upgrades.',
   keywords: [
     'electrician Lake Elsinore',
     'electrician Temecula',
@@ -93,12 +94,19 @@ export const metadata: Metadata = {
   // },
 }
 
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+}
+
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
   const localBusinessSchema = generateLocalBusinessSchema()
+  const webSiteSchema = generateWebSiteSchema()
 
   return (
     <html lang="en" className={`${inter.variable} ${poppins.variable}`}>
@@ -114,6 +122,12 @@ export default function RootLayout({
             __html: JSON.stringify(localBusinessSchema),
           }}
         />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(webSiteSchema),
+          }}
+        />
       </head>
       <body className="font-sans antialiased">
         <Script
@@ -122,10 +136,11 @@ export default function RootLayout({
         />
         <QuoteModalProvider>
           <Header />
-          <main>{children}</main>
+          <main id="main">{children}</main>
           <Footer />
         </QuoteModalProvider>
         <AccessibilityWidget />
+        <CookieConsent />
       </body>
     </html>
   )

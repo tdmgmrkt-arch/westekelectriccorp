@@ -1,19 +1,36 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 import { BUSINESS_INFO } from '@/lib/constants'
+import { generateBreadcrumbSchema } from '@/lib/seo'
 
 export const metadata: Metadata = {
   title: 'Terms of Service',
   description:
-    'Terms of Service for Westek Electric Corp. Read our terms and conditions for using our electrical services.',
+    'Terms of Service for Westek Electric Corp. Read our terms and conditions governing the use of our website and electrical contracting services.',
   alternates: {
     canonical: '/terms',
+  },
+  openGraph: {
+    title: 'Terms of Service | Westek Electric Corp.',
+    description:
+      'Read the terms and conditions governing the use of Westek Electric Corp. website and electrical contracting services in California.',
   },
 }
 
 export default function TermsPage() {
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: 'Home', url: '/' },
+    { name: 'Terms of Service', url: '/terms' },
+  ])
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbSchema),
+        }}
+      />
       {/* Hero */}
       <section className="pt-40 pb-16 bg-gradient-to-br from-accent-100 via-white to-accent-50">
         <div className="container-wide">
