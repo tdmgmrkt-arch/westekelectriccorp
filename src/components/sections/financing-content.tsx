@@ -124,10 +124,10 @@ export function FinancingContent() {
                   </a>
                 </Button>
                 <Button asChild variant="outline" size="lg">
-                  <Link href="/contact">
-                    Get Free Estimate
+                  <a href="#financing-form">
+                    Request Financing Info
                     <ArrowRight className="w-5 h-5 ml-1" />
-                  </Link>
+                  </a>
                 </Button>
               </div>
             </motion.div>
@@ -294,10 +294,10 @@ export function FinancingContent() {
                   </a>
                 </Button>
                 <Button asChild variant="outline-white" size="lg">
-                  <Link href="/contact">
-                    Request Free Quote
+                  <a href="#financing-form">
+                    Request Financing Info
                     <ArrowRight className="w-5 h-5 ml-1" />
-                  </Link>
+                  </a>
                 </Button>
               </div>
             </div>
@@ -316,7 +316,7 @@ export function FinancingContent() {
       </section>
 
       {/* Financing Form Section */}
-      <section className="section-padding bg-gradient-to-br from-white via-accent-50 to-white">
+      <section id="financing-form" className="section-padding bg-gradient-to-br from-white via-accent-50 to-white scroll-mt-24">
         <div className="container-wide">
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             <motion.div
@@ -397,7 +397,7 @@ export function FinancingContent() {
                 <CardContent className="p-6 lg:p-8">
                   <div className="mb-6">
                     <h3 className="text-2xl font-heading font-bold text-navy-900 mb-2">
-                      Request Financing Information
+                      Request Financing Options
                     </h3>
                     <p className="text-charcoal-600">
                       Fill out the form below and we&apos;ll contact you about financing options for your project.
@@ -430,10 +430,10 @@ export function FinancingContent() {
               </a>
             </Button>
             <Button asChild variant="outline-white" size="lg">
-              <Link href="/contact">
-                Request Free Estimate
+              <a href="#financing-form">
+                Request Financing Options
                 <ArrowRight className="w-5 h-5 ml-1" />
-              </Link>
+              </a>
             </Button>
           </div>
         </div>

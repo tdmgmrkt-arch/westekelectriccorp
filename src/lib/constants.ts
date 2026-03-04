@@ -49,10 +49,11 @@ export const NAV_LINKS = [
   { label: 'Home', href: '/' },
   { label: 'Services', href: '/services' },
   { label: 'Portfolio', href: '/portfolio' },
+  { label: 'Gallery', href: '/gallery' },
   { label: 'EV Chargers', href: '/ev-chargers' },
   { label: 'Financing', href: '/financing' },
   { label: 'About', href: '/about' },
-  { label: 'Blog', href: '/blog' },
+  { label: 'Blog', href: '/news' },
   { label: 'Contact', href: '/contact' },
 ] as const
 

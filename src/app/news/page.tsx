@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   description:
     'Expert electrical tips, guides, and industry news from Westek Electric Corp. Learn about EV chargers, panel upgrades, LED lighting, and electrical safety.',
   alternates: {
-    canonical: '/blog',
+    canonical: '/news',
   },
 }
 
@@ -78,7 +78,7 @@ export default function BlogPage() {
         <div className="container-wide">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {blogPosts.map((post) => (
-              <Link key={post.slug} href={`/blog/${post.slug}`} className="block group">
+              <Link key={post.slug} href={`/news/${post.slug}`} className="block group">
                 <Card className="h-full transition-all duration-300 hover:shadow-medium hover:-translate-y-1 overflow-hidden">
                   {/* Image Placeholder */}
                   <div className="aspect-[16/9] bg-gradient-to-br from-navy-800 to-navy-900 flex items-center justify-center relative">

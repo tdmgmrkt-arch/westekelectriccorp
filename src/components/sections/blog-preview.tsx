@@ -70,7 +70,7 @@ export function BlogPreviewSection() {
         >
           {BLOG_POSTS_PREVIEW.map((post) => (
             <motion.div key={post.slug} variants={itemVariants}>
-              <Link href={`/blog/${post.slug}`} className="block h-full group">
+              <Link href={`/news/${post.slug}`} className="block h-full group">
                 <Card className="h-full transition-all duration-300 hover:shadow-medium hover:-translate-y-1 overflow-hidden">
                   {/* Image Placeholder */}
                   <div className="aspect-[16/9] bg-gradient-to-br from-navy-800 to-navy-900 flex items-center justify-center relative overflow-hidden">
@@ -134,7 +134,7 @@ export function BlogPreviewSection() {
           className="text-center mt-12"
         >
           <Button asChild variant="outline" size="lg">
-            <Link href="/blog">
+            <Link href="/news">
               View All Articles
               <ArrowRight className="w-5 h-5 ml-1" />
             </Link>

@@ -4,6 +4,22 @@ module.exports = {
   generateRobotsTxt: true,
   generateIndexSitemap: false,
   exclude: ['/api/*'],
+  additionalPaths: async () => {
+    const blogSlugs = [
+      'ev-charger-installation-guide-temecula',
+      'signs-you-need-panel-upgrade',
+      'led-lighting-benefits-energy-savings',
+      'whole-house-rewiring-what-to-expect',
+      'smart-home-electrical-requirements',
+      'outdoor-lighting-installation-tips',
+    ]
+    return blogSlugs.map((slug) => ({
+      loc: `/news/${slug}`,
+      lastmod: new Date().toISOString(),
+      changefreq: 'monthly',
+      priority: 0.7,
+    }))
+  },
   robotsTxtOptions: {
     policies: [
       {
@@ -11,9 +27,6 @@ module.exports = {
         allow: '/',
         disallow: ['/api/'],
       },
-    ],
-    additionalSitemaps: [
-      'https://socalelectricpros.com/sitemap.xml',
     ],
   },
 }

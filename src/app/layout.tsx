@@ -5,6 +5,7 @@ import { Header } from '@/components/layout/header'
 import { Footer } from '@/components/layout/footer'
 import { QuoteModalProvider } from '@/components/forms/quote-modal'
 import { generateLocalBusinessSchema } from '@/lib/seo'
+import { AccessibilityWidget } from '@/components/accessibility-widget'
 import '@/styles/globals.css'
 
 const RECAPTCHA_SITE_KEY = '6LfdVUIsAAAAAEkutqurevpauvNgCikqQwCQchET'
@@ -87,9 +88,9 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  verification: {
-    google: 'your-google-verification-code',
-  },
+  // verification: {
+  //   google: 'YOUR_ACTUAL_GOOGLE_VERIFICATION_CODE',
+  // },
 }
 
 export default function RootLayout({
@@ -124,6 +125,7 @@ export default function RootLayout({
           <main>{children}</main>
           <Footer />
         </QuoteModalProvider>
+        <AccessibilityWidget />
       </body>
     </html>
   )

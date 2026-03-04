@@ -72,7 +72,7 @@ export async function generateMetadata({
     title: post.title,
     description: post.excerpt,
     alternates: {
-      canonical: `/blog/${params.slug}`,
+      canonical: `/news/${params.slug}`,
     },
   }
 }
@@ -85,7 +85,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
     return (
       <div className="pt-40 pb-16 text-center">
         <h1 className="text-2xl font-bold text-navy-900 mb-4">Post Not Found</h1>
-        <Link href="/blog" className="text-electric-500 hover:underline">
+        <Link href="/news" className="text-electric-500 hover:underline">
           Return to Blog
         </Link>
       </div>
@@ -95,7 +95,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
   const articleSchema = generateArticleSchema({
     title: post.title,
     description: post.excerpt,
-    url: `/blog/${params.slug}`,
+    url: `/news/${params.slug}`,
     datePublished: post.date,
   })
 
@@ -121,7 +121,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
       <section className="pt-40 pb-8 bg-gradient-to-br from-accent-100 via-white to-accent-50">
         <div className="container-narrow">
           <Link
-            href="/blog"
+            href="/news"
             className="inline-flex items-center gap-2 text-charcoal-600 hover:text-navy-900 mb-6 transition-colors"
           >
             <ArrowLeft className="w-4 h-4" />
@@ -214,7 +214,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
               .map((relatedPost) => (
                 <Link
                   key={relatedPost.slug}
-                  href={`/blog/${relatedPost.slug}`}
+                  href={`/news/${relatedPost.slug}`}
                   className="bg-white rounded-xl p-6 shadow-soft hover:shadow-medium transition-shadow group"
                 >
                   <Badge variant="default" className="mb-3">
