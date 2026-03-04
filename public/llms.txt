@@ -57,6 +57,8 @@ Lake Elsinore, Temecula, Murrieta, Menifee, Wildomar, Winchester, French Valley,
 - Home: https://socalelectricpros.com
 - About: https://socalelectricpros.com/about
 - Services: https://socalelectricpros.com/services
+- Switches & Outlets: https://socalelectricpros.com/services/switches-outlets
+- LED Lighting: https://socalelectricpros.com/services/led-lighting
 - EV Chargers: https://socalelectricpros.com/ev-chargers
 - Portfolio: https://socalelectricpros.com/portfolio
 - Gallery: https://socalelectricpros.com/gallery

@@ -14,7 +14,7 @@ import type { ServiceDetail } from '@/lib/service-details'
 interface ServicePageContentProps {
   service: ServiceDetail
   serviceType: 'residential' | 'business'
-  relatedServices: { id: string; title: string; category: string; href: string }[]
+  relatedServices: { id: string; title: string; category: string; href: string; image?: string }[]
 }
 
 export function ServicePageContent({ service, serviceType, relatedServices }: ServicePageContentProps) {
@@ -221,7 +221,17 @@ export function ServicePageContent({ service, serviceType, relatedServices }: Se
                   href={related.href as never}
                   className="group"
                 >
-                  <Card className="h-full hover:shadow-lg transition-all hover:-translate-y-1">
+                  <Card className="h-full hover:shadow-lg transition-all hover:-translate-y-1 overflow-hidden">
+                    {related.image && (
+                      <div className="relative aspect-[16/10] overflow-hidden">
+                        <Image
+                          src={related.image}
+                          alt={related.title}
+                          fill
+                          className="object-cover group-hover:scale-105 transition-transform duration-300"
+                        />
+                      </div>
+                    )}
                     <CardContent className="p-5">
                       <span className="text-electric-500 text-xs font-semibold uppercase tracking-wider">
                         {related.category}

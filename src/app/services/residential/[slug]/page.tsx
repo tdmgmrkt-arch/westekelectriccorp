@@ -59,6 +59,7 @@ export default function ResidentialServicePage({ params }: PageProps) {
       title: s.title,
       category: s.category,
       href: s.href,
+      image: s.image,
     }))
 
   const serviceSchema = generateServiceSchema({
