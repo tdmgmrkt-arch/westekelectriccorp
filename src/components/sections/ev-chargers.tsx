@@ -67,7 +67,7 @@ export function EVChargersSection() {
             </div>
 
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-navy-900 mb-4 md:mb-6">
-              EV Charger Installation in Murrieta & Temecula
+              EV Charger Installation in Lake Elsinore & Temecula Valley
             </h2>
 
             <p className="text-base md:text-lg text-charcoal-600 leading-relaxed mb-4 md:mb-6">

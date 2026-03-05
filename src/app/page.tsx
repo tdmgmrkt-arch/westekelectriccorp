@@ -10,7 +10,7 @@ import { BlogPreviewSection } from '@/components/sections/blog-preview'
 import { generateFAQSchema } from '@/lib/seo'
 
 export const metadata: Metadata = {
-  title: 'Electrician in Lake Elsinore & Temecula | 24/7 Service',
+  title: 'Electrician in Lake Elsinore & Temecula Valley | 24/7 Service',
   description:
     'Top-rated electricians in Lake Elsinore, Temecula & Murrieta. Residential, commercial, EV chargers, panel upgrades. Licensed C10 contractor. Free estimates.',
   alternates: {

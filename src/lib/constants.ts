@@ -45,7 +45,20 @@ export const SERVICE_AREAS = [
 ] as const
 
 // Navigation Links
+// Desktop nav links (Services and Our Work handled as dropdowns in header)
 export const NAV_LINKS = [
+  { label: 'Home', href: '/' },
+  { label: 'EV Chargers', href: '/ev-chargers' },
+  { label: 'Portfolio', href: '/portfolio' },
+  { label: 'Gallery', href: '/gallery' },
+  { label: 'Financing', href: '/financing' },
+  { label: 'Blog', href: '/news' },
+  { label: 'About', href: '/about' },
+  { label: 'Contact', href: '/contact' },
+] as const
+
+// Mobile nav keeps all links flat
+export const MOBILE_NAV_LINKS = [
   { label: 'Home', href: '/' },
   { label: 'Services', href: '/services' },
   { label: 'Portfolio', href: '/portfolio' },
@@ -299,6 +312,7 @@ export const BLOG_POSTS_PREVIEW = [
     date: '2024-12-10',
     category: 'EV Chargers',
     readTime: '8 min read',
+    image: '/images/blog/bestevchargersblog.webp',
   },
   {
     slug: 'signs-you-need-panel-upgrade',
@@ -307,6 +321,7 @@ export const BLOG_POSTS_PREVIEW = [
     date: '2024-12-05',
     category: 'Electrical Safety',
     readTime: '6 min read',
+    image: '/images/blog/benefitsupgradingyourelecctricalpanelblog.webp',
   },
   {
     slug: 'led-lighting-benefits-energy-savings',
@@ -315,6 +330,34 @@ export const BLOG_POSTS_PREVIEW = [
     date: '2024-11-28',
     category: 'Energy Efficiency',
     readTime: '5 min read',
+    image: '/images/blog/savemoneywithledlightingblog.webp',
+  },
+  {
+    slug: 'whole-house-rewiring-what-to-expect',
+    title: 'Whole House Rewiring: What Homeowners Need to Know',
+    excerpt: 'Planning a whole house rewire? Learn about the process, timeline, costs, and what to expect during this major electrical project.',
+    date: '2024-11-20',
+    category: 'Home Improvement',
+    readTime: '7 min read',
+    image: '/images/blog/wholehouserewiring.webp',
+  },
+  {
+    slug: 'smart-home-electrical-requirements',
+    title: 'Smart Home Electrical Requirements: A Complete Guide',
+    excerpt: 'Thinking about upgrading to a smart home? Here\'s what you need to know about electrical requirements for smart devices and automation.',
+    date: '2024-11-15',
+    category: 'Smart Home',
+    readTime: '6 min read',
+    image: '/images/blog/SmartHomeElectricalRequirements.webp',
+  },
+  {
+    slug: 'outdoor-lighting-installation-tips',
+    title: 'Outdoor Lighting Installation: Design Tips for Curb Appeal',
+    excerpt: 'Transform your outdoor spaces with professional lighting design. Learn about landscape lighting, security lights, and pathway illumination.',
+    date: '2024-11-08',
+    category: 'Lighting',
+    readTime: '5 min read',
+    image: '/images/blog/OutdoorLightingInstallation.webp',
   },
 ] as const
 
@@ -371,7 +414,7 @@ export const RESIDENTIAL_SERVICES = [
   {
     id: 'outdoor-lighting',
     category: 'Outdoor',
-    title: 'Lighting',
+    title: 'Outdoor Lighting',
     description: 'We know outdoor wiring like the back of our hand. Trust us to get the job done right, on time and on budget.',
     image: '/images/Outdoor-Lighting-Service-Image.webp',
     href: '/services/residential/outdoor-lighting',
@@ -379,7 +422,7 @@ export const RESIDENTIAL_SERVICES = [
   {
     id: 'indoor-lighting',
     category: 'Indoor',
-    title: 'Lighting',
+    title: 'Indoor Lighting',
     description: 'Westek offers professional indoor wiring services for homes and businesses. Schedule a consultation today.',
     image: '/images/Indoor_Lighting-Service-Image.webp',
     href: '/services/residential/indoor-lighting',
@@ -471,7 +514,7 @@ export const COMMERCIAL_SERVICES = [
   {
     id: 'outdoor-lighting',
     category: 'Outdoor',
-    title: 'Commercial Lighting',
+    title: 'Exterior Lighting',
     description: 'The team at Westek offers a variety of wiring solutions for your commercial lighting needs.',
     image: '/images/Commercial-ourdoor-lighting-Service-Image.webp',
     href: '/services/commercial/outdoor-lighting',
@@ -479,7 +522,7 @@ export const COMMERCIAL_SERVICES = [
   {
     id: 'indoor-lighting',
     category: 'Indoor',
-    title: 'Commercial Lighting',
+    title: 'Interior Lighting',
     description: 'We have provided quality commercial indoor lighting installation for businesses for over 15 years.',
     image: '/images/Commercial-Indoor-Lighting-Service-Image.webp',
     href: '/services/commercial/indoor-lighting',

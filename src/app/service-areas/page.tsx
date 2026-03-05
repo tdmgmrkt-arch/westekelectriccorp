@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 import { MapPin, ArrowRight, Phone, ShieldCheck, Clock, Star, Award } from 'lucide-react'
 import { Button } from '@/components/ui/button'
@@ -8,11 +9,16 @@ import { BUSINESS_INFO } from '@/lib/constants'
 import { generateBreadcrumbSchema } from '@/lib/seo'
 
 export const metadata: Metadata = {
-  title: 'Service Areas | Licensed Electrician in Southern California',
+  title: 'Service Areas - Licensed Electrician',
   description:
-    'Westek Electric Corp. serves Temecula, Murrieta, Menifee, Lake Elsinore, Corona, Riverside, and surrounding Southern California communities. Licensed C-10 electrical contractor.',
+    'Westek Electric serves Temecula, Murrieta, Menifee, Lake Elsinore, Corona, Riverside & Southern California. Licensed C-10 contractor. Free estimates.',
   alternates: {
     canonical: '/service-areas',
+  },
+  openGraph: {
+    title: 'Service Areas | Westek Electric Corp. - Southern California Electrician',
+    description:
+      'Licensed electricians serving Temecula, Murrieta, Menifee, Lake Elsinore, Corona, Riverside & all of Southern California. Free estimates available.',
   },
 }
 
@@ -34,10 +40,15 @@ export default function ServiceAreasPage() {
       />
 
       {/* Hero */}
-      <section className="pt-36 pb-20 md:pt-40 md:pb-24 bg-gradient-to-br from-navy-900 via-navy-800 to-navy-900 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(229,57,53,0.3),transparent_50%)]" />
-        </div>
+      <section className="pt-36 pb-20 md:pt-40 md:pb-24 relative overflow-hidden">
+        <Image
+          src="/images/lakeelisnore.webp"
+          alt="Lake Elsinore, Southern California"
+          fill
+          className="object-cover"
+          priority
+        />
+        <div className="absolute inset-0 bg-gradient-to-br from-navy-900/90 via-navy-800/85 to-navy-900/90" />
         <div className="container-wide relative z-10">
           <div className="max-w-3xl">
             <span className="text-electric-400 font-semibold text-sm uppercase tracking-wider mb-4 block">

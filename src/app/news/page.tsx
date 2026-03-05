@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 import { Calendar, Clock, ArrowRight } from 'lucide-react'
 import { Card, CardContent } from '@/components/ui/card'
@@ -20,34 +21,7 @@ export const metadata: Metadata = {
   },
 }
 
-// Extended blog posts for the blog index page
-const blogPosts = [
-  ...BLOG_POSTS_PREVIEW,
-  {
-    slug: 'whole-house-rewiring-what-to-expect',
-    title: 'Whole House Rewiring: What Homeowners Need to Know',
-    excerpt: 'Planning a whole house rewire? Learn about the process, timeline, costs, and what to expect during this major electrical project.',
-    date: '2024-11-20',
-    category: 'Home Improvement',
-    readTime: '7 min read',
-  },
-  {
-    slug: 'smart-home-electrical-requirements',
-    title: 'Smart Home Electrical Requirements: A Complete Guide',
-    excerpt: 'Thinking about upgrading to a smart home? Here\'s what you need to know about electrical requirements for smart devices and automation.',
-    date: '2024-11-15',
-    category: 'Smart Home',
-    readTime: '6 min read',
-  },
-  {
-    slug: 'outdoor-lighting-installation-tips',
-    title: 'Outdoor Lighting Installation: Design Tips for Curb Appeal',
-    excerpt: 'Transform your outdoor spaces with professional lighting design. Learn about landscape lighting, security lights, and pathway illumination.',
-    date: '2024-11-08',
-    category: 'Lighting',
-    readTime: '5 min read',
-  },
-]
+const blogPosts = BLOG_POSTS_PREVIEW
 
 function formatDate(dateString: string): string {
   const date = new Date(dateString)
@@ -97,16 +71,14 @@ export default function BlogPage() {
             {blogPosts.map((post) => (
               <Link key={post.slug} href={`/news/${post.slug}`} className="block group">
                 <Card className="h-full transition-all duration-300 hover:shadow-medium hover:-translate-y-1 overflow-hidden">
-                  {/* Image Placeholder */}
-                  <div className="aspect-[16/9] bg-gradient-to-br from-navy-800 to-navy-900 flex items-center justify-center relative">
-                    <div className="text-center text-white/60 p-4">
-                      <div className="w-12 h-12 mx-auto mb-2 border-2 border-white/30 rounded-lg flex items-center justify-center">
-                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                        </svg>
-                      </div>
-                      <p className="text-xs">Blog Image</p>
-                    </div>
+                  {/* Image */}
+                  <div className="aspect-[16/9] relative overflow-hidden">
+                    <Image
+                      src={post.image}
+                      alt={post.title}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
                     <div className="absolute top-4 left-4">
                       <Badge variant="electric" className="bg-electric-500 text-white border-0">
                         {post.category}

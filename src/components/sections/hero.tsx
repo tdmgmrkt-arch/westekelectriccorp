@@ -34,13 +34,13 @@ export function HeroSection() {
             </motion.div>
 
             {/* Main Headline */}
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-navy-900 leading-tight mb-4 md:mb-6">
+            <h1 className="text-[1.5rem] sm:text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-navy-900 leading-tight mb-4 md:mb-6">
               Trusted{' '}
               <span className="relative">
                 <span className="relative z-10">Electricians</span>
                 <span className="absolute bottom-1 md:bottom-2 left-0 w-full h-2 md:h-3 bg-electric-500/20 -z-0" />
               </span>{' '}
-              in Temecula & Murrieta
+              in Lake Elsinore & Temecula Valley
             </h1>
 
             {/* Mobile Hero Image - Content Interleaving: Shows after H1 on mobile only */}

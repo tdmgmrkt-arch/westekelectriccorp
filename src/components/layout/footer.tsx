@@ -14,6 +14,7 @@ import {
 import { BUSINESS_INFO, SERVICE_AREAS } from '@/lib/constants'
 import { cityToSlug } from '@/lib/service-areas'
 import { FaYelp } from 'react-icons/fa'
+import { FooterAccordion } from './footer-accordion'
 
 const footerServices = [
   { label: 'Residential Electrical', href: '/services#residential' },
@@ -126,46 +127,44 @@ export function Footer() {
 
           {/* Column 2: Services */}
           <div className="lg:col-span-2">
-            <h3 className="text-white font-bold text-base uppercase tracking-wide mb-4 pb-2 border-b border-navy-700">
-              Services
-            </h3>
-            <ul className="space-y-2.5">
-              {footerServices.map((service) => (
-                <li key={service.href}>
-                  <Link
-                    href={service.href as never}
-                    className="text-navy-200 hover:text-electric-400 active:text-electric-300 transition-colors text-sm py-1 block"
-                  >
-                    {service.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+            <FooterAccordion title="Services">
+              <ul className="space-y-2.5">
+                {footerServices.map((service) => (
+                  <li key={service.href}>
+                    <Link
+                      href={service.href as never}
+                      className="text-navy-200 hover:text-electric-400 active:text-electric-300 transition-colors text-sm py-1 block"
+                    >
+                      {service.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </FooterAccordion>
           </div>
 
           {/* Column 3: Service Areas */}
           <div className="lg:col-span-4">
-            <h3 className="text-white font-bold text-base uppercase tracking-wide mb-4 pb-2 border-b border-navy-700">
-              Service Areas
-            </h3>
-            <ul className="grid grid-cols-2 gap-x-4 gap-y-2">
-              {SERVICE_AREAS.map((area) => (
-                <li key={area}>
-                  <Link
-                    href={`/service-areas/${cityToSlug(area)}`}
-                    className="text-navy-200 hover:text-electric-400 transition-colors text-sm"
-                  >
-                    {area}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-            <Link
-              href="/service-areas"
-              className="mt-4 text-electric-400 text-sm font-semibold block hover:text-electric-300 transition-colors"
-            >
-              View All Service Areas &rarr;
-            </Link>
+            <FooterAccordion title="Service Areas">
+              <ul className="grid grid-cols-2 gap-x-4 gap-y-2">
+                {SERVICE_AREAS.map((area) => (
+                  <li key={area}>
+                    <Link
+                      href={`/service-areas/${cityToSlug(area)}`}
+                      className="text-navy-200 hover:text-electric-400 transition-colors text-sm"
+                    >
+                      {area}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+              <Link
+                href="/service-areas"
+                className="mt-4 text-electric-400 text-sm font-semibold block hover:text-electric-300 transition-colors"
+              >
+                View All Service Areas &rarr;
+              </Link>
+            </FooterAccordion>
           </div>
 
           {/* Column 4: Contact Info */}
@@ -196,8 +195,8 @@ export function Footer() {
                   <div className="w-9 h-9 rounded-lg bg-navy-800 flex items-center justify-center shrink-0 group-hover:bg-navy-700 transition-colors">
                     <Mail className="w-4 h-4" />
                   </div>
-                  <div>
-                    <p className="text-sm break-all">{BUSINESS_INFO.email}</p>
+                  <div className="min-w-0">
+                    <p className="text-sm break-words">{BUSINESS_INFO.email}</p>
                   </div>
                 </a>
               </li>
@@ -236,29 +235,29 @@ export function Footer() {
 
       {/* Bottom Bar */}
       <div className="border-t border-navy-700/50 bg-navy-950">
-        <div className="container-wide py-5">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+        <div className="container-wide py-4 md:py-5">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-3">
             <p className="text-navy-400 text-sm text-center md:text-left">
-              © {currentYear} {BUSINESS_INFO.name}. All rights reserved.
+              &copy; {currentYear} {BUSINESS_INFO.name}. All rights reserved.
             </p>
-            <div className="flex items-center gap-2 md:gap-6">
+            <div className="flex items-center gap-1 text-sm">
               <Link
                 href="/privacy"
-                className="text-navy-400 hover:text-white active:text-electric-400 transition-colors text-sm px-2 py-2 min-h-[44px] flex items-center"
+                className="text-navy-400 hover:text-white active:text-electric-400 transition-colors px-2 py-1.5 min-h-[44px] flex items-center"
               >
-                Privacy Policy
+                Privacy
               </Link>
-              <span className="text-navy-600 hidden md:inline">|</span>
+              <span className="text-navy-600">·</span>
               <Link
                 href="/terms"
-                className="text-navy-400 hover:text-white active:text-electric-400 transition-colors text-sm px-2 py-2 min-h-[44px] flex items-center"
+                className="text-navy-400 hover:text-white active:text-electric-400 transition-colors px-2 py-1.5 min-h-[44px] flex items-center"
               >
-                Terms of Service
+                Terms
               </Link>
-              <span className="text-navy-600 hidden md:inline">|</span>
+              <span className="text-navy-600">·</span>
               <a
                 href="/sitemap.xml"
-                className="text-navy-400 hover:text-white active:text-electric-400 transition-colors text-sm px-2 py-2 min-h-[44px] flex items-center"
+                className="text-navy-400 hover:text-white active:text-electric-400 transition-colors px-2 py-1.5 min-h-[44px] flex items-center"
               >
                 Sitemap
               </a>

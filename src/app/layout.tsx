@@ -26,7 +26,7 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: {
-    default: 'Westek Electric Corp. | Electrician in Lake Elsinore & Temecula CA',
+    default: 'Westek Electric Corp. | Electrician in Lake Elsinore & Temecula Valley CA',
     template: '%s | Westek Electric Corp.',
   },
   description:
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     canonical: '/',
   },
   openGraph: {
-    title: 'Westek Electric Corp. | Electrician in Lake Elsinore & Temecula CA',
+    title: 'Westek Electric Corp. | Electrician in Lake Elsinore & Temecula Valley CA',
     description:
       'Licensed electricians serving Lake Elsinore, Temecula, Murrieta & Southern California. Residential, commercial, EV charger installation, panel upgrades. 24/7 emergency service.',
     url: 'https://socalelectricpros.com',
@@ -73,7 +73,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Westek Electric Corp. | Electrician in Lake Elsinore & Temecula CA',
+    title: 'Westek Electric Corp. | Electrician in Lake Elsinore & Temecula Valley CA',
     description:
       'Licensed electricians serving Lake Elsinore, Temecula, Murrieta & Southern California. Residential, commercial, EV charger installation. 24/7 emergency service.',
     images: ['/images/og-default.jpg'],

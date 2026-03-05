@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import Link from 'next/link'
 import {
   ArrowRight,
@@ -11,9 +12,6 @@ import {
   Star,
   Award,
   MapPin,
-  Zap,
-  Home,
-  Building2,
 } from 'lucide-react'
 import { useState } from 'react'
 import { motion } from 'framer-motion'
@@ -23,11 +21,11 @@ import { useQuoteModal } from '@/components/forms/quote-modal'
 import { BUSINESS_INFO, CORE_SERVICES } from '@/lib/constants'
 import type { ServiceAreaData } from '@/lib/service-areas'
 
-const iconMap: Record<string, React.ElementType> = {
-  Home,
-  Building2,
-  PlugZap: Zap,
-  Lightbulb: Zap,
+const serviceImageMap: Record<string, string> = {
+  residential: '/images/residential.webp',
+  commercial: '/images/Commercial.webp',
+  'switches-outlets': '/images/Dedicated-Circuit-Service-Image.webp',
+  'led-lighting': '/images/Indoor_Lighting-Service-Image.webp',
 }
 
 interface ServiceAreaContentProps {
@@ -48,10 +46,17 @@ export function ServiceAreaContent({ area, nearbyCities }: ServiceAreaContentPro
   return (
     <>
       {/* Hero Section */}
-      <section className="pt-36 pb-20 md:pt-40 md:pb-24 bg-gradient-to-br from-navy-900 via-navy-800 to-navy-900 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(229,57,53,0.3),transparent_50%)]" />
-        </div>
+      <section className="pt-36 pb-20 md:pt-40 md:pb-24 relative overflow-hidden">
+        {/* Background Image */}
+        <Image
+          src={area.heroImage}
+          alt={`Electrical services in ${area.name}, CA`}
+          fill
+          className="object-cover"
+          priority
+        />
+        {/* Navy overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-navy-900/90 via-navy-800/85 to-navy-900/90" />
         <div className="container-wide relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -146,14 +151,21 @@ export function ServiceAreaContent({ area, nearbyCities }: ServiceAreaContentPro
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {CORE_SERVICES.map((service) => {
-              const Icon = iconMap[service.icon] || Zap
+              const serviceImage = serviceImageMap[service.id]
               return (
                 <Link key={service.id} href={service.href as never} className="group">
-                  <Card className="h-full hover:shadow-lg transition-all hover:-translate-y-1">
-                    <CardContent className="p-6">
-                      <div className="w-12 h-12 bg-electric-50 rounded-xl flex items-center justify-center mb-4 group-hover:bg-electric-500 transition-colors">
-                        <Icon className="w-6 h-6 text-electric-500 group-hover:text-white transition-colors" />
+                  <Card className="h-full hover:shadow-lg transition-all hover:-translate-y-1 overflow-hidden">
+                    {serviceImage && (
+                      <div className="relative aspect-[16/10] overflow-hidden">
+                        <Image
+                          src={serviceImage}
+                          alt={service.title}
+                          fill
+                          className="object-cover group-hover:scale-105 transition-transform duration-300"
+                        />
                       </div>
+                    )}
+                    <CardContent className="p-5">
                       <h3 className="text-lg font-heading font-semibold text-navy-900 mb-2 group-hover:text-electric-500 transition-colors">
                         {service.title}
                       </h3>

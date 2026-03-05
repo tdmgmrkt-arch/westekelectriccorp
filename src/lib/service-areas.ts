@@ -8,6 +8,7 @@ export interface ServiceAreaData {
   metaDescription: string
   heroHeadline: string
   heroDescription: string
+  heroImage: string
   introduction: string
   nearbyAreas: string[]
   highlights: string[]
@@ -28,10 +29,11 @@ export const SERVICE_AREA_DATA: Record<string, ServiceAreaData> = {
     zipCodes: ['92590', '92591', '92592'],
     metaTitle: 'Electrician in Temecula, CA | Licensed Electrical Contractor',
     metaDescription:
-      'Licensed electrician serving Temecula, CA. Residential & commercial electrical services, panel upgrades, EV charger installation. Free estimates. Call (909) 996-6678.',
+      'Licensed electrician serving Temecula, CA. Residential & commercial electrical, panel upgrades, EV charger installation. Free estimates. Call (909) 996-6678.',
     heroHeadline: 'Your Trusted Electricians in Temecula, CA',
     heroDescription:
       'Westek Electric Corp. provides licensed residential and commercial electrical services throughout Temecula. From Old Town to the wine country estates, we keep Temecula powered safely.',
+    heroImage: '/images/portfolio/DCH-Dodge-of-Temecula-1.webp',
     introduction:
       "Temecula has grown rapidly from a quiet wine country community into one of Riverside County's most vibrant cities, with over 110,000 residents. That growth means thousands of homes built during the 1990s and 2000s construction boom — many with 100-amp electrical panels that struggle to keep up with modern power demands like EV chargers, smart home systems, and high-efficiency HVAC units.\n\nWhether you live in Redhawk, Paloma del Sol, Wolf Creek, or the hillside estates along De Portola Road, Westek Electric Corp. understands the unique electrical needs of Temecula homes and businesses. We regularly work with Old Town Temecula commercial properties on lighting upgrades and code compliance, and we help homeowners throughout the valley modernize their electrical systems.\n\nAs your local licensed electrical contractor, we're just a short drive from Temecula and can respond quickly for both scheduled projects and emergency calls. Every job we perform meets Riverside County building codes and is backed by our satisfaction guarantee.",
     nearbyAreas: ['murrieta', 'french-valley', 'winchester', 'fallbrook'],
@@ -89,6 +91,7 @@ export const SERVICE_AREA_DATA: Record<string, ServiceAreaData> = {
     heroHeadline: 'Your Trusted Electricians in Murrieta, CA',
     heroDescription:
       'Westek Electric Corp. delivers reliable residential and commercial electrical services throughout Murrieta. From family neighborhoods to growing commercial centers, we have you covered.',
+    heroImage: '/images/residential.webp',
     introduction:
       "Murrieta is one of Southern California's safest and fastest-growing cities, known for its family-friendly master-planned communities like Greer Ranch, Spencer's Crossing, and The Colony. With a population over 115,000, Murrieta homeowners depend on reliable electrical systems to power modern family life.\n\nMany Murrieta homes were built during the early 2000s housing boom and feature builder-grade electrical systems that may need updating. Common upgrades include panel capacity increases for EV chargers and home additions, outdoor lighting for large yards, and smart home integration throughout the house.\n\nWestek Electric Corp. has served Murrieta homeowners and businesses for over 15 years. We understand the specific electrical requirements of Murrieta's diverse housing stock — from single-story ranch homes to multi-story custom builds. Our team is licensed, insured, and familiar with all local building codes and permit requirements.",
     nearbyAreas: ['temecula', 'wildomar', 'menifee', 'french-valley'],
@@ -137,10 +140,11 @@ export const SERVICE_AREA_DATA: Record<string, ServiceAreaData> = {
     zipCodes: ['92584', '92585', '92586', '92587'],
     metaTitle: 'Electrician in Menifee, CA | Licensed Electrical Contractor',
     metaDescription:
-      'Licensed electrician serving Menifee, CA. New construction wiring, panel upgrades, and electrical repairs for one of Riverside County\'s fastest-growing cities. Call (909) 996-6678.',
+      'Licensed electrician serving Menifee, CA. New construction, panel upgrades & electrical repairs. Riverside County\'s fastest-growing city. Call (909) 996-6678.',
     heroHeadline: 'Your Trusted Electricians in Menifee, CA',
     heroDescription:
       'Westek Electric Corp. serves Menifee with expert residential and commercial electrical services. From brand-new communities to established neighborhoods, we deliver quality electrical work.',
+    heroImage: '/images/New_Construction-Service-Image.webp',
     introduction:
       "Menifee is one of the youngest and fastest-growing cities in Riverside County, incorporating in 2008 and rapidly expanding with new master-planned communities like Audie Murphy Ranch, Heritage Lake, and Menifee Lakes. This explosive growth means a constant demand for both new construction electrical work and upgrades to older homes in the Sun City and Quail Valley areas.\n\nThe mix of brand-new construction and decades-old homes makes Menifee unique. Newer homes may need additional circuits for EV chargers or home theaters, while older properties in Sun City often require complete rewiring, panel upgrades, and updated safety features like GFCI and AFCI protection.\n\nWestek Electric Corp. has been part of Menifee's growth story, working with homeowners and builders throughout the city. Whether you're moving into a new build and need custom lighting installed, or you've discovered outdated wiring in an older Menifee home, our licensed team can handle it all.",
     nearbyAreas: ['murrieta', 'wildomar', 'hemet', 'san-jacinto'],
@@ -189,10 +193,11 @@ export const SERVICE_AREA_DATA: Record<string, ServiceAreaData> = {
     zipCodes: ['92530', '92532'],
     metaTitle: 'Electrician in Lake Elsinore, CA | Licensed Electrical Contractor',
     metaDescription:
-      'Local electrician based in Lake Elsinore, CA. Residential & commercial electrical services with fast response times. Licensed, insured, and trusted. Call (909) 996-6678.',
+      'Local electrician in Lake Elsinore, CA. Residential & commercial electrical services with fast response times. Licensed and insured. Call (909) 996-6678.',
     heroHeadline: 'Your Local Electricians in Lake Elsinore, CA',
     heroDescription:
       'Westek Electric Corp. is headquartered right here in Lake Elsinore. As your neighbors, we provide fast, reliable electrical services with the shortest response times in the area.',
+    heroImage: '/images/Westek-Truck.webp',
     introduction:
       "Lake Elsinore is home — it's where Westek Electric Corp. is based, and where we've built our reputation as trusted electrical contractors. Being headquartered here means Lake Elsinore residents get the fastest response times and most personalized service of any community we serve.\n\nLake Elsinore's diverse housing stock ranges from lakeside cottages and historic downtown homes to the newer developments in Canyon Hills, Rosetta Canyon, and Summerly. Each neighborhood presents unique electrical challenges, from upgrading aging infrastructure in older homes to customizing electrical systems in new construction.\n\nThe city's growth and the popularity of outdoor recreation — from the lake to skydiving to the motocross park — means many homeowners are adding features like outdoor entertainment systems, landscape lighting, pool and spa equipment, and EV chargers for their adventure vehicles. Our team knows these needs firsthand because we live here too.",
     nearbyAreas: ['wildomar', 'menifee', 'corona', 'murrieta'],
@@ -241,10 +246,11 @@ export const SERVICE_AREA_DATA: Record<string, ServiceAreaData> = {
     zipCodes: ['92595'],
     metaTitle: 'Electrician in Wildomar, CA | Licensed Electrical Contractor',
     metaDescription:
-      'Licensed electrician serving Wildomar, CA. Residential electrical services, panel upgrades, and EV charger installation. Your rural and suburban electrical experts. Call (909) 996-6678.',
+      'Licensed electrician in Wildomar, CA. Residential electrical, panel upgrades & EV charger installation. Rural and suburban experts. Call (909) 996-6678.',
     heroHeadline: 'Your Trusted Electricians in Wildomar, CA',
     heroDescription:
       'Westek Electric Corp. provides expert electrical services throughout Wildomar. From rural properties to newer subdivisions, we handle the unique electrical needs of this growing community.',
+    heroImage: '/images/Outdoor-Lighting-Service-Image.webp',
     introduction:
       "Wildomar, incorporated in 2008, sits between Lake Elsinore and Murrieta along the I-15 corridor. This growing community features a unique mix of rural equestrian properties, established neighborhoods, and new residential developments that each present different electrical requirements.\n\nRural and semi-rural properties in Wildomar often have unique electrical challenges — longer service runs, well pump circuits, barn and stable lighting, and the need for reliable backup power during outages. Meanwhile, newer developments along Clinton Keith Road and Bundy Canyon require modern electrical systems designed for today's connected lifestyle.\n\nAs Wildomar's neighbor in Lake Elsinore, Westek Electric Corp. is ideally positioned to serve this community. We understand the specific needs of both rural and suburban properties and can handle everything from agricultural electrical work to smart home installations.",
     nearbyAreas: ['lake-elsinore', 'murrieta', 'menifee', 'temecula'],
@@ -293,10 +299,11 @@ export const SERVICE_AREA_DATA: Record<string, ServiceAreaData> = {
     zipCodes: ['92596'],
     metaTitle: 'Electrician in Winchester, CA | Licensed Electrical Contractor',
     metaDescription:
-      'Licensed electrician serving Winchester, CA. Electrical services for rural properties, new developments, and custom homes. Free estimates. Call (909) 996-6678.',
+      'Licensed electrician in Winchester, CA. Electrical services for rural properties, new developments, and custom homes. Free estimates. Call (909) 996-6678.',
     heroHeadline: 'Your Trusted Electricians in Winchester, CA',
     heroDescription:
       'Westek Electric Corp. provides residential and commercial electrical services throughout Winchester. Expert electrical work for this growing unincorporated community in Riverside County.',
+    heroImage: '/images/Residential-Breakers-Replacement-Service-Image.webp',
     introduction:
       "Winchester is an unincorporated community in Riverside County that has seen significant residential growth in recent years. Nestled between Temecula, Hemet, and Menifee, Winchester offers a more rural lifestyle while remaining close to urban amenities. The area features a blend of established ranch properties, custom homes on large lots, and newer planned communities.\n\nThe electrical needs in Winchester are as diverse as its properties. Older ranch homes may need complete electrical system overhauls, while newer homes in communities like Winchester Hills may need additional circuits for modern conveniences. The area's agricultural heritage also means many properties have outbuildings, workshops, and equipment that require dedicated electrical service.\n\nWestek Electric Corp. has extensive experience working in Winchester and surrounding unincorporated areas. We're familiar with the specific permitting requirements through Riverside County (rather than a city building department) and can navigate the process efficiently for our customers.",
     nearbyAreas: ['temecula', 'french-valley', 'hemet', 'menifee'],
@@ -345,10 +352,11 @@ export const SERVICE_AREA_DATA: Record<string, ServiceAreaData> = {
     zipCodes: ['92596'],
     metaTitle: 'Electrician in French Valley, CA | Licensed Electrical Contractor',
     metaDescription:
-      'Licensed electrician serving French Valley, CA. Modern home electrical services, EV charger installation, and smart home wiring. Free estimates. Call (909) 996-6678.',
+      'Licensed electrician in French Valley, CA. Modern home electrical, EV charger installation, and smart home wiring. Free estimates. Call (909) 996-6678.',
     heroHeadline: 'Your Trusted Electricians in French Valley, CA',
     heroDescription:
       'Westek Electric Corp. serves French Valley with modern electrical solutions. From newer planned communities to established homes, we provide expert electrical services.',
+    heroImage: '/images/EV-Chargers.webp',
     introduction:
       "French Valley is a rapidly developing unincorporated community in southwestern Riverside County, situated between Temecula and Winchester. Known for its newer master-planned developments, French Valley has become a popular destination for families seeking modern homes with excellent schools and convenient access to I-15 and I-215.\n\nBecause most French Valley homes are relatively new (built from the 2000s onward), the electrical needs tend toward upgrades and additions rather than major repairs. Homeowners commonly request EV charger installations, home office circuits, smart home wiring, and enhanced outdoor lighting. The community's newer infrastructure also means most homes are well-suited for these modern electrical additions.\n\nWestek Electric Corp. regularly works in French Valley's communities and understands the typical electrical layouts and panel configurations found in these homes. We can efficiently plan and execute upgrades that work with your existing system.",
     nearbyAreas: ['temecula', 'winchester', 'murrieta', 'menifee'],
@@ -397,10 +405,11 @@ export const SERVICE_AREA_DATA: Record<string, ServiceAreaData> = {
     zipCodes: ['92028'],
     metaTitle: 'Electrician in Fallbrook, CA | Licensed Electrical Contractor',
     metaDescription:
-      'Licensed electrician serving Fallbrook, CA. Agricultural, residential & commercial electrical services for the Friendly Village. Free estimates. Call (909) 996-6678.',
+      'Licensed electrician in Fallbrook, CA. Agricultural, residential & commercial electrical for the Friendly Village. Free estimates. Call (909) 996-6678.',
     heroHeadline: 'Your Trusted Electricians in Fallbrook, CA',
     heroDescription:
       'Westek Electric Corp. extends our expert electrical services to Fallbrook. From avocado groves to custom estates, we handle the diverse electrical needs of this unique community.',
+    heroImage: '/images/Lanscape-Lighting-Service-Image.webp',
     introduction:
       "Fallbrook, known as the \"Friendly Village,\" is an unincorporated community in northern San Diego County famous for its avocado groves, nurseries, and rural charm. With a population of around 32,000, Fallbrook features a distinctive mix of agricultural properties, custom hillside estates, charming village-area homes, and newer residential developments.\n\nThe agricultural character of Fallbrook means many properties have specialized electrical needs including irrigation pump circuits, greenhouse lighting, cold storage power, and equipment buildings. At the same time, the area's custom estates often feature sophisticated electrical systems with landscape lighting, pool and spa equipment, home automation, and backup generators.\n\nWhile Fallbrook is in San Diego County, it's geographically close to our Riverside County service area. Westek Electric Corp. is licensed to work in both counties and regularly serves Fallbrook customers. We understand the unique permitting requirements through San Diego County and can handle the process from start to finish.",
     nearbyAreas: ['temecula', 'murrieta', 'winchester', 'french-valley'],
@@ -453,6 +462,7 @@ export const SERVICE_AREA_DATA: Record<string, ServiceAreaData> = {
     heroHeadline: 'Your Trusted Electricians in Hemet, CA',
     heroDescription:
       'Westek Electric Corp. provides reliable electrical services throughout Hemet. Specializing in older home upgrades and modern electrical solutions for this established San Jacinto Valley community.',
+    heroImage: '/images/Residential-Rewiring-Service-Image.webp',
     introduction:
       "Hemet is one of the San Jacinto Valley's most established communities, with a rich history dating back to the late 1800s. With a population over 90,000, Hemet features a wide range of housing from historic downtown properties and mid-century homes to retirement communities and newer developments on the city's outskirts.\n\nThe age and variety of Hemet's housing stock creates significant demand for electrical upgrades. Many homes built before 1980 have outdated panels (60-100 amps), aluminum wiring, or lack the modern safety features required by current codes. These older systems can be safety hazards and often can't support today's electrical demands.\n\nWestek Electric Corp. has extensive experience working with Hemet's older homes. We specialize in the careful upgrades these properties need — from panel replacements and aluminum wiring remediation to full rewires that bring homes up to modern safety standards while respecting the character of older construction.",
     nearbyAreas: ['san-jacinto', 'menifee', 'winchester', 'french-valley'],
@@ -505,6 +515,7 @@ export const SERVICE_AREA_DATA: Record<string, ServiceAreaData> = {
     heroHeadline: 'Your Trusted Electricians in San Jacinto, CA',
     heroDescription:
       'Westek Electric Corp. delivers quality electrical services throughout San Jacinto. From historic downtown properties to new developments, we provide reliable and affordable electrical solutions.',
+    heroImage: '/images/Residentail-code-Corrections-Service-Image.webp',
     introduction:
       "San Jacinto, nestled at the base of the San Jacinto Mountains, is a growing city with a historic downtown and expanding residential areas. With a population around 55,000, the city has experienced steady growth while maintaining its small-town character and agricultural roots.\n\nSan Jacinto's housing ranges from turn-of-the-century downtown homes to modern developments east of the city. The older housing stock often requires significant electrical upgrades including panel replacements, rewiring, and the addition of modern safety devices. Newer developments typically need upgrades like EV chargers, additional circuits, and enhanced outdoor lighting.\n\nWestek Electric Corp. serves San Jacinto with the same commitment to quality and fair pricing that has built our reputation throughout the region. We work efficiently to keep costs reasonable while never compromising on safety or code compliance.",
     nearbyAreas: ['hemet', 'menifee', 'winchester', 'french-valley'],
@@ -553,10 +564,11 @@ export const SERVICE_AREA_DATA: Record<string, ServiceAreaData> = {
     zipCodes: ['92879', '92880', '92881', '92882', '92883'],
     metaTitle: 'Electrician in Corona, CA | Licensed Electrical Contractor',
     metaDescription:
-      'Licensed electrician serving Corona, CA. Residential and commercial electrical services for the Circle City. Panel upgrades, EV chargers, and more. Call (909) 996-6678.',
+      'Licensed electrician in Corona, CA. Residential and commercial electrical for the Circle City. Panel upgrades, EV chargers & more. Call (909) 996-6678.',
     heroHeadline: 'Your Trusted Electricians in Corona, CA',
     heroDescription:
       'Westek Electric Corp. serves Corona with comprehensive residential and commercial electrical services. From established neighborhoods to thriving business districts, we deliver expert electrical work.',
+    heroImage: '/images/Commercial.webp',
     introduction:
       "Corona, known as the \"Circle City\" for its unique circular Grand Boulevard, is a major Riverside County city with over 157,000 residents. The city's diverse neighborhoods range from historic homes near the downtown circle to expansive newer developments in South Corona, Eagle Glen, and the Dos Lagos area.\n\nCorona's large commercial and industrial sector also drives significant demand for commercial electrical services. From retail centers along the 91 corridor to office parks and light industrial facilities, Corona businesses need reliable electrical contractors who can minimize downtime and keep operations running.\n\nWestek Electric Corp. serves both residential and commercial customers throughout Corona. Whether you need a panel upgrade in an older home near the circle, EV charger installation in South Corona, or commercial electrical work for your Corona business, our licensed team delivers quality results on time and on budget.",
     nearbyAreas: ['riverside', 'lake-elsinore', 'wildomar', 'menifee'],
@@ -605,10 +617,11 @@ export const SERVICE_AREA_DATA: Record<string, ServiceAreaData> = {
     zipCodes: ['92501', '92503', '92504', '92505', '92506', '92507', '92508'],
     metaTitle: 'Electrician in Riverside, CA | Licensed Electrical Contractor',
     metaDescription:
-      'Licensed electrician serving Riverside, CA. From historic Mission Inn district to modern developments. Residential & commercial electrical services. Call (909) 996-6678.',
+      'Licensed electrician in Riverside, CA. From historic Mission Inn district to modern developments. Residential & commercial electrical. Call (909) 996-6678.',
     heroHeadline: 'Your Trusted Electricians in Riverside, CA',
     heroDescription:
       'Westek Electric Corp. provides professional electrical services throughout Riverside. From the historic downtown core to expanding suburban neighborhoods, we serve the county seat with expert electrical work.',
+    heroImage: '/images/Commercial-Electric-Panel-Installation-Service-Image.webp',
     introduction:
       "Riverside, the county seat of Riverside County and home to over 314,000 residents, is the largest city in our service area. With a rich history dating back to the citrus industry era, Riverside features an incredible range of architecture and housing from Victorian-era homes in the Wood Streets neighborhood to modern developments in Orangecrest and Mission Grove.\n\nThe city's historic districts — including the Wood Streets, Mile Square, and areas surrounding the famous Mission Inn — present unique electrical challenges. These homes often have original knob-and-tube wiring, outdated fuse boxes, and electrical systems that predate modern building codes. Upgrading these systems requires expertise and care to preserve the historic character while ensuring modern safety.\n\nRiverside's thriving commercial sector, anchored by downtown revitalization, the university district near UC Riverside, and major employers throughout the city, also creates steady demand for commercial electrical services. Westek Electric Corp. is proud to serve this diverse and dynamic city.",
     nearbyAreas: ['corona', 'menifee', 'lake-elsinore', 'hemet'],

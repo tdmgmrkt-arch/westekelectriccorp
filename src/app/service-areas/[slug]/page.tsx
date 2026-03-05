@@ -29,13 +29,13 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   }
 
   return {
-    title: area.metaTitle,
+    title: `Electrician in ${area.name}, CA`,
     description: area.metaDescription,
     alternates: {
       canonical: `/service-areas/${area.slug}`,
     },
     openGraph: {
-      title: area.metaTitle,
+      title: `Electrician in ${area.name}, CA | Westek Electric Corp.`,
       description: area.metaDescription,
     },
   }
