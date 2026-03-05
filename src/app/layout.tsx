@@ -131,6 +131,18 @@ export default function RootLayout({
       </head>
       <body className="font-sans antialiased">
         <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-HMVV49Z8W1"
+          strategy="afterInteractive"
+        />
+        <Script id="gtag-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-HMVV49Z8W1');
+          `}
+        </Script>
+        <Script
           src={`https://www.google.com/recaptcha/enterprise.js?render=${RECAPTCHA_SITE_KEY}`}
           strategy="lazyOnload"
         />
