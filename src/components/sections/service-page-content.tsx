@@ -97,8 +97,11 @@ export function ServicePageContent({ service, serviceType, relatedServices }: Se
               <h2 className="text-3xl md:text-4xl font-heading font-bold text-navy-900 mb-6">
                 Service Features
               </h2>
+              <p className="text-charcoal-600 mb-4">
+                Our {service.title.toLowerCase()} services include everything you need for a safe, efficient, and code-compliant installation. Every project is handled by licensed electricians with over 15 years of experience serving homes and businesses across Southern California.
+              </p>
               <p className="text-charcoal-600 mb-8">
-                Our {service.title.toLowerCase()} services include everything you need for a safe, efficient, and code-compliant installation.
+                We pull all required permits, coordinate inspections with local building departments, and back our work with a satisfaction guarantee. From initial assessment through final walkthrough, you can expect clear communication, clean workmanship, and fair pricing.
               </p>
               <ul className="grid sm:grid-cols-2 gap-4">
                 {service.features.map((feature, index) => (
@@ -190,11 +193,13 @@ export function ServicePageContent({ service, serviceType, relatedServices }: Se
                       }`}
                     />
                   </button>
-                  {openFaq === index && (
-                    <div className="px-5 pb-5">
-                      <p className="text-charcoal-600">{faq.answer}</p>
-                    </div>
-                  )}
+                  <div
+                    className={`px-5 overflow-hidden transition-all duration-300 ${
+                      openFaq === index ? 'max-h-96 pb-5' : 'max-h-0'
+                    }`}
+                  >
+                    <p className="text-charcoal-600">{faq.answer}</p>
+                  </div>
                 </Card>
               ))}
             </div>

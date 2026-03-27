@@ -160,9 +160,14 @@ export function PortfolioContent() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-navy-900 mb-6">
               Portfolio
             </h1>
-            <p className="text-lg text-charcoal-600 leading-relaxed">
+            <p className="text-lg text-charcoal-600 leading-relaxed mb-4">
               Explore our completed projects showcasing quality electrical work across
               residential, commercial, and industrial settings throughout Southern California.
+            </p>
+            <p className="text-base text-charcoal-500 leading-relaxed">
+              From auto dealership buildouts and mobile food trailer wiring to residential panel upgrades
+              and RC track lighting, each project below demonstrates our commitment to clean, code-compliant
+              electrical work. Click any project to view the full photo gallery and detailed scope of work.
             </p>
           </div>
         </div>

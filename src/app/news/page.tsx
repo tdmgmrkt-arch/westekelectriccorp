@@ -56,9 +56,15 @@ export default function BlogPage() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-navy-900 mb-6">
               Electrical Tips & News
             </h1>
-            <p className="text-lg text-charcoal-600 leading-relaxed">
+            <p className="text-lg text-charcoal-600 leading-relaxed mb-4">
               Stay informed with expert electrical tips, industry news, and helpful guides from
               our licensed electricians. Learn how to keep your home or business safe and efficient.
+            </p>
+            <p className="text-base text-charcoal-500 leading-relaxed">
+              Our articles cover everything from EV charger installation and panel upgrades to
+              smart home wiring, LED lighting savings, and whole-house rewiring. Whether you are
+              planning a renovation or troubleshooting an electrical issue, these guides will help
+              you make informed decisions about your home or business electrical needs.
             </p>
           </div>
         </div>

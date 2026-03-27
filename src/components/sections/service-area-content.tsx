@@ -277,11 +277,13 @@ export function ServiceAreaContent({ area, nearbyCities }: ServiceAreaContentPro
                       }`}
                     />
                   </button>
-                  {openFaq === index && (
-                    <div className="px-5 pb-5">
-                      <p className="text-charcoal-600">{faq.answer}</p>
-                    </div>
-                  )}
+                  <div
+                    className={`px-5 overflow-hidden transition-all duration-300 ${
+                      openFaq === index ? 'max-h-96 pb-5' : 'max-h-0'
+                    }`}
+                  >
+                    <p className="text-charcoal-600">{faq.answer}</p>
+                  </div>
                 </Card>
               ))}
             </div>

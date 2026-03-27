@@ -45,7 +45,10 @@ export default function ContactPage() {
             </h1>
             <p className="text-base md:text-lg text-charcoal-600 leading-relaxed">
               Ready to start your electrical project? Have a question? We&apos;re here to help.
-              Contact us today for a free, no-obligation estimate.
+              Contact us today for a free, no-obligation estimate on residential or commercial
+              electrical work, including panel upgrades, EV charger installation, lighting, rewiring,
+              and code corrections. Our licensed electricians serve Lake Elsinore, Temecula, Murrieta,
+              and communities throughout Riverside County and Southern California.
             </p>
           </div>
         </div>
