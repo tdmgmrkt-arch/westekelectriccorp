@@ -87,7 +87,7 @@ const service: ServiceDetail = {
 }
 
 export const metadata: Metadata = {
-  title: `${service.fullTitle} | Westek Electric Corp.`,
+  title: service.fullTitle,
   description: service.longDescription.slice(0, 160),
   alternates: {
     canonical: '/services/led-lighting',

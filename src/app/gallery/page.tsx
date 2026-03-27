@@ -72,6 +72,32 @@ export default function GalleryPage() {
         </div>
       </section>
 
+      {/* About Our Work */}
+      <section className="py-10 bg-accent-50">
+        <div className="container-wide max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-6 text-center">
+            <div>
+              <p className="text-3xl font-bold text-navy-900 mb-1">15+</p>
+              <p className="text-charcoal-600 text-sm">Years of Experience</p>
+            </div>
+            <div>
+              <p className="text-3xl font-bold text-navy-900 mb-1">500+</p>
+              <p className="text-charcoal-600 text-sm">Projects Completed</p>
+            </div>
+            <div>
+              <p className="text-3xl font-bold text-navy-900 mb-1">4.9 Stars</p>
+              <p className="text-charcoal-600 text-sm">Customer Rating</p>
+            </div>
+          </div>
+          <p className="text-charcoal-600 text-center mt-6 leading-relaxed">
+            From panel upgrades and whole-house rewiring to commercial tenant improvements and EV charger installations,
+            our licensed electricians deliver clean, code-compliant work on every project. Each photo below represents
+            a real job completed by our team in Lake Elsinore, Temecula, Murrieta, and communities throughout
+            Riverside County and Southern California.
+          </p>
+        </div>
+      </section>
+
       {/* Gallery Grid */}
       <section className="section-padding bg-white">
         <div className="container-wide">

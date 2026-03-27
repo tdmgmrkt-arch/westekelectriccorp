@@ -126,6 +126,17 @@ export function PortfolioProjectContent({
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
+            {'details' in project && project.details && (
+              <div className="mb-10">
+                <h2 className="text-2xl font-heading font-bold text-navy-900 mb-4">
+                  Project Details
+                </h2>
+                <p className="text-charcoal-600 leading-relaxed">
+                  {project.details}
+                </p>
+              </div>
+            )}
+
             <h2 className="text-2xl font-heading font-bold text-navy-900 mb-8">
               Project Gallery
             </h2>

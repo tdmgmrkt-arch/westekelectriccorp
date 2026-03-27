@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   }
 
   return {
-    title: `${service.fullTitle} | Commercial Electrical`,
+    title: service.fullTitle,
     description: service.longDescription.slice(0, 160),
     alternates: {
       canonical: `/services/commercial/${params.slug}`,

@@ -17,7 +17,7 @@ const iconMap = {
 const categoryImages: Record<string, string> = {
   residential: '/images/residential.webp',
   commercial: '/images/Commercial.webp',
-  industrial: '/images/industrial.webp',
+  industrial: '/images/Commercial.webp',
   design: '/images/Electrical-Design.webp',
 }
 
@@ -78,7 +78,7 @@ export function ServiceCategoriesSection() {
             return (
               <motion.div key={category.id} variants={itemVariants}>
                 <Link
-                  href={`/services/${category.id}` as never}
+                  href="/services"
                   className="block group"
                 >
                   <Card className="h-full transition-all duration-300 hover:shadow-medium hover:-translate-y-1 overflow-hidden">

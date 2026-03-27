@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: process.env.SITE_URL || 'https://socalelectricpros.com',
+  siteUrl: process.env.SITE_URL || 'https://www.westekelectriccorp.com',
   generateRobotsTxt: true,
   generateIndexSitemap: false,
   exclude: ['/api/*'],

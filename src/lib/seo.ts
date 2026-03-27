@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 import { BUSINESS_INFO, SERVICE_AREAS } from './constants'
 
-const siteUrl = 'https://socalelectricpros.com'
+const siteUrl = 'https://www.westekelectriccorp.com'
 
 // Base metadata configuration
 export function generateMetadata({
@@ -113,13 +113,6 @@ export function generateLocalBusinessSchema() {
       BUSINESS_INFO.social.instagram,
       BUSINESS_INFO.social.yelp,
     ],
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      reviewCount: '127',
-      bestRating: '5',
-      worstRating: '1',
-    },
   }
 }
 
@@ -225,13 +218,6 @@ export function generateServiceAreaSchema(area: {
         '@type': 'AdministrativeArea',
         name: area.county,
       },
-    },
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      reviewCount: '127',
-      bestRating: '5',
-      worstRating: '1',
     },
     priceRange: '$$',
     openingHoursSpecification: [

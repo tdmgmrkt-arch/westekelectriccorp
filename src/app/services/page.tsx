@@ -26,12 +26,12 @@ export default function ServicesPage() {
     generateServiceSchema({
       name: 'Residential Electrical Services',
       description: 'Comprehensive home power solutions by our experienced team, ensuring safety, reliability, and tailored excellence for all your household electrical needs.',
-      url: '/services/residential',
+      url: '/services',
     }),
     generateServiceSchema({
       name: 'Commercial Electrical Services',
       description: 'Professional commercial electrical services for businesses of all sizes. Expert installation, repairs, and maintenance.',
-      url: '/services/commercial',
+      url: '/services',
     }),
   ]
 

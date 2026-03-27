@@ -9,7 +9,7 @@
 - Email: westekelectriccompany@gmail.com
 - Address: 29304 Abelia Ln., Lake Elsinore, CA 92530
 - License: C10-1100272
-- Website: https://socalelectricpros.com
+- Website: https://www.westekelectriccorp.com
 - Hours: Monday-Friday 8:00 AM - 5:00 PM, 24/7 Emergency Service Available
 
 ## Services
@@ -54,14 +54,14 @@ Lake Elsinore, Temecula, Murrieta, Menifee, Wildomar, Winchester, French Valley,
 
 ## Pages
 
-- Home: https://socalelectricpros.com
-- About: https://socalelectricpros.com/about
-- Services: https://socalelectricpros.com/services
-- Switches & Outlets: https://socalelectricpros.com/services/switches-outlets
-- LED Lighting: https://socalelectricpros.com/services/led-lighting
-- EV Chargers: https://socalelectricpros.com/ev-chargers
-- Portfolio: https://socalelectricpros.com/portfolio
-- Gallery: https://socalelectricpros.com/gallery
-- Financing: https://socalelectricpros.com/financing
-- Blog: https://socalelectricpros.com/news
-- Contact: https://socalelectricpros.com/contact
+- Home: https://www.westekelectriccorp.com
+- About: https://www.westekelectriccorp.com/about
+- Services: https://www.westekelectriccorp.com/services
+- Switches & Outlets: https://www.westekelectriccorp.com/services/switches-outlets
+- LED Lighting: https://www.westekelectriccorp.com/services/led-lighting
+- EV Chargers: https://www.westekelectriccorp.com/ev-chargers
+- Portfolio: https://www.westekelectriccorp.com/portfolio
+- Gallery: https://www.westekelectriccorp.com/gallery
+- Financing: https://www.westekelectriccorp.com/financing
+- Blog: https://www.westekelectriccorp.com/news
+- Contact: https://www.westekelectriccorp.com/contact

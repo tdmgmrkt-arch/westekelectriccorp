@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://socalelectricpros.com'),
+  metadataBase: new URL('https://www.westekelectriccorp.com'),
   alternates: {
     canonical: '/',
   },
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
     title: 'Westek Electric Corp. | Electrician in Lake Elsinore & Temecula Valley CA',
     description:
       'Licensed electricians serving Lake Elsinore, Temecula, Murrieta & Southern California. Residential, commercial, EV charger installation, panel upgrades. 24/7 emergency service.',
-    url: 'https://socalelectricpros.com',
+    url: 'https://www.westekelectriccorp.com',
     siteName: 'Westek Electric Corp.',
     locale: 'en_US',
     type: 'website',

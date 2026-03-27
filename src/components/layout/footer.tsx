@@ -23,6 +23,20 @@ const footerServices = [
   { label: 'Panel Upgrades', href: '/services/residential/breaker-replacement' },
   { label: 'Outdoor Lighting', href: '/services/residential/outdoor-lighting' },
   { label: 'New Construction', href: '/services/residential/new-construction' },
+  { label: 'Pool & Spa Wiring', href: '/services/residential/hot-tub-spa-pool-jacuzzi' },
+  { label: 'Security Lighting', href: '/services/commercial/security-lighting' },
+  { label: 'Low Voltage Wiring', href: '/services/commercial/low-voltage-wiring' },
+  { label: 'Office Lighting', href: '/services/commercial/office-lighting' },
+  { label: 'Transformers', href: '/services/commercial/transformers' },
+  { label: 'Cat 6 Installation', href: '/services/commercial/cat6-installation' },
+]
+
+const footerResources = [
+  { label: 'Smart Home Electrical Guide', href: '/news/smart-home-electrical-requirements' },
+  { label: 'Outdoor Lighting Tips', href: '/news/outdoor-lighting-installation-tips' },
+  { label: 'EV Charger Guide', href: '/news/ev-charger-installation-guide-temecula' },
+  { label: 'Pool & Spa Lighting', href: '/services/residential/pool-spa-lighting' },
+  { label: 'Indoor Lighting', href: '/services/commercial/indoor-lighting' },
 ]
 
 export function Footer() {
@@ -136,6 +150,20 @@ export function Footer() {
                       className="text-navy-200 hover:text-electric-400 active:text-electric-300 transition-colors text-sm py-1 block"
                     >
                       {service.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </FooterAccordion>
+            <FooterAccordion title="Resources">
+              <ul className="space-y-2.5">
+                {footerResources.map((resource) => (
+                  <li key={resource.href}>
+                    <Link
+                      href={resource.href as never}
+                      className="text-navy-200 hover:text-electric-400 active:text-electric-300 transition-colors text-sm py-1 block"
+                    >
+                      {resource.label}
                     </Link>
                   </li>
                 ))}

@@ -24,7 +24,7 @@ export const BUSINESS_INFO = {
     facebook: 'https://www.facebook.com/1westekelectric',
     instagram: 'https://www.instagram.com/westekelectricco',
     yelp: 'https://www.yelp.com/biz/westek-electric-lake-elsinore-9',
-    google: 'https://g.page/socalelectricpros',
+    google: 'https://g.page/westekelectric',
   },
 } as const
 
@@ -88,6 +88,7 @@ export const PORTFOLIO_PROJECTS = [
       '/images/portfolio/RC–Track-Parking-Lot-Lights-7.webp',
     ],
     services: ['Underground Conduit', 'Power Distribution', 'Outdoor Lighting'],
+    details: 'This project involved trenching and installing underground conduit runs across the entire facility to deliver reliable power to lighting poles, timing systems, and pit area stations. We installed high-output LED parking lot lights for nighttime racing events and wired dedicated circuits for the announcer booth, concession stand, and scoring equipment. All work was completed to commercial code standards with weatherproof enclosures rated for outdoor use.',
   },
   {
     id: 'mobile-bakery-trailer',
@@ -107,6 +108,7 @@ export const PORTFOLIO_PROJECTS = [
       '/images/portfolio/mobile-bakery-trailer-9.webp',
     ],
     services: ['Panel Installation', 'Commercial Kitchen Wiring', 'HVAC Circuits'],
+    details: 'We designed and built a custom electrical panel to power all kitchen appliances, including commercial ovens, mixers, refrigeration units, and hood ventilation. The trailer required careful load calculations to balance power demands within a mobile setup. We ran individual circuits for each major appliance, installed GFCI protection throughout, and added a shore power connection with a 50-amp inlet for plugging into external power sources at event locations.',
   },
   {
     id: 'mobile-home-panel',
@@ -125,6 +127,7 @@ export const PORTFOLIO_PROJECTS = [
       '/images/portfolio/Mobile.Home.Service.Panel.Replacement-8.webp',
     ],
     services: ['Panel Upgrade', 'Code Corrections', 'Safety Inspection'],
+    details: 'The existing panel was a dated split-bus design that no longer met current electrical codes and could not support the homeowner\'s modern appliances. We replaced it with a new 200-amp main breaker panel, rewired all existing circuits with proper labeling, and added dedicated circuits for the HVAC system and kitchen appliances. The project included a full safety inspection, grounding system upgrade, and installation of whole-home surge protection.',
   },
   {
     id: 'dch-dodge-temecula',
@@ -139,6 +142,7 @@ export const PORTFOLIO_PROJECTS = [
       '/images/portfolio/DCH-Dodge-of-Temecula-4.webp',
     ],
     services: ['Commercial Lighting', 'Power Distribution', '3-Phase Installation'],
+    details: 'Our team handled the complete electrical buildout for this major auto dealership, including three-phase power distribution for the service department, energy-efficient LED showroom lighting designed to highlight vehicles on the sales floor, and high-mast parking lot lighting for the outdoor inventory area. We coordinated closely with the general contractor to meet tight construction deadlines while ensuring all work passed city inspection on the first visit.',
   },
   {
     id: 'hyundai-anaheim',
@@ -156,6 +160,7 @@ export const PORTFOLIO_PROJECTS = [
       '/images/portfolio/Hyundai-of-Anaheim-7.webp',
     ],
     services: ['EV Charger Installation', 'Commercial Lighting', 'Service Bay Wiring'],
+    details: 'This dealership project included installing Level 2 and DC fast charging stations to support their growing EV inventory and customer charging needs. We upgraded the showroom lighting to modern LED panels for better vehicle presentation and lower energy costs, and wired the service bays with dedicated 240-volt circuits for diagnostic equipment and vehicle lifts. The project also included exterior security lighting and a new subpanel to accommodate future electrical expansion.',
   },
 ] as const
 
@@ -166,14 +171,14 @@ export const CORE_SERVICES = [
     title: 'Residential Electrical',
     description: 'Complete home electrical services from panel upgrades to whole-house rewiring. We keep your family safe and your lights on.',
     icon: 'Home',
-    href: '/services/residential',
+    href: '/services',
   },
   {
     id: 'commercial',
     title: 'Commercial Electrical',
     description: 'Licensed commercial electricians for businesses of all sizes. Minimize downtime with our reliable service.',
     icon: 'Building2',
-    href: '/services/commercial',
+    href: '/services',
   },
   {
     id: 'switches-outlets',
@@ -307,7 +312,7 @@ export const TESTIMONIALS = [
 export const BLOG_POSTS_PREVIEW = [
   {
     slug: 'ev-charger-installation-guide-temecula',
-    title: 'Complete Guide to EV Charger Installation in Temecula',
+    title: 'EV Charger Installation Guide for Temecula',
     excerpt: 'Everything Temecula homeowners need to know about installing a Level 2 EV charger, from electrical requirements to permits and rebates.',
     date: '2024-12-10',
     category: 'EV Chargers',
@@ -343,7 +348,7 @@ export const BLOG_POSTS_PREVIEW = [
   },
   {
     slug: 'smart-home-electrical-requirements',
-    title: 'Smart Home Electrical Requirements: A Complete Guide',
+    title: 'Smart Home Electrical Requirements Guide',
     excerpt: 'Thinking about upgrading to a smart home? Here\'s what you need to know about electrical requirements for smart devices and automation.',
     date: '2024-11-15',
     category: 'Smart Home',
@@ -352,7 +357,7 @@ export const BLOG_POSTS_PREVIEW = [
   },
   {
     slug: 'outdoor-lighting-installation-tips',
-    title: 'Outdoor Lighting Installation: Design Tips for Curb Appeal',
+    title: 'Outdoor Lighting Design Tips for Curb Appeal',
     excerpt: 'Transform your outdoor spaces with professional lighting design. Learn about landscape lighting, security lights, and pathway illumination.',
     date: '2024-11-08',
     category: 'Lighting',

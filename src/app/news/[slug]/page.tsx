@@ -14,7 +14,7 @@ export async function generateStaticParams() {
 // This would normally come from a CMS or MDX files
 const blogPostContent = {
   'ev-charger-installation-guide-temecula': {
-    title: 'Complete Guide to EV Charger Installation in Temecula',
+    title: 'EV Charger Installation Guide for Temecula',
     excerpt: 'Everything Temecula homeowners need to know about installing a Level 2 EV charger, from electrical requirements to permits and rebates.',
     date: '2024-12-10',
     category: 'EV Chargers',
@@ -185,7 +185,7 @@ const blogPostContent = {
     `,
   },
   'smart-home-electrical-requirements': {
-    title: 'Smart Home Electrical Requirements: A Complete Guide',
+    title: 'Smart Home Electrical Requirements Guide',
     excerpt: 'Thinking about upgrading to a smart home? Here\'s what you need to know about electrical requirements for smart devices and automation.',
     date: '2024-11-15',
     category: 'Smart Home',
@@ -213,17 +213,17 @@ const blogPostContent = {
       <p>If you work from home, a dedicated circuit for your office ensures that your computer, monitors, and networking equipment aren't sharing power with other rooms. This prevents tripped breakers during video calls and protects sensitive electronics from voltage fluctuations. A dedicated 20-amp circuit for a home office is a quick, affordable upgrade.</p>
 
       <h2>Outdoor Smart Devices</h2>
-      <p>Smart security cameras, floodlights, and landscape lighting controllers need properly weatherproofed electrical connections. If you're installing outdoor smart cameras, make sure you have exterior outlets or junction boxes in the right locations. Hardwired cameras are more reliable than battery-powered ones and don't need recharging every few months.</p>
+      <p>Smart security cameras, floodlights, and landscape lighting controllers need properly weatherproofed electrical connections. If you're installing outdoor smart cameras, make sure you have exterior outlets or junction boxes in the right locations. Hardwired cameras are more reliable than battery-powered ones and don't need recharging every few months. For pools and hot tubs, <a href="/services/residential/hot-tub-spa-pool-jacuzzi">smart pool and spa wiring</a> can integrate with your home automation system.</p>
 
       <h2>WiFi and Networking</h2>
-      <p>While not strictly electrical, your smart home is only as good as your WiFi network. If you're going all-in on smart devices, consider having an electrician install structured wiring — Ethernet cables run through your walls to strategic locations for WiFi access points. This gives you a rock-solid mesh network that won't drop devices when your neighbor's WiFi interferes.</p>
+      <p>While not strictly electrical, your smart home is only as good as your WiFi network. If you're going all-in on smart devices, consider having an electrician install structured wiring — <a href="/services/commercial/cat6-installation">Cat 6 network cabling</a> run through your walls to strategic locations for WiFi access points. This gives you a rock-solid mesh network that won't drop devices when your neighbor's WiFi interferes.</p>
 
       <h2>Plan Your Smart Home Right</h2>
-      <p>The best time to set up your smart home electrical infrastructure is during a renovation or new construction — but retrofitting is absolutely doable. Westek Electric Corp. can evaluate your current wiring, add neutral wires where needed, install dedicated circuits, and set up outdoor power for cameras and lighting. Call (909) 996-6678 for a free consultation.</p>
+      <p>The best time to set up your smart home electrical infrastructure is during a renovation or new construction — but retrofitting is absolutely doable. Westek Electric Corp. can evaluate your current wiring, add neutral wires where needed, install dedicated circuits, run <a href="/services/commercial/low-voltage-wiring">low voltage wiring</a>, and set up outdoor power for cameras and lighting. Call (909) 996-6678 for a free consultation.</p>
     `,
   },
   'outdoor-lighting-installation-tips': {
-    title: 'Outdoor Lighting Installation: Design Tips for Curb Appeal',
+    title: 'Outdoor Lighting Design Tips for Curb Appeal',
     excerpt: 'Transform your outdoor spaces with professional lighting design. Learn about landscape lighting, security lights, and pathway illumination.',
     date: '2024-11-08',
     category: 'Lighting',
@@ -250,8 +250,8 @@ const blogPostContent = {
       </ul>
 
       <h2>Security Lighting That Doesn't Look Like a Prison</h2>
-      <p>Security lighting doesn't have to mean harsh floodlights that blind everyone in the neighborhood. Modern motion-activated LED fixtures come in attractive designs that blend with your home's style. Strategic placement at entry points, side yards, and garage areas provides excellent security coverage while keeping your home looking welcoming.</p>
-      <p>We recommend a combination of always-on low-level lighting (pathway lights, porch lights) supplemented by motion-activated fixtures in less-trafficked areas. This approach deters intruders while keeping your property beautifully lit.</p>
+      <p>Security lighting doesn't have to mean harsh floodlights that blind everyone in the neighborhood. Modern motion-activated LED fixtures come in attractive designs that blend with your home's style. Strategic placement at entry points, side yards, and garage areas provides excellent <a href="/services/commercial/security-lighting">security lighting</a> coverage while keeping your home looking welcoming.</p>
+      <p>We recommend a combination of always-on low-level lighting (pathway lights, porch lights) supplemented by motion-activated fixtures in less-trafficked areas. This approach deters intruders while keeping your property beautifully lit. If you have a pool or spa, dedicated <a href="/services/residential/pool-spa-lighting">pool and spa lighting</a> adds both safety and ambiance to your backyard.</p>
 
       <h2>Low Voltage vs. Line Voltage</h2>
       <p>Most landscape lighting uses low-voltage (12V) systems powered by a transformer. Benefits include:</p>
@@ -261,13 +261,13 @@ const blogPostContent = {
         <li>Easier to expand and modify</li>
         <li>Available in a wide range of high-quality fixtures</li>
       </ul>
-      <p>However, the transformer and main wiring connections should be installed by a licensed electrician. We frequently see DIY landscape lighting with undersized transformers, voltage drop issues from long wire runs, and improper connections that corrode and fail. Getting the infrastructure right from the start saves headaches down the road.</p>
+      <p>However, the transformer and main <a href="/services/commercial/low-voltage-wiring">low voltage wiring</a> connections should be installed by a licensed electrician. We frequently see DIY landscape lighting with undersized transformers, voltage drop issues from long wire runs, and improper connections that corrode and fail. Getting the infrastructure right from the start saves headaches down the road.</p>
 
       <h2>Smart Outdoor Lighting Controls</h2>
       <p>Modern outdoor lighting systems can be controlled with timers, photocells (dusk-to-dawn sensors), motion sensors, or smart home integration. A photocell combined with a timer is the most popular setup — lights turn on automatically at dusk and off at a set time. Smart controls let you adjust schedules from your phone and create scenes for different occasions.</p>
 
       <h2>Get a Professional Lighting Plan</h2>
-      <p>The difference between amateur and professional outdoor lighting is dramatic. At Westek Electric Corp., we design and install complete outdoor lighting systems for homes throughout Lake Elsinore, Temecula, and Southern California. We'll create a lighting plan that enhances your home's curb appeal, improves safety, and works within your budget. Call (909) 996-6678 for a free consultation.</p>
+      <p>The difference between amateur and professional outdoor lighting is dramatic. For businesses, we also provide <a href="/services/commercial/indoor-lighting">commercial indoor lighting</a> and <a href="/services/commercial/office-lighting">office lighting solutions</a>. At Westek Electric Corp., we design and install complete outdoor lighting systems for homes throughout Lake Elsinore, Temecula, and Southern California. We'll create a lighting plan that enhances your home's curb appeal, improves safety, and works within your budget. Call (909) 996-6678 for a free consultation.</p>
     `,
   },
 }
