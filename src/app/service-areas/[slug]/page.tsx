@@ -29,7 +29,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   }
 
   return {
-    title: `Electrician in ${area.name}, CA`,
+    title: area.metaTitle,
     description: area.metaDescription,
     alternates: {
       canonical: `/service-areas/${area.slug}`,

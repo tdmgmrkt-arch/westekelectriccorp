@@ -27,10 +27,10 @@ export const SERVICE_AREA_DATA: Record<string, ServiceAreaData> = {
     county: 'Riverside County',
     coordinates: { lat: 33.4936, lng: -117.1484 },
     zipCodes: ['92590', '92591', '92592'],
-    metaTitle: 'Electrician in Temecula, CA | Licensed Electrical Contractor',
+    metaTitle: 'Licensed Electrician in Temecula, CA',
     metaDescription:
       'Licensed electrician serving Temecula, CA. Residential & commercial electrical, panel upgrades, EV charger installation. Free estimates. Call (909) 996-6678.',
-    heroHeadline: 'Your Trusted Electricians in Temecula, CA',
+    heroHeadline: 'Licensed Electricians Serving Temecula, CA',
     heroDescription:
       'Westek Electric Corp. provides licensed residential and commercial electrical services throughout Temecula. From Old Town to the wine country estates, we keep Temecula powered safely.',
     heroImage: '/images/portfolio/DCH-Dodge-of-Temecula-1.webp',
@@ -85,10 +85,10 @@ export const SERVICE_AREA_DATA: Record<string, ServiceAreaData> = {
     county: 'Riverside County',
     coordinates: { lat: 33.5539, lng: -117.2139 },
     zipCodes: ['92562', '92563'],
-    metaTitle: 'Electrician in Murrieta, CA | Licensed Electrical Contractor',
+    metaTitle: 'Murrieta, CA Electrical Services',
     metaDescription:
       'Licensed electrician serving Murrieta, CA. Panel upgrades, EV chargers, rewiring & more. Trusted by Murrieta homeowners for 15+ years. Call (909) 996-6678.',
-    heroHeadline: 'Your Trusted Electricians in Murrieta, CA',
+    heroHeadline: 'Professional Electrical Services in Murrieta, CA',
     heroDescription:
       'Westek Electric Corp. delivers reliable residential and commercial electrical services throughout Murrieta. From family neighborhoods to growing commercial centers, we have you covered.',
     heroImage: '/images/residential.webp',
@@ -138,10 +138,10 @@ export const SERVICE_AREA_DATA: Record<string, ServiceAreaData> = {
     county: 'Riverside County',
     coordinates: { lat: 33.6971, lng: -117.1851 },
     zipCodes: ['92584', '92585', '92586', '92587'],
-    metaTitle: 'Electrician in Menifee, CA | Licensed Electrical Contractor',
+    metaTitle: 'Electrical Contractor in Menifee, CA',
     metaDescription:
       'Licensed electrician serving Menifee, CA. New construction, panel upgrades & electrical repairs. Riverside County\'s fastest-growing city. Call (909) 996-6678.',
-    heroHeadline: 'Your Trusted Electricians in Menifee, CA',
+    heroHeadline: 'Expert Electrical Contractors in Menifee, CA',
     heroDescription:
       'Westek Electric Corp. serves Menifee with expert residential and commercial electrical services. From brand-new communities to established neighborhoods, we deliver quality electrical work.',
     heroImage: '/images/New_Construction-Service-Image.webp',
@@ -191,7 +191,7 @@ export const SERVICE_AREA_DATA: Record<string, ServiceAreaData> = {
     county: 'Riverside County',
     coordinates: { lat: 33.6681, lng: -117.3273 },
     zipCodes: ['92530', '92532'],
-    metaTitle: 'Electrician in Lake Elsinore, CA | Licensed Electrical Contractor',
+    metaTitle: 'Local Electrician in Lake Elsinore, CA',
     metaDescription:
       'Local electrician in Lake Elsinore, CA. Residential & commercial electrical services with fast response times. Licensed and insured. Call (909) 996-6678.',
     heroHeadline: 'Your Local Electricians in Lake Elsinore, CA',
@@ -244,10 +244,10 @@ export const SERVICE_AREA_DATA: Record<string, ServiceAreaData> = {
     county: 'Riverside County',
     coordinates: { lat: 33.5989, lng: -117.2798 },
     zipCodes: ['92595'],
-    metaTitle: 'Electrician in Wildomar, CA | Licensed Electrical Contractor',
+    metaTitle: 'Electrician Serving Wildomar, CA',
     metaDescription:
       'Licensed electrician in Wildomar, CA. Residential electrical, panel upgrades & EV charger installation. Rural and suburban experts. Call (909) 996-6678.',
-    heroHeadline: 'Your Trusted Electricians in Wildomar, CA',
+    heroHeadline: 'Reliable Electrical Contractors in Wildomar, CA',
     heroDescription:
       'Westek Electric Corp. provides expert electrical services throughout Wildomar. From rural properties to newer subdivisions, we handle the unique electrical needs of this growing community.',
     heroImage: '/images/Outdoor-Lighting-Service-Image.webp',
@@ -297,10 +297,10 @@ export const SERVICE_AREA_DATA: Record<string, ServiceAreaData> = {
     county: 'Riverside County',
     coordinates: { lat: 33.7076, lng: -117.0845 },
     zipCodes: ['92596'],
-    metaTitle: 'Electrician in Winchester, CA | Licensed Electrical Contractor',
+    metaTitle: 'Winchester, CA Electrician',
     metaDescription:
       'Licensed electrician in Winchester, CA. Electrical services for rural properties, new developments, and custom homes. Free estimates. Call (909) 996-6678.',
-    heroHeadline: 'Your Trusted Electricians in Winchester, CA',
+    heroHeadline: 'Full-Service Electricians in Winchester, CA',
     heroDescription:
       'Westek Electric Corp. provides residential and commercial electrical services throughout Winchester. Expert electrical work for this growing unincorporated community in Riverside County.',
     heroImage: '/images/Residential-Breakers-Replacement-Service-Image.webp',
@@ -350,10 +350,10 @@ export const SERVICE_AREA_DATA: Record<string, ServiceAreaData> = {
     county: 'Riverside County',
     coordinates: { lat: 33.5980, lng: -117.1022 },
     zipCodes: ['92596'],
-    metaTitle: 'Electrician in French Valley, CA | Licensed Electrical Contractor',
+    metaTitle: 'French Valley, CA Electrical Services',
     metaDescription:
       'Licensed electrician in French Valley, CA. Modern home electrical, EV charger installation, and smart home wiring. Free estimates. Call (909) 996-6678.',
-    heroHeadline: 'Your Trusted Electricians in French Valley, CA',
+    heroHeadline: 'Trusted Electrical Services in French Valley, CA',
     heroDescription:
       'Westek Electric Corp. serves French Valley with modern electrical solutions. From newer planned communities to established homes, we provide expert electrical services.',
     heroImage: '/images/EV-Chargers.webp',
@@ -403,10 +403,10 @@ export const SERVICE_AREA_DATA: Record<string, ServiceAreaData> = {
     county: 'San Diego County',
     coordinates: { lat: 33.3764, lng: -117.2511 },
     zipCodes: ['92028'],
-    metaTitle: 'Electrician in Fallbrook, CA | Licensed Electrical Contractor',
+    metaTitle: 'Certified Electrician in Fallbrook, CA',
     metaDescription:
       'Licensed electrician in Fallbrook, CA. Agricultural, residential & commercial electrical for the Friendly Village. Free estimates. Call (909) 996-6678.',
-    heroHeadline: 'Your Trusted Electricians in Fallbrook, CA',
+    heroHeadline: 'Certified Electricians Serving Fallbrook, CA',
     heroDescription:
       'Westek Electric Corp. extends our expert electrical services to Fallbrook. From avocado groves to custom estates, we handle the diverse electrical needs of this unique community.',
     heroImage: '/images/Lanscape-Lighting-Service-Image.webp',
@@ -456,10 +456,10 @@ export const SERVICE_AREA_DATA: Record<string, ServiceAreaData> = {
     county: 'Riverside County',
     coordinates: { lat: 33.7476, lng: -116.9719 },
     zipCodes: ['92543', '92544', '92545', '92546'],
-    metaTitle: 'Electrician in Hemet, CA | Licensed Electrical Contractor',
+    metaTitle: 'Hemet, CA Electrical Contractor',
     metaDescription:
       'Licensed electrician serving Hemet, CA. Rewiring, panel upgrades, and electrical repairs for older homes. Trusted electrical contractor. Call (909) 996-6678.',
-    heroHeadline: 'Your Trusted Electricians in Hemet, CA',
+    heroHeadline: 'Experienced Electricians in Hemet, CA',
     heroDescription:
       'Westek Electric Corp. provides reliable electrical services throughout Hemet. Specializing in older home upgrades and modern electrical solutions for this established San Jacinto Valley community.',
     heroImage: '/images/Residential-Rewiring-Service-Image.webp',
@@ -509,10 +509,10 @@ export const SERVICE_AREA_DATA: Record<string, ServiceAreaData> = {
     county: 'Riverside County',
     coordinates: { lat: 33.7839, lng: -116.9586 },
     zipCodes: ['92582', '92583'],
-    metaTitle: 'Electrician in San Jacinto, CA | Licensed Electrical Contractor',
+    metaTitle: 'Electrician Near San Jacinto, CA',
     metaDescription:
       'Licensed electrician serving San Jacinto, CA. Home rewiring, panel upgrades, and new construction electrical. Affordable and reliable. Call (909) 996-6678.',
-    heroHeadline: 'Your Trusted Electricians in San Jacinto, CA',
+    heroHeadline: 'Quality Electrical Services in San Jacinto, CA',
     heroDescription:
       'Westek Electric Corp. delivers quality electrical services throughout San Jacinto. From historic downtown properties to new developments, we provide reliable and affordable electrical solutions.',
     heroImage: '/images/Residentail-code-Corrections-Service-Image.webp',
@@ -562,10 +562,10 @@ export const SERVICE_AREA_DATA: Record<string, ServiceAreaData> = {
     county: 'Riverside County',
     coordinates: { lat: 33.8753, lng: -117.5664 },
     zipCodes: ['92879', '92880', '92881', '92882', '92883'],
-    metaTitle: 'Electrician in Corona, CA | Licensed Electrical Contractor',
+    metaTitle: 'Corona, CA Licensed Electrician',
     metaDescription:
       'Licensed electrician in Corona, CA. Residential and commercial electrical for the Circle City. Panel upgrades, EV chargers & more. Call (909) 996-6678.',
-    heroHeadline: 'Your Trusted Electricians in Corona, CA',
+    heroHeadline: 'Top-Rated Electricians in Corona, CA',
     heroDescription:
       'Westek Electric Corp. serves Corona with comprehensive residential and commercial electrical services. From established neighborhoods to thriving business districts, we deliver expert electrical work.',
     heroImage: '/images/Commercial.webp',
@@ -615,10 +615,10 @@ export const SERVICE_AREA_DATA: Record<string, ServiceAreaData> = {
     county: 'Riverside County',
     coordinates: { lat: 33.9533, lng: -117.3962 },
     zipCodes: ['92501', '92503', '92504', '92505', '92506', '92507', '92508'],
-    metaTitle: 'Electrician in Riverside, CA | Licensed Electrical Contractor',
+    metaTitle: 'Riverside, CA Electrical Contractor',
     metaDescription:
       'Licensed electrician in Riverside, CA. From historic Mission Inn district to modern developments. Residential & commercial electrical. Call (909) 996-6678.',
-    heroHeadline: 'Your Trusted Electricians in Riverside, CA',
+    heroHeadline: 'Professional Electricians in Riverside, CA',
     heroDescription:
       'Westek Electric Corp. provides professional electrical services throughout Riverside. From the historic downtown core to expanding suburban neighborhoods, we serve the county seat with expert electrical work.',
     heroImage: '/images/Commercial-Electric-Panel-Installation-Service-Image.webp',
