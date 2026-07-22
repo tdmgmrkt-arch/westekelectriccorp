@@ -90,10 +90,10 @@ export function Footer() {
 
       {/* Main Footer Content */}
       <div className="container-wide py-12 md:py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 md:gap-10 lg:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10 lg:gap-10">
 
           {/* Column 1: Brand */}
-          <div className="lg:col-span-3">
+          <div>
             <Link href="/" className="inline-block mb-5">
               <Image
                 src="/images/westek.logo.webp"
@@ -140,9 +140,9 @@ export function Footer() {
           </div>
 
           {/* Column 2: Services */}
-          <div className="lg:col-span-2">
+          <div>
             <FooterAccordion title="Services">
-              <ul className="space-y-2.5">
+              <ul className="grid grid-cols-2 gap-x-4 gap-y-2">
                 {footerServices.map((service) => (
                   <li key={service.href}>
                     <Link
@@ -155,24 +155,10 @@ export function Footer() {
                 ))}
               </ul>
             </FooterAccordion>
-            <FooterAccordion title="Resources">
-              <ul className="space-y-2.5">
-                {footerResources.map((resource) => (
-                  <li key={resource.href}>
-                    <Link
-                      href={resource.href as never}
-                      className="text-navy-200 hover:text-electric-400 active:text-electric-300 transition-colors text-sm py-1 block"
-                    >
-                      {resource.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </FooterAccordion>
           </div>
 
           {/* Column 3: Service Areas */}
-          <div className="lg:col-span-4">
+          <div>
             <FooterAccordion title="Service Areas">
               <ul className="grid grid-cols-2 gap-x-4 gap-y-2">
                 {SERVICE_AREAS.map((area) => (
@@ -196,7 +182,7 @@ export function Footer() {
           </div>
 
           {/* Column 4: Contact Info */}
-          <div className="lg:col-span-3">
+          <div>
             <h3 className="text-white font-bold text-base uppercase tracking-wide mb-4 pb-2 border-b border-navy-700">
               Contact Us
             </h3>
@@ -256,6 +242,29 @@ export function Footer() {
                   </div>
                 </Link>
               </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      {/* Popular Guides Strip */}
+      <div className="border-t border-navy-700/50">
+        <div className="container-wide py-4 md:py-5">
+          <div className="flex flex-col md:flex-row md:items-center gap-3 md:gap-6">
+            <p className="text-white text-xs font-bold uppercase tracking-wider shrink-0">
+              Popular Guides
+            </p>
+            <ul className="flex flex-wrap items-center gap-x-5 gap-y-2">
+              {footerResources.map((resource) => (
+                <li key={resource.href}>
+                  <Link
+                    href={resource.href as never}
+                    className="text-navy-300 hover:text-electric-400 active:text-electric-300 transition-colors text-sm"
+                  >
+                    {resource.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
