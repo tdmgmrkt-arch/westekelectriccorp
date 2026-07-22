@@ -291,6 +291,19 @@ export function Footer() {
               </a>
             </div>
           </div>
+          <div className="mt-3 pt-3 border-t border-navy-800/60 text-center">
+            <p className="text-navy-500 text-xs">
+              Designed &amp; Developed by{' '}
+              <a
+                href="https://tdmarketinggroup.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-navy-400 hover:text-electric-400 transition-colors"
+              >
+                TD Marketing Group
+              </a>
+            </p>
+          </div>
         </div>
       </div>
     </footer>
