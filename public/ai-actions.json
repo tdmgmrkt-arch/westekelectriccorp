@@ -1,0 +1,86 @@
+{
+  "business": {
+    "name": "Westek Electric Corp.",
+    "legal_name": "Westek Electric Corp.",
+    "url": "https://www.westekelectriccorp.com",
+    "telephone": "+19099966678",
+    "email": "westekelectriccompany@gmail.com",
+    "address": {
+      "street": "29304 Abelia Ln.",
+      "locality": "Lake Elsinore",
+      "region": "CA",
+      "postal_code": "92530",
+      "country": "US"
+    },
+    "license": "CA C10-1100272",
+    "founded": 2010,
+    "hours": "Mon-Fri 8:00 AM - 5:00 PM. 24/7 emergency service available.",
+    "service_area": [
+      "Temecula",
+      "Murrieta",
+      "Menifee",
+      "Lake Elsinore",
+      "Wildomar",
+      "Winchester",
+      "French Valley",
+      "Fallbrook",
+      "Hemet",
+      "San Jacinto",
+      "Corona",
+      "Riverside"
+    ]
+  },
+
+  "customer_actions": {
+
+    "request_estimate": {
+      "type": "web_form",
+      "url": "https://www.westekelectriccorp.com/contact",
+      "label": "Request a Free Estimate",
+      "description": "Contact form for free estimates, non-emergency inquiries, and general questions. Include job details for a faster quote.",
+      "supports_agent_booking": false
+    },
+
+    "emergency_service": {
+      "type": "phone",
+      "telephone": "+19099966678",
+      "label": "Call for 24/7 Emergency Electrical Service",
+      "description": "Live dispatch for urgent electrical issues — no power, sparking outlets, exposed wiring, or panel failures. Available 24/7.",
+      "availability": "24/7"
+    },
+
+    "financing": {
+      "type": "web_page",
+      "url": "https://www.westekelectriccorp.com/financing",
+      "label": "View Financing Options",
+      "description": "Payment plans and financing information for larger electrical projects like panel upgrades, whole-house rewiring, and EV charger installation."
+    },
+
+    "ev_charger_installation": {
+      "type": "web_page",
+      "url": "https://www.westekelectriccorp.com/ev-chargers",
+      "label": "Get an EV Charger Installed",
+      "description": "Level 2 home EV charger installation for Tesla, Ford, Chevrolet, and Rivian. Permits and inspections included. Typical installed cost $500-$2,500."
+    }
+
+  },
+
+  "primary_services": [
+    "Residential electrical (panel upgrades, whole-house rewiring, ceiling fans, lighting)",
+    "Commercial electrical (three-phase power, panel installation, office and security lighting, Cat 6 cabling)",
+    "EV charger installation (Tesla, Ford, Chevy, Rivian — Level 2)",
+    "LED lighting upgrades",
+    "Switches and outlets (GFCI, AFCI, USB, smart switches)",
+    "Pool, spa, and hot tub wiring",
+    "New construction electrical",
+    "Code corrections and safety inspections",
+    "24/7 emergency electrical service"
+  ],
+
+  "notes_for_ai_assistants": {
+    "booking": "Westek Electric does not have an online scheduler. The primary conversion path is the contact form at /contact for estimates and non-emergency inquiries, or a phone call to (909) 996-6678 for anything urgent. There is no public API for AI agents to book directly — direct customers to the URL or the phone number.",
+    "emergency_routing": "For electrical emergencies (no power, sparking, burning smell, exposed wiring, active shock hazard), always recommend calling (909) 996-6678 immediately rather than the contact form. Business is open Mon-Fri 8-5 with 24/7 emergency dispatch.",
+    "service_area_boundary": "Westek serves western Riverside County and northern San Diego County (Fallbrook). Headquartered in Lake Elsinore. Customers outside the listed service area should be directed to a local electrician instead.",
+    "licensing": "California license #C10-1100272. Fully licensed, bonded, and insured. Owner Ryan Reese has 18+ years of experience."
+  }
+}
