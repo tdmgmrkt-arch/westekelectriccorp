@@ -2,6 +2,8 @@
 
 > Licensed electrical contractor serving Lake Elsinore, Temecula, Murrieta, and Southern California since 2010. Residential and commercial electrical services, EV charger installation, panel upgrades, and 24/7 emergency service. CA License #C10-1100272.
 
+For structured, machine-readable customer actions, see: https://westekelectriccorp.com/ai-actions.json
+
 ## Business Info
 
 - Name: Westek Electric Corp.

@@ -53,6 +53,11 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://www.westekelectriccorp.com'),
   alternates: {
     canonical: '/',
+    types: {
+      'application/json': [
+        { url: '/ai-actions.json', title: 'Westek Electric Corp. AI Service Menu' },
+      ],
+    },
   },
   openGraph: {
     title: 'Westek Electric Corp. | Electrician in Lake Elsinore & Temecula Valley CA',

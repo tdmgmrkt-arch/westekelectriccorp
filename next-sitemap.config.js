@@ -37,6 +37,7 @@ module.exports = {
       ...blogPaths,
       { loc: '/service-areas', lastmod: new Date().toISOString(), changefreq: 'monthly', priority: 0.9 },
       ...serviceAreaPaths,
+      { loc: '/ai-actions.json', lastmod: new Date().toISOString(), changefreq: 'monthly', priority: 0.5 },
     ]
   },
   robotsTxtOptions: {
