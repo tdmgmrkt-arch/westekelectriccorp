@@ -24,7 +24,7 @@ const blogPostContent = {
 
       <h2>Where Surges Actually Come From</h2>
       <p>Roughly 80% of the voltage transients a home experiences are internally generated. Every time a large inductive load switches off — an AC compressor, a pool pump, a well pump, a refrigerator — it dumps energy back onto your wiring. The rest come from the utility side: line switching, capacitor bank operations, tree contact, transformer faults, and the restoration spike when power comes back after a Public Safety Power Shutoff.</p>
-      <p>Riverside County gets all of these. Summer monsoon cells roll over the Ortega and Elsinore hills, SCE switches circuits under heat load, and PSPS events end with thousands of homes re-energizing at once.</p>
+      <p>Riverside County gets all of these. Summer monsoon cells roll over the Ortega and Elsinore hills, SCE switches circuits under heat load, and PSPS events end with thousands of homes re-energizing at once — the same shutoffs that lead many homeowners to consider a <a href="/news/whole-home-standby-generators-menifee-psps">whole-home standby generator</a>.</p>
 
       <h2>Why It Matters More Than It Did 20 Years Ago</h2>
       <p>An older home was full of resistive loads — incandescent bulbs, mechanical timers, motors with no electronics. They shrug off a 600-volt transient. A modern home is full of circuit boards: the inverter in your heat pump, the control board in your furnace, the LED drivers in every recessed can, the Wi-Fi radio in your thermostat, the charging module in your EV charger. Those boards fail at voltages a light bulb would never notice.</p>
@@ -44,10 +44,12 @@ const blogPostContent = {
       <p>Look for a unit with a visible status indicator and, ideally, an audible alarm. An SPD that has sacrificed itself protecting your house looks exactly like a working one unless it tells you otherwise.</p>
 
       <h2>Installation Reality in an Older Panel</h2>
-      <p>A whole-home SPD needs two adjacent breaker spaces and a short, straight conductor run to the bus. "Short and straight" matters more than most people realize — every extra inch of lead length raises the let-through voltage. If your panel is full, or if it is one of the obsolete brands that shows up constantly in Lake Elsinore and <a href="/service-areas/wildomar">Wildomar</a> home inspections, adding surge protection is the right moment to talk about a <a href="/services/commercial/panel-installation">panel upgrade</a> instead of forcing a device into a panel that is already at its limit.</p>
+      <p>A whole-home SPD needs two adjacent breaker spaces and a short, straight conductor run to the bus. "Short and straight" matters more than most people realize — every extra inch of lead length raises the let-through voltage. If your panel is full, or if it is one of the obsolete brands that shows up constantly in Lake Elsinore and <a href="/service-areas/wildomar">Wildomar</a> <a href="/news/home-inspection-electrical-red-flags-temecula-murrieta">home inspections</a>, adding surge protection is the right moment to talk about a <a href="/services/commercial/panel-installation">panel upgrade</a> instead of forcing a device into a panel that is already at its limit.</p>
 
       <h2>What It Costs and What It Protects</h2>
       <p>Installed, a quality service-entrance SPD on an existing panel with available space typically runs a few hundred dollars. Compare that against a single heat pump control board, an EV charger, or the LED retrofit in a whole house. For homes that have added solar, a battery, a <a href="/services/residential/dedicated-circuits">dedicated circuit</a> for an EV charger, or any smart home automation, it is among the cheapest insurance in the panel.</p>
+
+      <p>Surge protection pairs naturally with the rest of your grid-resilience checklist. If you have not already worked through <a href="/news/wildfire-season-electrical-prep-southern-california">wildfire season electrical prep</a>, that is the companion piece to this one.</p>
 
       <h2>One Caveat</h2>
       <p>Surge protection does not replace grounding. An SPD works by diverting energy to ground, so if your grounding electrode system is undersized, corroded, or missing the bonding jumpers required by current code, the device cannot do its job. We check grounding every time we install one — and in pre-1990 homes, we find problems more often than not.</p>
@@ -81,14 +83,14 @@ const blogPostContent = {
         <li><strong>Panel replacement or upgrade,</strong> including a main breaker change or a service upgrade to 200 amps</li>
         <li><strong>Subpanels</strong> in a garage, shop, ADU, or at a pool equipment pad</li>
         <li><strong>Rewiring</strong> — whole-house or partial <a href="/services/residential/rewiring">rewiring</a>, and any replacement of aluminum branch circuits</li>
-        <li><strong>Adding outlets, switches, or lighting</strong> in a remodel, addition, or converted space</li>
+        <li><strong>Adding outlets, switches, or lighting</strong> in a remodel, addition, or converted space — see our breakdown of <a href="/news/kitchen-remodel-electrical-requirements-lake-elsinore">kitchen remodel electrical requirements</a></li>
         <li><strong>Pool, spa, and hot tub wiring,</strong> including bonding grids</li>
         <li><strong>Solar, battery storage, and generator interlocks or transfer switches</strong></li>
         <li><strong>Any work in a detached structure</strong> that is newly energized</li>
       </ul>
 
       <h2>Why Cities Care</h2>
-      <p>The California Electrical Code — the state's adoption of the National Electrical Code, updated on a three-year cycle — exists because electrical mistakes hide inside walls until they start a fire. An inspector is there to confirm wire gauge matches breaker size, that AFCI and GFCI protection exists where required, that grounding and bonding are correct, and that boxes are accessible and properly filled. The <a href="https://www.dir.ca.gov/dlse/ecu/electricalcertifications.html" target="_blank" rel="noopener nofollow">California Department of Industrial Relations</a> also requires that the electricians doing the work be state-certified, which is part of what a permitted job verifies.</p>
+      <p>The California Electrical Code — the state's adoption of the National Electrical Code, updated on a three-year cycle — exists because electrical mistakes hide inside walls until they start a fire. An inspector is there to confirm wire gauge matches breaker size, that <a href="/news/gfci-afci-california-code-requirements-2026">AFCI and GFCI protection</a> exists where required, that grounding and bonding are correct, and that boxes are accessible and properly filled. The <a href="https://www.dir.ca.gov/dlse/ecu/electricalcertifications.html" target="_blank" rel="noopener nofollow">California Department of Industrial Relations</a> also requires that the electricians doing the work be state-certified, which is part of what a permitted job verifies.</p>
 
       <h2>How the Process Actually Works Here</h2>
       <p>Each jurisdiction runs its own building department. Temecula, Murrieta, Menifee, Lake Elsinore, Wildomar, and Hemet each issue their own permits; properties in <a href="/service-areas/french-valley">French Valley</a>, <a href="/service-areas/winchester">Winchester</a>, and other unincorporated areas go through Riverside County Building and Safety.</p>
@@ -99,7 +101,7 @@ const blogPostContent = {
       <p>Be very suspicious of any contractor who asks <em>you</em> to pull the permit for work <em>they</em> will perform. That is a warning sign about their license status, and it shifts liability onto you.</p>
 
       <h2>What Happens With Unpermitted Work</h2>
-      <p>Three things, usually. Your homeowners insurance may deny a claim traced to unpermitted electrical work. A buyer's inspector will flag it, and lenders sometimes require it be corrected before funding. And bringing it into compliance after the fact means opening finished walls — which costs far more than doing it right initially. We do a steady volume of <a href="/services/residential/code-corrections">code correction</a> work that started as someone's weekend project.</p>
+      <p>Three things, usually. Your homeowners insurance may deny a claim traced to unpermitted electrical work. A buyer's inspector will flag it — unpermitted work sits alongside the other <a href="/news/home-inspection-electrical-red-flags-temecula-murrieta">electrical red flags that surface during a sale</a> — and lenders sometimes require it be corrected before funding. And bringing it into compliance after the fact means opening finished walls — which costs far more than doing it right initially. We do a steady volume of <a href="/services/residential/code-corrections">code correction</a> work that started as someone's weekend project.</p>
 
       <h2>When You Are Not Sure, Ask First</h2>
       <p>Westek Electric Corp. pulls permits in every city we work in across the Temecula Valley and handles the inspections as part of the job. If you are planning a project and want a straight answer about whether it needs a permit and what that adds to the timeline, call (909) 996-6678.</p>
@@ -113,7 +115,7 @@ const blogPostContent = {
     readTime: '6 min read',
     content: `
       <p>Drive through <a href="/service-areas/french-valley">French Valley</a> or the newer tracts in <a href="/service-areas/murrieta">Murrieta</a> after dark and the difference between a house with a lighting plan and a house with a floodlight bolted over the garage is obvious from the street. One reads as designed. The other reads as an interrogation.</p>
-      <p>Outdoor lighting does two jobs at once — curb appeal and security — and the good news is that a well-designed system does both better than a bad one does either.</p>
+      <p>Outdoor lighting does two jobs at once — curb appeal and security — and the good news is that a well-designed system does both better than a bad one does either. If you are starting from scratch, our <a href="/news/outdoor-lighting-installation-tips">outdoor lighting design tips</a> cover the curb-appeal side in more depth.</p>
 
       <h2>Start With Layers, Not Fixtures</h2>
       <p>Professional outdoor lighting uses three layers. Get the layers right and the fixture selection almost takes care of itself.</p>
@@ -129,7 +131,7 @@ const blogPostContent = {
       <p>Size the transformer with headroom. A system loaded to 95% of transformer capacity has nowhere to grow, and Temecula Valley homeowners almost always want to add fixtures in year two.</p>
 
       <h2>Warm Color Temperature Wins Outdoors</h2>
-      <p>Use 2700K for planting, stone, and architecture. It flatters stucco, warm-toned hardscape, and the olive and citrus that do well here. 3000K is acceptable on cooler gray stone. Anything at 4000K and above looks like a parking lot and, worse, makes your landscaping look dead. Mixing color temperatures across a property is the single most common mistake we correct on existing systems.</p>
+      <p>Use 2700K for planting, stone, and architecture. It flatters stucco, warm-toned hardscape, and the olive and citrus that do well here. 3000K is acceptable on cooler gray stone. Anything at 4000K and above looks like a parking lot and, worse, makes your landscaping look dead. Modern LED fixtures make this an easy choice — and, as we covered in <a href="/news/led-lighting-benefits-energy-savings">how much LED lighting actually saves</a>, they cost a fraction to run. Mixing color temperatures across a property is the single most common mistake we correct on existing systems.</p>
 
       <h2>Security Lighting: Bright Is Not the Goal</h2>
       <p>A single harsh floodlight creates deep shadows right next to the brightest spot on the property — which is exactly where someone hides. Even, moderate coverage beats intense, patchy coverage every time.</p>
@@ -143,6 +145,8 @@ const blogPostContent = {
 
       <h2>Dark Sky Considerations</h2>
       <p>Riverside County has outdoor lighting ordinances in place partly to protect astronomical observation at Palomar, and several HOAs in the valley add their own rules. Practically, that means shielded, downward-directed fixtures and sensible lumen levels. This is not a constraint on good design — full-cutoff fixtures are what good designers use anyway. The <a href="https://darksky.org/resources/what-is-light-pollution/" target="_blank" rel="noopener nofollow">International Dark-Sky Association</a> has straightforward guidance if you want to read further.</p>
+
+      <p>One seasonal note: if you add holiday lighting to these same exterior circuits each December, plan the load now rather than in November. We wrote up how to do that in <a href="/news/holiday-lighting-without-blown-circuits-temecula">holiday lighting without the blown circuits</a>.</p>
 
       <h2>Control It Properly</h2>
       <p>Astronomic timers that track sunset and sunrise year-round beat photocells and fixed timers. Better still, put landscape zones on a smart controller so you can run a full scene for entertaining and a low security scene overnight. Two zones on separate control is the minimum we recommend.</p>
@@ -172,7 +176,7 @@ const blogPostContent = {
       <ul>
         <li><strong>Panel and distribution.</strong> A new or upsized panel and feeder is common in TI work. <a href="/services/commercial/panel-installation">Commercial panel installation</a> is rarely the biggest cost but is almost always on the critical path, because it drives inspection scheduling.</li>
         <li><strong>Transformers.</strong> If you need 120/208V from a 277/480V service, you need a dry-type transformer and the space, clearances, and ventilation it requires. <a href="/services/commercial/transformers">Transformer installation</a> is a line item many TI budgets omit entirely.</li>
-        <li><strong>Title 24 lighting compliance.</strong> California's energy code requires specific lighting power densities, plus occupancy sensing, daylight zone controls, and multi-level dimming for most commercial spaces. Reusing the old troffers is usually not an option. Plan for a compliant <a href="/services/commercial/office-lighting">office lighting</a> or <a href="/services/commercial/indoor-lighting">indoor lighting</a> package.</li>
+        <li><strong>Title 24 lighting compliance.</strong> California's energy code, maintained by the <a href="https://www.energy.ca.gov/programs-and-topics/programs/building-energy-efficiency-standards" target="_blank" rel="noopener nofollow">California Energy Commission</a>, requires specific lighting power densities, plus occupancy sensing, daylight zone controls, and multi-level dimming for most commercial spaces. Reusing the old troffers is usually not an option, and <a href="/news/led-lighting-benefits-energy-savings">the operating-cost math on LED</a> makes that a good thing. Plan for a compliant <a href="/services/commercial/office-lighting">office lighting</a> or <a href="/services/commercial/indoor-lighting">indoor lighting</a> package.</li>
         <li><strong>Low voltage and data.</strong> <a href="/services/commercial/cat6-installation">Cat6 cabling</a>, access control, cameras, and AV all need pathways coordinated before ceilings close. Running it after drywall costs multiples of running it during.</li>
         <li><strong>Emergency and exit lighting.</strong> Code-required, inspected, and frequently forgotten until the final walkthrough.</li>
         <li><strong>Existing code violations.</strong> Pulling a permit on a 1990s suite often surfaces conditions that must be corrected as part of the work. Budget a contingency for <a href="/services/commercial/code-corrections">code corrections</a>.</li>
@@ -190,7 +194,7 @@ const blogPostContent = {
         <li><strong>Get the electrician in during lease negotiation,</strong> not after signing. A one-hour site walk can change a lease term.</li>
         <li><strong>Design the lighting package once, correctly.</strong> Title 24 rework after inspection is pure waste.</li>
         <li><strong>Overbuild pathways, not equipment.</strong> Empty conduit and extra data drops are cheap now and expensive later.</li>
-        <li><strong>Check SCE commercial incentives.</strong> Lighting and HVAC controls often qualify for rebates that offset a meaningful share of the upgrade.</li>
+        <li><strong>Check SCE commercial incentives.</strong> Lighting and HVAC controls often qualify for rebates that offset a meaningful share of the upgrade — we broke down the fastest-payback options in <a href="/news/commercial-electrical-upgrades-save-wildomar-businesses-money">commercial electrical upgrades that save business owners money</a>.</li>
       </ul>
 
       <h2>Get a Scope Before You Sign</h2>
@@ -204,6 +208,8 @@ const blogPostContent = {
     category: 'EV Chargers',
     readTime: '7 min read',
     content: `
+      <p>Our <a href="/news/ev-charger-installation-guide-temecula">EV charger installation guide</a> covers permits, rebates, and what the job involves. This piece answers the question that comes first: how much charging speed do you actually need?</p>
+
       <p>Most people shopping for a home EV charger start with the wrong question. They ask which charger is fastest. The better question is how many miles you actually drive between the time you park at night and the time you leave in the morning — because in the <a href="/service-areas/temecula">Temecula</a> Valley, the answer determines everything.</p>
 
       <h2>The Only Math That Matters</h2>
@@ -225,13 +231,13 @@ const blogPostContent = {
         <li>You commute into Orange County, San Diego, or the Inland Empire — an 80 to 120 mile round trip that Level 1 cannot refill overnight</li>
         <li>You have two EVs sharing one charging location</li>
         <li>You drive a large truck or SUV EV, where a mile costs more kilowatt-hours</li>
-        <li>You want to charge on solar during the day, which requires the higher rate to use meaningful production in a few peak hours</li>
+        <li>You want to <a href="/news/pairing-solar-with-ev-charger-murrieta">charge on solar during the day</a>, which requires the higher rate to use meaningful production in a few peak hours</li>
         <li>Your schedule is unpredictable and you want to be full by morning regardless</li>
       </ul>
       <p>For the large majority of these drivers, a 40-amp circuit feeding a 32-amp charger is the sweet spot on cost, panel impact, and speed. See our <a href="/ev-chargers">EV charger installation page</a> for the units we install most often.</p>
 
       <h2>What the Circuit Actually Costs You in Panel Space</h2>
-      <p>This is where Temecula Valley homes split into two groups. A 1990s tract home on 100-amp or a crowded 200-amp panel may not have room for a 60-amp charger circuit without a load calculation and possibly a panel upgrade. That same home often has room for a 40-amp circuit.</p>
+      <p>This is where Temecula Valley homes split into two groups. A 1990s tract home on 100-amp or a crowded 200-amp panel may not have room for a 60-amp charger circuit without a load calculation and possibly a panel upgrade — the <a href="/news/signs-you-need-panel-upgrade">warning signs are worth knowing</a> before you shop for a charger. That same home often has room for a 40-amp circuit.</p>
       <p>There is also a middle path many homeowners do not know about: a load-managing charger or an energy management system that lets a charger share capacity with other loads, backing off automatically when the AC and dryer run. That can avoid a panel upgrade entirely. It is worth asking about before you assume you need one.</p>
 
       <h2>Hardwired vs Plug-In</h2>
@@ -267,7 +273,7 @@ const blogPostContent = {
 
       <h2>2. Does the Main Panel Have Capacity?</h2>
       <p>This is the question that decides whether your project costs $4,000 or $12,000. Feeding a 100-amp subpanel from a 100-amp main service usually means a service upgrade first. Feeding it from a modern 200-amp panel with free spaces is straightforward.</p>
-      <p>Older properties in this area frequently have 100 or 125-amp service that was adequate in 1985 and is not adequate for a house plus an ADU. If a panel upgrade is needed, do it first — it is the foundation everything else sits on.</p>
+      <p>Older properties in this area frequently have 100 or 125-amp service that was adequate in 1985 and is not adequate for a house plus an ADU. The <a href="/news/signs-you-need-panel-upgrade">signs your panel is already at its limit</a> usually show up well before you start this project. If a panel upgrade is needed, do it first — it is the foundation everything else sits on.</p>
 
       <h2>3. Trench Depth, Conduit, and Wire</h2>
       <p>Code sets minimum burial depths that depend on the method. Direct-buried cable needs to go deeper than conductors in rigid metal conduit; PVC conduit sits in between, and the depth changes again under a driveway. In practice, for most residential runs we use PVC conduit at 18 inches minimum, deeper under vehicle traffic.</p>
@@ -280,14 +286,14 @@ const blogPostContent = {
 
       <h2>4. The Subpanel Itself</h2>
       <p>A detached structure subpanel has rules a garage subpanel inside the house does not. Since the 2008 code cycle, four-wire feeders are required: two hots, a neutral, and an equipment ground. The neutral and ground must be kept separate at the subpanel, and the structure needs its own grounding electrode — typically a ground rod or two, bonded to the panel.</p>
-      <p>If your detached garage was wired before 2008 with a three-wire feeder and a bonded neutral, that is a real hazard worth correcting. It shows up constantly in <a href="/services/residential/code-corrections">code correction</a> work out here.</p>
+      <p>If your detached garage was wired before 2008 with a three-wire feeder and a bonded neutral, that is a real hazard worth correcting — and if the structure is older still, it may be a candidate for <a href="/news/whole-house-rewiring-what-to-expect">a full rewire</a> rather than a patch. It shows up constantly in <a href="/services/residential/code-corrections">code correction</a> work out here.</p>
 
       <h2>5. Disconnects, GFCI, and Receptacles</h2>
       <p>The structure needs a disconnecting means, which the subpanel main breaker usually satisfies. All 125V, 15- and 20-amp receptacles in a garage, shop, or unfinished accessory building need GFCI protection. Lighting should be on its own circuit so a tripped tool breaker does not leave you in the dark — a small detail that shop owners appreciate every single time.</p>
       <p>For a working shop, plan <a href="/services/residential/dedicated-circuits">dedicated circuits</a> for the compressor, dust collection, and any 240V tool, plus more 20-amp general receptacles than you think you need. Outlets every 4 to 6 feet along the bench wall is not overkill.</p>
 
       <h2>6. Permits and Inspection</h2>
-      <p>All of this requires a permit. Wildomar and Lake Elsinore issue their own; properties in unincorporated areas go through Riverside County. There will be a trench inspection before backfill — do not cover the trench until it has been signed off, because opening it again is the most avoidable cost on the whole job. ADU projects carry additional plan review; the <a href="https://www.hcd.ca.gov/policy-and-research/accessory-dwelling-units" target="_blank" rel="noopener nofollow">California Department of Housing and Community Development</a> maintains current statewide ADU standards worth reviewing early.</p>
+      <p>All of this requires a permit — see <a href="/news/electrical-permits-inspections-riverside-county">which electrical work needs a permit in Riverside County</a> for the full picture. Wildomar and Lake Elsinore issue their own; properties in unincorporated areas go through Riverside County. There will be a trench inspection before backfill — do not cover the trench until it has been signed off, because opening it again is the most avoidable cost on the whole job. ADU projects carry additional plan review; the <a href="https://www.hcd.ca.gov/policy-and-research/accessory-dwelling-units" target="_blank" rel="noopener nofollow">California Department of Housing and Community Development</a> maintains current statewide ADU standards worth reviewing early.</p>
 
       <h2>What It Typically Costs</h2>
       <p>The wide range you see quoted comes almost entirely from three variables: distance, trenching conditions, and whether the main panel needs upgrading. Rocky decomposed granite, which is common on the hillsides here, costs more to trench than flat soil. Crossing a finished driveway costs more than crossing dirt. Get those three answers and the estimate stops being a mystery.</p>
@@ -304,7 +310,7 @@ const blogPostContent = {
     readTime: '7 min read',
     content: `
       <p>If your home in <a href="/service-areas/hemet">Hemet</a> or <a href="/service-areas/san-jacinto">San Jacinto</a> was built between roughly 1965 and 1975, there is a meaningful chance the branch circuits behind your walls are aluminum rather than copper. Copper prices spiked during that decade, builders switched, and millions of American homes were wired with solid aluminum conductors on 15- and 20-amp circuits.</p>
-      <p>This is not a reason to panic. It is a reason to find out, because the failure mode is a fire at a connection point, and the fix is well understood.</p>
+      <p>This is not a reason to panic. It is a reason to find out, because the failure mode is a fire at a connection point, and the fix is well understood. Aluminum branch wiring sits near the top of our list of <a href="/news/home-inspection-electrical-red-flags-temecula-murrieta">electrical red flags that show up in home inspections</a>.</p>
 
       <h2>Why Aluminum Branch Circuits Are a Problem</h2>
       <p>Aluminum is a perfectly good conductor — it is still used today for service entrance and feeder conductors, correctly and safely. The problem was specific to small-gauge solid aluminum at device terminations.</p>
@@ -331,9 +337,11 @@ const blogPostContent = {
       <ul>
         <li><strong>1. COPALUM crimp.</strong> A copper pigtail is joined to the aluminum conductor with a specialized crimp tool that creates a cold weld, then insulated. This is regarded as the gold standard fix. The limitation is availability — it requires certified installers and specific tooling, and finding one has become harder over time.</li>
         <li><strong>2. AlumiConn connectors.</strong> A listed set-screw lug that joins aluminum to a copper pigtail with anti-oxidant compound and torqued terminations. Far more widely available than COPALUM, accepted by inspectors, and appropriate for most homes. Correct torque matters enormously here, which is why this is not a DIY job.</li>
-        <li><strong>3. Complete rewiring.</strong> Replacing the aluminum branch circuits with copper. It is the most expensive and most disruptive option, and it is also the permanent one. If you are already remodeling, opening walls, or upgrading a panel, full <a href="/services/residential/rewiring">rewiring</a> often makes the most financial sense because the access cost is already being paid.</li>
+        <li><strong>3. Complete rewiring.</strong> Replacing the aluminum branch circuits with copper. It is the most expensive and most disruptive option, and it is also the permanent one. If you are already remodeling, opening walls, or upgrading a panel, full <a href="/services/residential/rewiring">rewiring</a> often makes the most financial sense because the access cost is already being paid. Our guide to <a href="/news/whole-house-rewiring-what-to-expect">what to expect during a whole-house rewire</a> covers the timeline and disruption.</li>
       </ul>
       <p>What is <em>not</em> acceptable: standard wire nuts on aluminum-to-copper splices, "CO/ALR" devices as a whole-house solution on their own, or purple twist connectors used outside their listing. These show up in homes constantly and they do not resolve the hazard.</p>
+
+      <p>All three options are permitted work. If you are weighing doing any of it yourself, read <a href="/news/electrical-permits-inspections-riverside-county">which electrical work needs a permit in Riverside County</a> first.</p>
 
       <h2>The Insurance Angle</h2>
       <p>Carriers ask about aluminum branch wiring on applications, and in California's tightened homeowners market some will decline coverage or charge significantly more without documented remediation. If you are buying, renewing, or shopping carriers, having a licensed electrician's remediation documentation in hand is genuinely valuable.</p>
@@ -353,10 +361,10 @@ const blogPostContent = {
     readTime: '6 min read',
     content: `
       <p>Inland Riverside County has a specific climate advantage that coastal homes do not: the overnight drop. A 102°F afternoon in <a href="/service-areas/menifee">Menifee</a> or <a href="/service-areas/winchester">Winchester</a> often falls into the low 60s by 4 AM. Homes that take advantage of that swing spend dramatically less on cooling than homes that just run the AC harder.</p>
-      <p>Two pieces of equipment do that work, and they are not interchangeable.</p>
+      <p>Two pieces of equipment do that work, and they are not interchangeable. Both also take load off an AC system that may already be struggling — if yours <a href="/news/ac-breaker-tripping-summer-riverside-county">keeps tripping its breaker on hot afternoons</a>, start there first.</p>
 
       <h2>Ceiling Fans Move Air Across People</h2>
-      <p>A ceiling fan does not cool a room. It creates airflow across skin, which accelerates evaporation and makes a room feel roughly 4°F cooler than it is. That means you can raise the thermostat about 4 degrees with no loss in comfort — and every degree on the thermostat is meaningful money on an SCE summer bill.</p>
+      <p>A ceiling fan does not cool a room. It creates airflow across skin, which accelerates evaporation and makes a room feel roughly 4°F cooler than it is. That means you can raise the thermostat about 4 degrees with no loss in comfort — and every degree on the thermostat is meaningful money on an SCE summer bill. It stacks well with other efficiency work, like <a href="/news/led-lighting-benefits-energy-savings">converting to LED lighting</a>.</p>
       <p>The catch, and it is the one everyone forgets: a ceiling fan running in an empty room is pure waste. It cools nobody and adds a small amount of motor heat. Fans go off when the room empties.</p>
       <ul>
         <li><strong>Size to the room.</strong> 44-52 inch blades for a typical bedroom or living space, larger for great rooms with high ceilings.</li>
@@ -373,7 +381,7 @@ const blogPostContent = {
       <h2>What a Whole-House Fan Install Actually Requires</h2>
       <ul>
         <li><strong>Adequate attic venting.</strong> This is the number one installation failure. A fan needs roughly 1 square foot of net free vent area per 750 CFM. Under-vented attics pressurize, the fan underperforms, and it gets loud.</li>
-        <li><strong>A <a href="/services/residential/dedicated-circuits">dedicated circuit</a> and a proper wall control.</strong> Modern units use a timer and multi-speed control, not a bare toggle switch.</li>
+        <li><strong>A <a href="/services/residential/dedicated-circuits">dedicated circuit</a> and a proper wall control.</strong> Modern units use a timer and multi-speed control, not a bare toggle switch — and they integrate well with <a href="/news/smart-home-electrical-requirements">smart home automation</a> if you are already running it.</li>
         <li><strong>An insulated, sealed damper</strong> so you are not losing conditioned air through the ceiling in December.</li>
         <li><strong>Careful location.</strong> Central hallway ceilings work best. Framing, HVAC ducts, and structural members all constrain where it can go.</li>
       </ul>
@@ -1101,6 +1109,16 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
     { name: post.title, url: `/news/${params.slug}` },
   ])
 
+  // Related posts: same category first (most recent first), then fill any
+  // remaining slots with the next-most-recent posts from other categories.
+  // Without this every post shows the same three newest articles.
+  const otherPosts = BLOG_POSTS_PREVIEW.filter((p) => p.slug !== params.slug)
+  const sameCategory = otherPosts.filter((p) => p.category === post.category)
+  const relatedPosts = [
+    ...sameCategory,
+    ...otherPosts.filter((p) => p.category !== post.category),
+  ].slice(0, 3)
+
   const formatDate = (dateString: string) => {
     const date = new Date(dateString)
     return date.toLocaleDateString('en-US', {
@@ -1223,9 +1241,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
             Related Articles
           </h2>
           <div className="grid md:grid-cols-3 gap-6">
-            {BLOG_POSTS_PREVIEW.filter((p) => p.slug !== params.slug)
-              .slice(0, 3)
-              .map((relatedPost) => (
+            {relatedPosts.map((relatedPost) => (
                 <Link
                   key={relatedPost.slug}
                   href={`/news/${relatedPost.slug}`}
