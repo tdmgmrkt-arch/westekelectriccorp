@@ -13,6 +13,277 @@ export async function generateStaticParams() {
 
 // This would normally come from a CMS or MDX files
 const blogPostContent = {
+  'commercial-kitchen-electrical-temecula-restaurants': {
+    title: 'Commercial Kitchen Electrical for Temecula Restaurants',
+    excerpt: 'Hoods, walk-ins, fryers, and dish machines all land on the same panel. Here is how Temecula and Murrieta restaurant owners should plan the electrical before the health department walkthrough.',
+    date: '2026-10-16',
+    category: 'Commercial',
+    readTime: '8 min read',
+    content: `
+      <p>A commercial kitchen is the most electrically demanding space most small business owners will ever build. A 1,200 square foot restaurant in <a href="/service-areas/temecula">Temecula</a> can pull more amperage than ten houses. When a kitchen build-out goes over budget, the electrical scope is usually where it happened — and almost always because the equipment list was finalized after the panel was ordered.</p>
+
+      <h2>Start With the Equipment Schedule, Not the Floor Plan</h2>
+      <p>Before anyone sizes a panel, you need a complete equipment schedule with nameplate data: voltage, phase, amperage, and whether each unit is hardwired or cord-and-plug. Every piece. The walk-in compressor, the hood exhaust and make-up air, the dish machine and its booster heater, fryers, griddles, combi ovens, proofers, ice machines, POS terminals, and the beer cooler nobody mentioned until week six.</p>
+      <p>Changing a fryer model after rough-in is a minor edit. Adding a 208V three-phase combi oven after the panel is set is a change order.</p>
+
+      <h2>Single-Phase vs Three-Phase</h2>
+      <p>Most serious kitchen equipment is 208V three-phase. Many small retail suites in the Temecula Valley are single-phase only. Finding that out during lease negotiation gives you leverage; finding out during construction gives you a utility service upgrade on your critical path, which can add weeks.</p>
+      <p>We cover this in more depth in <a href="/news/tenant-improvement-electrical-temecula-business">what to budget for tenant improvement electrical</a>, and we handle <a href="/services/commercial/1-phase-3-phase">single-phase and three-phase</a> conversions regularly.</p>
+
+      <h2>The Hood Is an Electrical Project, Not Just a Mechanical One</h2>
+      <p>Type I hoods over grease-producing appliances carry electrical requirements people routinely underestimate:</p>
+      <ul>
+        <li>Exhaust fan and make-up air unit, usually on their own circuits</li>
+        <li>A fire suppression system with a micro-switch that must shut down power to every appliance under the hood on activation</li>
+        <li>Hood lighting rated for the environment</li>
+        <li>An interlock so make-up air runs with exhaust</li>
+      </ul>
+      <p>That shunt-trip requirement is the one that surprises owners. When Ansul discharges, gas valves close and electric appliances under the hood must de-energize. That means shunt-trip breakers and control wiring coordinated between your electrician, hood vendor, and fire suppression contractor. It gets inspected, and it fails inspection often when nobody owned the coordination.</p>
+
+      <h2>Dedicated Circuits and Receptacle Placement</h2>
+      <p>Nearly every significant appliance needs a <a href="/services/residential/dedicated-circuits">dedicated circuit</a>. Beyond that, placement matters more in a kitchen than anywhere else:</p>
+      <ul>
+        <li>GFCI protection is required for receptacles serving countertops, within six feet of sinks, and in dishwashing areas</li>
+        <li>Receptacles must be positioned so cords never cross a sink, a cooking surface, or a traffic lane</li>
+        <li>Wet-location covers where washdown occurs</li>
+        <li>Equipment that gets pulled for cleaning needs accessible disconnects</li>
+      </ul>
+
+      <h2>Walk-Ins and Refrigeration</h2>
+      <p>Walk-in coolers and freezers need dedicated circuits, and the freezer needs a defrost cycle accounted for in the load calculation. Put refrigeration on clearly labeled circuits and consider monitoring with an alarm — a tripped breaker at 11 PM on a Friday that nobody notices until Monday is a five-figure inventory loss. We have been called out for exactly that more than once.</p>
+
+      <h2>Lighting and Title 24</h2>
+      <p>California's energy code applies to commercial kitchens, dining rooms, and back-of-house alike, with lighting power density limits and required controls. Dining rooms typically need dimming and multi-level control; back-of-house needs occupancy sensing in storage and office areas. The <a href="https://www.energy.ca.gov/programs-and-topics/programs/building-energy-efficiency-standards" target="_blank" rel="noopener nofollow">California Energy Commission</a> publishes the current standards and compliance forms.</p>
+      <p>Kitchen fixtures also need to be cleanable and often gasketed. Standard office troffers are not appropriate over a prep line. Plan a proper <a href="/services/commercial/indoor-lighting">commercial indoor lighting</a> package, and remember the <a href="/news/led-lighting-benefits-energy-savings">operating-cost math on LED</a> matters more in a space running 14 hours a day.</p>
+
+      <h2>Data, POS, and Everything Else</h2>
+      <p>Modern restaurants run on networks: POS terminals, kitchen display screens, online-order tablets, cameras, music, and the office. Run <a href="/services/commercial/cat6-installation">Cat6 cabling</a> during rough-in. Pulling it after the ceiling closes costs several times more, and wireless-only POS in a building with stainless everywhere is a support headache you do not want during dinner service.</p>
+
+      <h2>Permits, Health Department, and Sequencing</h2>
+      <p>A restaurant build-out needs a building permit, plan check, and sign-off from Riverside County environmental health in addition to the city. These reviews run in parallel but not independently — health will look at surfaces, lighting levels, and equipment placement that your electrical drawings have to match. Build the review time into your lease commencement date. Paying rent on a kitchen you cannot open is the most avoidable cost in the whole project.</p>
+
+      <h2>Where Owners Actually Save</h2>
+      <ul>
+        <li><strong>Lock the equipment schedule early.</strong> Almost every kitchen change order traces back to this.</li>
+        <li><strong>Put one party in charge of hood coordination</strong> between electrical, mechanical, and fire suppression.</li>
+        <li><strong>Oversize the panel, not the equipment.</strong> Spare breaker spaces are cheap now and expensive later.</li>
+        <li><strong>Label everything properly.</strong> Your closing manager at midnight is not an electrician.</li>
+      </ul>
+
+      <h2>Get the Electrical Scoped Before You Sign</h2>
+      <p>Westek Electric Corp. has handled commercial kitchen and restaurant electrical throughout Temecula, Murrieta, Menifee, and Lake Elsinore since 2010, including full <a href="/services/commercial/new-construction">new construction</a> build-outs. Call (909) 996-6678 and we will review your equipment schedule and the suite before you commit to a lease.</p>
+    `,
+  },
+  'space-heaters-extension-cords-circuit-overload': {
+    title: 'Space Heaters, Extension Cords, and Winter Circuit Overload',
+    excerpt: 'Inland Riverside County nights get cold, and portable heaters are the single most common cause of winter electrical fires. Here is what your circuits can actually handle.',
+    date: '2026-10-09',
+    category: 'Electrical Safety',
+    readTime: '6 min read',
+    content: `
+      <p>People are often surprised by how cold inland Riverside County gets once the sun goes down in late fall. Overnight lows in <a href="/service-areas/menifee">Menifee</a>, <a href="/service-areas/hemet">Hemet</a>, and the higher parts of the valley drop into the 30s, and out come the portable heaters — usually into whatever outlet is closest.</p>
+      <p>Heating equipment is one of the leading causes of home fires in the United States, and portable space heaters account for the large majority of those deaths. The <a href="https://www.usfa.fema.gov/prevention/home-fires/prevent-fires/heating/" target="_blank" rel="noopener nofollow">U.S. Fire Administration</a> puts the peak squarely in the winter months. Nearly all of it is preventable.</p>
+
+      <h2>The Number That Matters: 1,500 Watts</h2>
+      <p>Virtually every portable electric heater sold draws about 1,500 watts on high. On a 120-volt circuit that is 12.5 amps.</p>
+      <p>A standard 15-amp household circuit has a continuous-load limit of 12 amps. A 20-amp circuit allows 16. So one space heater on high essentially consumes an entire 15-amp circuit by itself, with nothing left over.</p>
+      <p>That is the whole problem in one sentence: a space heater is not a small appliance. It is the largest plug-in load most people own.</p>
+
+      <h2>What Overload Actually Does</h2>
+      <p>If the breaker trips, the system worked. The dangerous cases are the ones where it does not:</p>
+      <ul>
+        <li><strong>Undersized or damaged extension cords</strong> heat up along their length, often under a rug or behind furniture where you cannot see or smell it.</li>
+        <li><strong>Worn receptacles</strong> lose spring tension, so the plug sits loose, resistance rises, and the outlet face heats and discolors.</li>
+        <li><strong>Backstabbed wiring</strong> — conductors pushed into the quick-connect holes on the back of a receptacle rather than wrapped under the screws — is a common weak point in tract homes from the 1980s and 1990s.</li>
+        <li><strong>Aged breakers</strong> may not trip reliably at all. We cover this in <a href="/news/signs-you-need-panel-upgrade">the warning signs your panel needs upgrading</a>.</li>
+      </ul>
+
+      <h2>Rules That Actually Prevent Fires</h2>
+      <ul>
+        <li><strong>Plug heaters directly into a wall outlet.</strong> No extension cord, no power strip, no surge protector, no smart plug. Those devices are generally not rated for a sustained 12.5-amp load.</li>
+        <li><strong>One heater per circuit.</strong> Not per outlet — per circuit. Two outlets in the same room are usually the same circuit.</li>
+        <li><strong>Three feet of clearance</strong> from bedding, curtains, upholstery, and laundry.</li>
+        <li><strong>Hard floors only,</strong> never carpet, and never under a desk where fabric can contact it.</li>
+        <li><strong>Buy units with tip-over and overheat shutoff</strong> and a recognized testing-lab mark.</li>
+        <li><strong>Never run one while asleep or out of the house.</strong></li>
+        <li><strong>Touch-test the plug and outlet</strong> after 20 minutes. Warm is a warning. Hot means stop immediately and call an electrician.</li>
+      </ul>
+
+      <h2>Older Homes Have Less Headroom</h2>
+      <p>A 1960s or 1970s home in Hemet or San Jacinto may have the entire bedroom wing on one or two circuits. Add a heater, a TV, a phone charger, and a lamp, and you are at the limit before anyone has done anything unusual. If the house still has two-prong ungrounded outlets, or <a href="/news/aluminum-wiring-older-homes-hemet-san-jacinto">aluminum branch wiring</a>, the margin is thinner still.</p>
+      <p>If you find yourself relying on heaters every winter, the real fix is usually a <a href="/services/residential/dedicated-circuits">dedicated circuit</a> in the rooms that need it, or addressing why the central heat is not keeping up.</p>
+
+      <h2>The December Compounding Problem</h2>
+      <p>Space heaters arrive at the same time as holiday decorations, and they frequently end up on the same circuits. If your living room circuit is already carrying a tree, a mantel display, and exterior lights, adding 12.5 amps of heater is how a season ends badly. Plan both together — our guide to <a href="/news/holiday-lighting-without-blown-circuits-temecula">holiday lighting without the blown circuits</a> covers the lighting half.</p>
+
+      <h2>Signs You Should Call Someone</h2>
+      <ul>
+        <li>A breaker that trips whenever the heater runs, or needs resetting repeatedly</li>
+        <li>An outlet or plug that is warm, discolored, or smells faintly of hot plastic</li>
+        <li>Lights that dim noticeably when the heater cycles on</li>
+        <li>A buzzing or crackling sound from a receptacle or switch</li>
+        <li>Scorch marks of any kind</li>
+      </ul>
+      <p>That last one is not a wait-and-see item. Turn the circuit off at the panel.</p>
+
+      <h2>Get Ahead of It</h2>
+      <p>Westek Electric Corp. tests circuits under load, replaces worn receptacles and tired breakers, and adds dedicated circuits throughout Menifee, Hemet, San Jacinto, Temecula, and Murrieta. Call (909) 996-6678 before the first cold snap rather than after something gets warm that should not.</p>
+    `,
+  },
+  'rental-property-electrical-compliance-riverside-county': {
+    title: 'Rental Property Electrical Compliance for Riverside County Landlords',
+    excerpt: 'Habitability law, smoke and CO alarms, GFCI protection, and unpermitted work all land on the owner. Here is the electrical checklist for Riverside County rental properties.',
+    date: '2026-10-02',
+    category: 'Electrical Safety',
+    readTime: '7 min read',
+    content: `
+      <p>If you own rental property in <a href="/service-areas/lake-elsinore">Lake Elsinore</a>, <a href="/service-areas/hemet">Hemet</a>, or anywhere else in Riverside County, the electrical system is one of the few parts of the building where a problem can become a liability claim rather than a repair bill. California habitability law puts electrical equipment maintained in good working order squarely on the owner, and it is not a duty a tenant can waive in a lease.</p>
+      <p>Here is the practical checklist.</p>
+
+      <h2>1. Smoke and Carbon Monoxide Alarms</h2>
+      <p>This is the item that generates the most enforcement and the most litigation. California requires working smoke alarms in every bedroom, outside each sleeping area, and on every level. Carbon monoxide alarms are required in any dwelling with a fuel-burning appliance, fireplace, or attached garage.</p>
+      <p>For rentals, the owner is responsible for installing them and for verifying they work at the start of each tenancy. Document it in writing with the move-in inspection, and keep the records. In older units, hardwired interconnected alarms are strongly preferable to battery units a tenant can remove.</p>
+
+      <h2>2. GFCI Protection Where It Is Required</h2>
+      <p>Kitchens, bathrooms, garages, laundry areas, exteriors, and anywhere near water need GFCI protection. Many units built before the 1990s have none in the garage or exterior, and some have had GFCI receptacles replaced with ordinary ones over the years by a previous owner or a handyman.</p>
+      <p>GFCI devices also fail. They should be tested periodically — the test button is there for a reason, and a device that does not trip when tested needs replacing. Our guide to <a href="/news/gfci-afci-california-code-requirements-2026">California GFCI and AFCI requirements</a> covers where they are mandated.</p>
+
+      <h2>3. The Panel</h2>
+      <p>Open the panel door and look at the brand. Federal Pacific Stab-Lok, Zinsco, and Sylvania-Zinsco panels have well-documented failure-to-trip problems, and they show up constantly in Riverside County rentals built in the 1960s through early 1980s. Many insurers now ask about them directly, and some will not write a policy without replacement.</p>
+      <p>Also check for: breakers that are warm to the touch, double-tapped breakers, rust or water staining inside the enclosure, missing dead-front covers, and open knockouts. Any of those is a genuine hazard in a building you do not live in and cannot monitor daily. Our list of <a href="/news/home-inspection-electrical-red-flags-temecula-murrieta">electrical red flags that show up in inspections</a> goes through each one.</p>
+
+      <h2>4. Ungrounded and Reverse-Polarity Outlets</h2>
+      <p>Two-prong ungrounded receptacles are common in older rentals. They are not automatically a violation, but a three-prong receptacle installed on an ungrounded circuit is — it tells the tenant there is a ground when there is not, and it is both a safety problem and an easy finding against you. The legitimate fixes are a GFCI with the required "No Equipment Ground" labeling, or running a proper ground.</p>
+
+      <h2>5. Unpermitted Work From Previous Owners</h2>
+      <p>Converted garages, added bedrooms, permitted-on-paper additions, backyard offices, and bootleg subpanels are everywhere in this market. When you buy the property, you buy the work. If a fire or injury traces back to unpermitted electrical, your insurer may deny the claim and your exposure is direct.</p>
+      <p>If you inherited something questionable, get it inspected and corrected under permit. See <a href="/news/electrical-permits-inspections-riverside-county">which electrical work needs a permit in Riverside County</a>, and we handle <a href="/services/residential/code-corrections">code corrections</a> regularly for exactly this situation.</p>
+
+      <h2>6. Aluminum Branch Wiring</h2>
+      <p>Units built between roughly 1965 and 1975 may have solid aluminum branch circuits. Carriers ask about it, and in California's tightened insurance market some will decline to write without documented remediation. Our guide to <a href="/news/aluminum-wiring-older-homes-hemet-san-jacinto">aluminum branch wiring risks and fixes</a> covers the three accepted repair methods.</p>
+
+      <h2>7. Exterior, Laundry, and Common Areas</h2>
+      <p>For multi-unit properties, do not overlook shared spaces: exterior lighting at walkways and parking, laundry room receptacles and equipment grounding, and house-meter circuits. Adequate <a href="/services/commercial/security-lighting">exterior lighting</a> is both a safety obligation and the cheapest liability reduction available on a rental property.</p>
+
+      <h2>8. Use Licensed Contractors, Always</h2>
+      <p>The temptation to use an unlicensed handyman on a rental is real, and it is the wrong call. Unpermitted or unlicensed electrical work transfers risk directly onto you, and it voids the protection a licensed contractor's bond and insurance provide. The <a href="https://www.cslb.ca.gov/Consumers/Hire_A_Contractor/" target="_blank" rel="noopener nofollow">Contractors State License Board</a> lets you verify a license in about thirty seconds.</p>
+
+      <h2>Build It Into Turnover</h2>
+      <p>The cheapest time to handle all of this is between tenants, when the unit is empty and you are already painting. A documented electrical check at every turnover costs very little and gives you a paper trail that matters if anything is ever disputed.</p>
+
+      <h2>Schedule a Rental Property Inspection</h2>
+      <p>Westek Electric Corp. performs electrical safety inspections for rental property owners throughout Lake Elsinore, Hemet, San Jacinto, Menifee, Murrieta, and Temecula, and provides written documentation of what we find and what we corrected. Call (909) 996-6678 to get on the schedule.</p>
+    `,
+  },
+  'electrifying-older-home-temecula-ev-heat-pump-induction': {
+    title: 'Electrifying an Older Temecula Home: EV Charger, Heat Pump, and Induction on One Panel',
+    excerpt: 'Going all-electric sounds simple until you add up the amps. Here is how Temecula homeowners fit an EV charger, heat pump, and induction range onto an existing service.',
+    date: '2026-09-25',
+    category: 'Energy Efficiency',
+    readTime: '8 min read',
+    content: `
+      <p>Electrification tends to happen one appliance at a time. An EV shows up in the driveway. The furnace dies and a heat pump replaces it. Then the range goes and induction looks appealing. Individually each decision makes sense. Collectively they can exceed what a <a href="/service-areas/temecula">Temecula</a> home built in 1995 was ever wired to deliver.</p>
+      <p>The good news: you usually have more options than "upgrade the service and pay for it."</p>
+
+      <h2>What Each Addition Actually Draws</h2>
+      <ul>
+        <li><strong>Level 2 EV charger:</strong> typically a 40A circuit for a 32A charger, or 60A for 48A</li>
+        <li><strong>Heat pump (air-to-air, 3-4 ton):</strong> commonly 30-50A, plus strip heat if specified</li>
+        <li><strong>Heat pump water heater:</strong> 30A, though some run on 15-20A</li>
+        <li><strong>Induction range:</strong> 40-50A</li>
+        <li><strong>Electric dryer:</strong> 30A</li>
+      </ul>
+      <p>Add those up as raw breaker ratings and it looks impossible on a 200-amp service. That arithmetic is also wrong, which is the key thing to understand.</p>
+
+      <h2>Breaker Size Is Not Load</h2>
+      <p>A load calculation performed under Article 220 of the electrical code does not sum breaker ratings. It applies demand factors based on the reality that your range, dryer, EV charger, and AC are rarely all at maximum simultaneously.</p>
+      <p>A typical 2,400 square foot Temecula home with 200-amp service often has substantially more headroom than the panel's appearance suggests. The first honest step is a calculation by a licensed electrician — not a guess, and not a contractor's assumption that you need an upgrade because it is the bigger sale.</p>
+
+      <h2>When You Genuinely Need a Service Upgrade</h2>
+      <p>Some situations do require it:</p>
+      <ul>
+        <li>100-amp or 125-amp service, which is common in <a href="/service-areas/hemet">Hemet</a>, <a href="/service-areas/san-jacinto">San Jacinto</a>, and older Lake Elsinore neighborhoods</li>
+        <li>A calculated load that genuinely exceeds capacity</li>
+        <li>An obsolete or unsafe panel that needs replacing regardless</li>
+        <li>No physical breaker spaces left and no room for tandems</li>
+      </ul>
+      <p>The <a href="/news/signs-you-need-panel-upgrade">warning signs of a panel at its limit</a> usually appear well before you start adding equipment.</p>
+
+      <h2>The Options Most Homeowners Are Never Told About</h2>
+      <p>This is where real money gets saved.</p>
+      <ul>
+        <li><strong>Load management for EV charging.</strong> A charger or energy management device that monitors total service draw and throttles the car when the AC and dryer run. The code explicitly permits this, and it frequently eliminates the need for a service upgrade entirely.</li>
+        <li><strong>Circuit-sharing devices.</strong> Listed splitters let a dryer and an EV charger share one 30A circuit, energizing only one at a time.</li>
+        <li><strong>Smart panels.</strong> More expensive, but they meter and prioritize every circuit and can shed load automatically.</li>
+        <li><strong>Charge at a lower amperage.</strong> A 32A charger on a 40A circuit refills a typical EV overnight just fine. See <a href="/news/level-1-vs-level-2-ev-charging-temecula-valley">Level 1 vs Level 2 charging</a> for the math on what you actually need.</li>
+        <li><strong>Skip the strip heat.</strong> Resistance backup heat is often the single largest load in a heat pump install, and in the Temecula Valley climate it is frequently unnecessary or can be sized far smaller.</li>
+      </ul>
+
+      <h2>Sequence Matters More Than People Expect</h2>
+      <p>If you know you are heading toward full electrification, do the panel work first rather than three times. Each separate mobilization carries its own permit, inspection, and labor cost. Running conduit to the garage while the wall is already open costs a fraction of returning in two years.</p>
+      <p>A practical order: load calculation and panel work, then the highest-value appliance, then the rest as equipment reaches end of life. Replacing a working furnace purely for electrification rarely pays back; replacing one that just failed usually does.</p>
+
+      <h2>Rebates and the Policy Backdrop</h2>
+      <p>California is actively pushing building electrification, and the <a href="https://www.cpuc.ca.gov/about-cpuc/divisions/energy-division/building-decarbonization" target="_blank" rel="noopener nofollow">California Public Utilities Commission</a> administers programs supporting it. Federal tax credits cover a share of heat pump, heat pump water heater, panel upgrade, and EV charger costs, and panel upgrades specifically qualify when done in connection with a qualifying electrification project — a detail many homeowners miss.</p>
+      <p>Southern California Edison also offers EV-specific time-of-use rates that change the operating math considerably. If you are adding solar as well, <a href="/news/pairing-solar-with-ev-charger-murrieta">pairing solar with an EV charger under NEM 3.0</a> covers how that interacts.</p>
+
+      <h2>What We Would Tell a Neighbor</h2>
+      <p>Get the load calculation before you get three bids. It costs little, it is the only document that answers the actual question, and it protects you from both the contractor who says you need a service upgrade you do not and the one who installs a 60-amp circuit on a panel that cannot carry it.</p>
+
+      <h2>Start With the Calculation</h2>
+      <p>Westek Electric Corp. performs load calculations, panel and service upgrades, and installs EV chargers, heat pump circuits, and <a href="/services/residential/dedicated-circuits">dedicated circuits</a> across Temecula, Murrieta, Menifee, and Lake Elsinore. Call (909) 996-6678 and we will tell you honestly what your service can carry.</p>
+    `,
+  },
+  'bathroom-remodel-electrical-requirements-murrieta': {
+    title: 'Bathroom Remodel Electrical Requirements in Murrieta',
+    excerpt: 'Bathrooms have their own dedicated circuit, GFCI, ventilation, and lighting rules. Here is what your Murrieta bathroom remodel needs to pass final inspection.',
+    date: '2026-09-18',
+    category: 'Home Improvement',
+    readTime: '7 min read',
+    content: `
+      <p>Bathrooms are small rooms with disproportionately strict electrical rules, for an obvious reason: water, bare feet, and grounded metal fixtures in close quarters. Most of the <a href="/service-areas/murrieta">Murrieta</a> bathrooms we rewire were built to a code that has since been revised two or three times, and homeowners are routinely surprised by what a remodel now triggers.</p>
+      <p>Here is what your project actually needs.</p>
+
+      <h2>1. A Dedicated 20-Amp Circuit</h2>
+      <p>Bathroom receptacles require at least one 20-amp circuit serving bathroom receptacle outlets only. It cannot also feed the hallway, the bedroom, or the exterior.</p>
+      <p>You have two options: one 20-amp circuit serving receptacles in multiple bathrooms, or a circuit dedicated to a single bathroom that may also serve that bathroom's lighting and fan. Most remodels are cleaner with the second approach — one bathroom, one <a href="/services/residential/dedicated-circuits">dedicated circuit</a>, everything in that room on it.</p>
+      <p>This matters practically, not just on paper. A hair dryer is 1,500 watts. Two people getting ready on a shared 15-amp circuit is a tripped breaker every morning.</p>
+
+      <h2>2. GFCI Protection on Everything</h2>
+      <p>All 125-volt receptacles in a bathroom require GFCI protection, with no exceptions. Current code has extended this further: the circuit serving a bathroom exhaust fan or lighting in certain configurations may also require protection, and equipment near a tub or shower has its own rules.</p>
+      <p>GFCI protects against the specific thing that kills people in bathrooms — current finding a path to ground through a person. It is the single most important device in the room. Our guide to <a href="/news/gfci-afci-california-code-requirements-2026">California GFCI and AFCI code requirements</a> covers where else in the house this now applies.</p>
+
+      <h2>3. Receptacle Placement</h2>
+      <p>At least one receptacle is required within 36 inches of the outside edge of each sink basin, on a wall or partition adjacent to the basin. For double vanities, plan two — the code minimum is one, but nobody with two sinks is happy with one outlet.</p>
+      <p>Receptacles are not permitted inside a shower or bath enclosure, and face-up receptacles in a countertop are prohibited. If you are adding a heated bidet seat, plan for an outlet near the toilet, since that is frequently forgotten until the fixture arrives.</p>
+
+      <h2>4. Ventilation Is an Electrical Item Too</h2>
+      <p>California requires mechanical ventilation in bathrooms, exhausted to the outside — never into the attic, which is a surprisingly common and damaging shortcut. Current energy code sets minimum airflow, and humidity-sensing or timer control is typically required rather than a plain switch.</p>
+      <p>Practically: size the fan for the room, duct it properly, and put it on a humidity sensor or countdown timer. In Murrieta's dry climate people under-run bathroom fans, and the result is the mildew we find on the back of drywall during remodels.</p>
+
+      <h2>5. Lighting: Layers and Wet Ratings</h2>
+      <p>Fixtures over a tub or in a shower must be rated for damp or wet locations, and recessed fixtures in those zones need the appropriate rating and trim. Beyond compliance, bathroom lighting benefits enormously from layers:</p>
+      <ul>
+        <li><strong>Vanity lighting</strong> at face height on both sides of the mirror rather than a single downlight overhead, which casts shadows exactly where you need to see</li>
+        <li><strong>General ceiling light</strong> for overall illumination</li>
+        <li><strong>Shower light</strong> rated for wet locations</li>
+        <li><strong>Optional night lighting</strong> on a low setting, which is one of the most appreciated upgrades we install</li>
+      </ul>
+      <p>Use 2700K to 3000K for flattering light. Our <a href="/services/residential/indoor-lighting">indoor lighting</a> work covers fixture selection and switching layout.</p>
+
+      <h2>6. Heated Floors, Towel Warmers, and Steam</h2>
+      <p>Electric radiant floor heat is increasingly popular and requires its own GFCI-protected circuit sized to the mat, with the thermostat and sensor installed before tile goes down. Towel warmers and steam generators likewise need dedicated circuits. These are decisions that must be made before rough-in — adding radiant floor heat after the tile is set means removing the tile.</p>
+
+      <h2>7. It Needs a Permit</h2>
+      <p>Adding circuits, moving outlets, or rewiring a bathroom requires a permit in Murrieta, and there will be a rough inspection before the walls close. This is not the project to skip it on: a buyer's inspector will look closely at bathroom GFCI protection, and unpermitted bathroom work is an easy finding. See <a href="/news/electrical-permits-inspections-riverside-county">which electrical work needs a permit in Riverside County</a>.</p>
+
+      <h2>Plan the Electrical Before the Tile</h2>
+      <p>The same advice applies here as in a <a href="/news/kitchen-remodel-electrical-requirements-lake-elsinore">kitchen remodel</a>: decide the electrical scope before finishes are ordered. Every item above is inexpensive during rough-in and expensive afterward. The <a href="https://www.cpsc.gov/Safety-Education/Safety-Guides/Home/Electrical-Safety" target="_blank" rel="noopener nofollow">U.S. Consumer Product Safety Commission</a> maintains general home electrical safety guidance worth reading if you want background on why these rules exist.</p>
+
+      <h2>Get Your Bathroom Wired Right</h2>
+      <p>Westek Electric Corp. handles bathroom remodel electrical throughout Murrieta, Temecula, Menifee, Wildomar, and Lake Elsinore — circuits, GFCI, ventilation, lighting, heated floors, and the permit. Call (909) 996-6678 before demolition starts.</p>
+    `,
+  },
   'whole-home-surge-protection-lake-elsinore': {
     title: 'Whole-Home Surge Protection: Why Lake Elsinore Homes Need It More Than Ever',
     excerpt: 'Every PSPS shutoff, monsoon storm, and grid switch sends voltage spikes through your house. Here is what a whole-home surge protector actually stops, what it costs, and why modern Lake Elsinore homes cannot skip it.',
