@@ -235,6 +235,29 @@ export default function EVChargersPage() {
         </div>
       </section>
 
+      {/* Charge Ready Home rebate */}
+      <section className="pb-16 bg-accent-100">
+        <div className="container-wide">
+          <div className="bg-white rounded-2xl p-8 md:p-10 shadow-soft max-w-4xl mx-auto text-center">
+            <h2 className="text-2xl md:text-3xl font-heading font-bold text-navy-900 mb-4">
+              Need a panel upgrade first? There&apos;s a rebate for that.
+            </h2>
+            <p className="text-charcoal-600 leading-relaxed mb-6">
+              If your panel is under 200 amps, it usually has to be upgraded before a Level 2 charger
+              can go in. The SCE Charge Ready Home program offers rebates to qualifying Southern
+              California Edison customers to help cover that upgrade — and we&apos;re an in-network
+              contractor for it.
+            </p>
+            <Button asChild size="lg">
+              <Link href="/charge-ready-home-rebate">
+                See if you qualify
+                <ArrowRight className="w-5 h-5 ml-1" />
+              </Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
       {/* FAQs */}
       <section className="section-padding bg-white">
         <div className="container-wide">

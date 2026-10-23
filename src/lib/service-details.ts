@@ -15,6 +15,47 @@ export interface ServiceDetail {
 }
 
 export const RESIDENTIAL_SERVICE_DETAILS: Record<string, ServiceDetail> = {
+  'panel-upgrade': {
+    id: 'panel-upgrade',
+    category: 'Residential',
+    title: 'Panel Upgrades',
+    fullTitle: 'Residential Electrical Panel Upgrades',
+    description: 'Upgrade from 100 amps to 200 amps, handled start to finish — permits, the Edison disconnect and reconnect, and wall repair color matched back to your stucco.',
+    longDescription: 'Most homes in Southern California were built with a 100-amp service, and a 100-amp panel was never designed for how a house runs today. Add central air, an electric range, a heat pump, or an EV charger and you run out of capacity fast — and on older panels you often run out of physical space on the bus before you run out of amps. We replace undersized and failing panels with a new 200-amp service, and we handle the whole job: the permit, the meter spot, the scheduled disconnect and reconnect with Southern California Edison, every circuit re-landed and labeled, and the stucco patched and painted back to match when we are done. If your home qualifies, the SCE Charge Ready Home program may cover a significant portion of the cost.',
+    image: '/images/portfolio/200-amp-panel-upgrade-8.jpeg',
+    features: [
+      '100-amp to 200-amp service upgrades',
+      'New meter main and service entrance conductors',
+      'Panel relocation when Edison requires it',
+      'Sub panel installation',
+      'Permits pulled and inspection scheduled',
+      'Edison disconnect and reconnect coordinated',
+      'All circuits re-landed and clearly labeled',
+      'Stucco repair, texture match, and paint match',
+    ],
+    benefits: [
+      'Capacity for EV charging, heat pumps, and modern appliances',
+      'Replaces rusted, overloaded, or obsolete equipment',
+      'Room on the bus to add circuits later',
+      'Brings the service up to current code',
+      'Finished wall repair — no patch left behind',
+      'May qualify for up to $4,200 through SCE Charge Ready Home',
+    ],
+    process: [
+      { step: 1, title: 'Evaluation', description: 'We look at your existing panel, meter, and loads, and confirm what size service your home actually needs.' },
+      { step: 2, title: 'Permits & Utility', description: 'We pull the permit, confirm the meter spot, and schedule the disconnect and reconnect with Edison.' },
+      { step: 3, title: 'Installation', description: 'The old panel comes out, the new 200-amp panel and meter main go in, and every circuit is re-landed and labeled.' },
+      { step: 4, title: 'Inspection & Finish', description: 'We meet the inspector, then patch the stucco, match the texture, and paint the wall back to its original color.' },
+    ],
+    faqs: [
+      { question: 'How do I know if I need a panel upgrade?', answer: 'Common signs are a 100-amp service, a panel with no open breaker spaces, rust or scorching inside the enclosure, breakers that trip when large appliances run, or a plan to add an EV charger, heat pump, or electric range. If you want to install a Level 2 EV charger and your panel is under 200 amps, an upgrade is usually required.' },
+      { question: 'How long does a panel upgrade take?', answer: 'Most residential panel upgrades are completed in one day, with the power off for several hours while Edison performs the disconnect and reconnect. Panel relocations and jobs needing new conduit runs can take longer.' },
+      { question: 'Do you handle the permit and the Edison coordination?', answer: 'Yes. We pull the permit, confirm the meter spot, schedule the disconnect and reconnect with Edison, and meet the inspector. You do not have to coordinate any of it.' },
+      { question: 'What happens to the wall around the panel?', answer: 'We repair it. After the new panel is set and inspected, we patch the stucco, match the existing texture, and paint it back to the original color so the wall does not look like a repair.' },
+      { question: 'Is there a rebate for a panel upgrade?', answer: 'There may be. The SCE Charge Ready Home program offers rebates to qualifying Southern California Edison residential customers upgrading their electric panel — up to $4,200 for qualified low-income households or those enrolled in a qualifying public assistance program, and up to $2,100 for qualified households in a disadvantaged community. Westek Electric Corp. is an in-network contractor for the program. Eligibility is determined by SCE at evhome.sce.com.' },
+      { question: 'Can you relocate my panel?', answer: 'Yes, and sometimes Edison requires it as a condition of the upgrade. We run new conduit from the old location to the new one, set the new service, install a sub panel to pick up existing circuits where needed, and repair the wall at the old opening.' },
+    ],
+  },
   'appliance-wiring': {
     id: 'appliance-wiring',
     category: 'Wiring',
