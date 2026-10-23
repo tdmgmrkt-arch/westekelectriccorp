@@ -214,7 +214,7 @@ export default function ChargeReadyHomeRebatePage() {
                     Get a Free Estimate
                   </Link>
                 </Button>
-                <Button asChild variant="outline" size="lg">
+                <Button asChild variant="outline-white" size="lg">
                   <a href={`tel:${BUSINESS_INFO.phoneRaw}`}>
                     <Phone className="w-5 h-5" />
                     Call {BUSINESS_INFO.phone}
@@ -472,7 +472,7 @@ export default function ChargeReadyHomeRebatePage() {
                   Call {BUSINESS_INFO.phone}
                 </a>
               </Button>
-              <Button asChild variant="outline" size="lg">
+              <Button asChild variant="outline-white" size="lg">
                 <Link href="/contact">
                   Request Free Estimate
                   <ArrowRight className="w-5 h-5 ml-1" />
